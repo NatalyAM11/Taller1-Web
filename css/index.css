@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap');
+
+body{
+    margin: 0px;
+    background-color: rgb(251,241,249);
+}
+
+.ji {
+    position: relative;
+}
+.nav{
+    display: block;
+    position: relative;
+    font-size: xx-large;
+    font-family: magra;
+    color: rgb(66, 4, 71);
+}
+
+.nav__img{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+.nav__options{
+    display: flex;
+    position: absolute;
+    justify-content: center;  
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.nav__option{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/*.logo{
+    width:100px;
+}*/
+
+
+
+
+
+
+
