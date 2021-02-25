@@ -12,37 +12,30 @@ p{
     color: rgb(66, 4, 71);
 }
 
+h1{
+    font-family: magra;
+    color: rgb(66, 4, 71);
+}
+
 h4{
     font-family: magra;
     font-size: 20px;
     color: rgb(66, 4, 71);
+    margin: 0px
 }
 
 //scss
-@import './_nav';
-@import './_banner';
-@import './_reasons';
-@import './_product';
-@import './_button';
-@import './details';
+@import '_title';
+@import '_nav';
+@import '_banner';
+@import '_reasons';
+@import '_product';
+@import '_button';
+@import 'details';
+@import '_colors';
+@import '_interaction';
+@import '_advertising';
 
-.title{   
-    display: flex;
-    justify-content: center; 
-    font-family: magra;
-    font-size: 30px;
-    margin-bottom: 40px;
-    color: rgb(66, 4, 71);
-}
-
-.title--reasons{
-    color: white;
-    margin: 0px;
-}
-
-.title--list{
-margin: 0px;
-}
 
 .text{
     display: flex;
@@ -51,14 +44,21 @@ margin: 0px;
 }
 
 .text--reasons{
-    color: white;
+    color: rgb(255, 241, 241);
     padding: 0% 5%;
+    
+}
+
+.text--product{
+   width:35%;
+   margin: 0px;
 }
 
 .logo{
     padding-left: 50px;
     padding-right: 50px;
 }
+
 
 
 

@@ -1,0 +1,13 @@
+.advertising{
+    position: relative;
+    background-image: url("../img/advertising.jpg");
+    display: flex;
+    align-items: center;
+    
+    
+    &__information{
+        padding: 4%;
+    }
+
+}
+

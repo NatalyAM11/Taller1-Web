@@ -1,30 +1,24 @@
 .details{
     margin-top: 80px;
-    width: 100%;
-    height: 100vh;
     display: flex;
+    padding: 0% 2%;
 
     &__section{
-        width: 40%;
-        padding-left: 3%;
-        padding-top: 2%;
+        width: 35%;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-      }
-
-    &__img {
-        padding-left: 6%;
+        margin-left: 7%;
     }
 
     &__list{
         list-style: none;
-         
+        margin: 0px 0px;
     }
 
-    &__element{
+    &__item{
         display: flex;
         align-items: center;       
     }

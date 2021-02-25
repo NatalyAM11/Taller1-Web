@@ -1,0 +1,38 @@
+.interaction{
+    width: 100%;
+    display: flex;
+
+    &__img{
+       display: flex;
+    }
+
+    &__section{
+       background-color: rgb(243, 226, 240);
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+    }
+
+    &__options{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 6%;
+    }
+
+    &__list{
+        list-style: none;
+        display: flex; 
+        flex-direction: column;
+    }
+
+    &__item{
+       padding: 2% 0%;
+    }
+
+    &__name{
+        margin: 0px;
+    }
+
+}
