@@ -24,6 +24,7 @@ h4{
 @import './_reasons';
 @import './_product';
 @import './_button';
+@import './details';
 
 .title{   
     display: flex;
@@ -36,12 +37,12 @@ h4{
 
 .title--reasons{
     color: white;
+    margin: 0px;
 }
 
 .title--list{
 margin: 0px;
 }
-
 
 .text{
     display: flex;
@@ -51,6 +52,7 @@ margin: 0px;
 
 .text--reasons{
     color: white;
+    padding: 0% 5%;
 }
 
 .logo{
@@ -58,36 +60,7 @@ margin: 0px;
     padding-right: 50px;
 }
 
-.details{
-    margin-top: 80px;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-}
 
-.details__section{
-  width: 40%;
-  padding-left: 3%;
-  padding-top: 2%;
-  box-sizing: border-box;
-}
-
-.details__img {
-    padding-left: 6%;
-}
-
-.details__list{
-    list-style: none;
-    justify-content: center;
-    
-}
-
-.details__element{
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 
 
