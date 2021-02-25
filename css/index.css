@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
 body {
   margin: 0px;
   background-color: #fbf1f9;
@@ -15,11 +16,23 @@ h1 {
   color: #420447;
 }
 
+h2 {
+  font-family: Manrope;
+  color: #420447;
+  margin: 0px;
+}
+
 h4 {
   font-family: magra;
   font-size: 20px;
   color: #420447;
-  margin: 0px;
+}
+
+button {
+  border-radius: 5px;
+  background-color: #420447;
+  color: white;
+  padding: 0.7% 3%;
 }
 
 .title {
@@ -210,12 +223,8 @@ h4 {
           align-items: center;
 }
 
-.button {
-  background-color: #420447;
-  color: white;
+.button--banner {
   position: absolute;
-  padding: 0.7% 3%;
-  border-radius: 5px;
   margin-left: 17%;
   bottom: 17%;
 }
@@ -378,6 +387,47 @@ h4 {
   padding: 4%;
 }
 
+.advertising__h4 {
+  margin: 0px;
+}
+
+.inscription {
+  background-image: url("../img/fondoInscription.jpg");
+  padding: 18% 0%;
+}
+
+.inscription__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+.inscription__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+.footer {
+  background-color: #b674aa;
+}
+
 .text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,6 +446,18 @@ h4 {
 .text--product {
   width: 35%;
   margin: 0px;
+}
+
+.text--inscription {
+  margin: 6px 0px;
+}
+
+.input {
+  border-radius: 5px;
+  font-family: Manrope;
+  padding: 12px 10%;
+  margin-bottom: 10px;
+  color: #b674aa;
 }
 
 .logo {

@@ -1,6 +1,7 @@
 //tipografias
 @import url('https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
 
 body{
     margin: 0px;
@@ -17,11 +18,23 @@ h1{
     color: rgb(66, 4, 71);
 }
 
+h2{
+    font-family: Manrope;
+    color: rgb(66, 4, 71);
+    margin: 0px;
+}
+
 h4{
     font-family: magra;
     font-size: 20px;
     color: rgb(66, 4, 71);
-    margin: 0px
+}
+
+button{
+    border-radius: 5px;
+    background-color: rgb(66, 4, 71);
+    color: white;
+    padding: 0.7% 3%;
 }
 
 //scss
@@ -35,7 +48,8 @@ h4{
 @import '_colors';
 @import '_interaction';
 @import '_advertising';
-
+@import '_inscription';
+@import '_footer';
 
 .text{
     display: flex;
@@ -52,6 +66,19 @@ h4{
 .text--product{
    width:35%;
    margin: 0px;
+}
+
+.text--inscription{
+    margin: 6px 0px;
+ }
+
+
+.input{
+    border-radius: 5px;
+    font-family: Manrope;
+    padding: 12px 10%;
+    margin-bottom: 10px;
+    color: rgb(182,116,170);
 }
 
 .logo{

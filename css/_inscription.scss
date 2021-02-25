@@ -1,0 +1,18 @@
+.inscription{
+    background-image: url("../img/fondoInscription.jpg");
+    padding: 18% 0%;
+
+    &__information{
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        margin-bottom: 25px; 
+    }
+
+    &__inputs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+}
