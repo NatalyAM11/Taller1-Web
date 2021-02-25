@@ -1,0 +1,40 @@
+.reasons{
+    margin-top: 100px;
+
+    &__div{
+        display: flex; 
+        justify-content: space-between;
+     }
+
+    &__characteristics{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__characteristics:nth-child(2){
+        flex-direction: column-reverse;
+     
+        .reasons__characteristics__text{
+            background-image: url("../img/fondoC2.jpg");
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: 250px;
+    }
+
+    &__text{
+        margin: 0px;
+        width: 100%;
+        height: 250px;
+        justify-content: center;  
+    }
+
+}
+    
+    
+
+    
+
+    

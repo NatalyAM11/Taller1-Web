@@ -1,0 +1,101 @@
+//tipografias
+@import url('https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+
+body{
+    margin: 0px;
+    background-color: rgb(251,241,249);
+}
+
+p{
+    font-family: Manrope;
+    color: rgb(66, 4, 71);
+}
+
+h4{
+    font-family: magra;
+    font-size: 20px;
+    color: rgb(66, 4, 71);
+}
+
+//scss
+@import './_nav';
+@import './_banner';
+@import './_reasons';
+@import './_product';
+@import './_button';
+
+.title{   
+    display: flex;
+    justify-content: center; 
+    font-family: magra;
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: rgb(66, 4, 71);
+}
+
+.title--reasons{
+    color: white;
+}
+
+.title--list{
+margin: 0px;
+}
+
+
+.text{
+    display: flex;
+    justify-content: center;
+    color: rgb(66, 4, 71);
+}
+
+.text--reasons{
+    color: white;
+}
+
+.logo{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.details{
+    margin-top: 80px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.details__section{
+  width: 40%;
+  padding-left: 3%;
+  padding-top: 2%;
+  box-sizing: border-box;
+}
+
+.details__img {
+    padding-left: 6%;
+}
+
+.details__list{
+    list-style: none;
+    justify-content: center;
+    
+}
+
+.details__element{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
