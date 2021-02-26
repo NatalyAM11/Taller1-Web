@@ -2,14 +2,15 @@
     margin-top: 100px;
 
     &__div{
-        display: flex; 
-        justify-content: space-between;
-     }
+        display: flex;
+        
+    }
 
     &__characteristics{
         display: flex;
         flex-direction: column;
-
+        width: 33.3%;
+        
         .reasons__text{
             display: flex;
             flex-direction: column;
@@ -43,12 +44,11 @@
 
   
     &__img{
-        height: 250px;
+
     }
 
     &__text{
-        height: 250px;
-      
+
     }
 
 }
