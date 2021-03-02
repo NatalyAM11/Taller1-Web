@@ -3,7 +3,7 @@
 
     &__div{
         display: flex;
-        
+        flex-wrap: wrap;
     }
 
     &__characteristics{
@@ -16,6 +16,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 250px;
+            //El padding no funciona bien porque los contenidos son diferentes 
+            //padding: 15% 0%;
         }
     }
 
