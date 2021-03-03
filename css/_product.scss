@@ -2,9 +2,10 @@
     width: 100%;
     position:relative;
     background-image: url("../img/fondoProduct.jpg");
-    background-size: contain;
+    background-size: cover;
     background-position:left;
     display: flex;
+    
   
 
     &__section{

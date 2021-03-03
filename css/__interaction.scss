@@ -1,15 +1,19 @@
 .interaction{
-    width: 100%;
     display: flex;
+    
     //flex-wrap: wrap;
 
     &__img{
-        
+        //necesito que la imagne mantenga su  proporción 
+        //min-width: 600px;
+        //min-width: 45%;
+        max-width: 40%;
     }
 
     &__section{
        background-color: rgb(243, 226, 240);
        width: 100%;
+       padding: 40px 0px;
        display: flex;
        flex-direction: column;
        justify-content: center;
@@ -17,15 +21,16 @@
 
     &__options{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
-        padding-right: 6%;
+        padding: 0px 10px;
     }
 
     &__list{
         list-style: none;
         display: flex; 
         flex-direction: column;
+        margin-right: 20px;
     }
 
     &__item{

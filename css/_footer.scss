@@ -8,8 +8,12 @@
     &__icons{
         width: 10%;
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
         box-sizing: content-box;
+        justify-content: center;
+    }
+
+    &__icons *{
+        padding-left: 10px;
     }
 }
