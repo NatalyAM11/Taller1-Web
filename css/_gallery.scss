@@ -1,0 +1,16 @@
+.gallery{
+    background-color: rgb(252, 212,225);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16% 0%;
+    position: relative;
+
+    &__clouds{
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        top: 100px;
+    }
+}

@@ -43,6 +43,7 @@ h4{
 @import 'details';
 @import '_colors';
 @import '_interaction';
+@import '_gallery';
 @import '_advertising';
 @import '_inscription';
 @import '_footer';
@@ -79,6 +80,11 @@ h4{
 
 .logoStormi--banner{
    width: 68%;
+}
+
+.video{
+    width: 800px;
+    height: 450px;
 }
 
 

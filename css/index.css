@@ -111,6 +111,10 @@ h4 {
           box-sizing: border-box;
 }
 
+.nav__option:hover {
+  color: #892091;
+}
+
 .banner {
   width: 100%;
   position: relative;
@@ -235,6 +239,10 @@ button {
   color: white;
   padding: 10px 30px;
   margin-top: 20px;
+}
+
+button:hover {
+  background-color: #892091;
 }
 
 .details {
@@ -390,6 +398,34 @@ button {
   margin: 0px;
 }
 
+.gallery {
+  background-color: #fcd4e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16% 0%;
+  position: relative;
+}
+
+.gallery__clouds {
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 100px;
+}
+
 .advertising {
   position: relative;
   background-image: url("../img/advertising.jpg");
@@ -510,5 +546,10 @@ button {
 
 .logoStormi--banner {
   width: 68%;
+}
+
+.video {
+  width: 800px;
+  height: 450px;
 }
 /*# sourceMappingURL=index.css.map */
