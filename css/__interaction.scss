@@ -1,14 +1,16 @@
 .interaction{
     display: flex;
-    
-    //flex-wrap: wrap;
+    width: 100%;
 
     &__img{
-        width: 40%;
+       width:44%;
+       background-image: url("./../img/makeup__img.jpg");
+       background-size: cover;
+       background-position: center;
     }
 
     &__section{
-        width: 60%;
+       min-width: 56%;
        background-color: rgb(243, 226, 240);
        padding: 80px 0px;
        display: flex;
@@ -21,7 +23,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        padding: 0px 10px;
+       // padding: 0px 10px;
     }
 
     &__list{
@@ -46,7 +48,71 @@
     }
 
     &__eye{
-        width: 90%;
+        width: 85%;
+    }
+
+    &__sample{
+        width: 85%;
     }
 
 }
+
+
+
+//Media query
+/*@media only screen and (max-width:917px){
+
+    .interaction{
+        display: flex;
+    
+        &__img{
+           min-width:70%;
+        }
+    
+        &__section{
+           min-width: 60%;
+           background-color: rgb(243, 226, 240);
+           padding: 80px 0px;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+        }
+    
+        &__options{
+            width:100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 10px;
+        }
+    
+        &__list{
+            width: 15%;
+            list-style: none;
+            display: flex; 
+            flex-direction: column;
+            margin-right: 20px;
+        }
+    
+        &__item{        
+           width: 100%;   
+        }
+    
+        &__li{
+            padding: 2% 0%;
+            //height: 60%;
+        }
+    
+        &__name{
+            margin: 0px;
+        }
+    
+        &__eye{
+            width: 90%;
+        }
+    
+    }
+
+
+
+}*/

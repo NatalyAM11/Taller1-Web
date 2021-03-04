@@ -6,6 +6,10 @@ body {
   background-color: #fbf1f9;
 }
 
+.todo {
+  height: 100%;
+}
+
 p {
   font-family: Manrope;
   color: #420447;
@@ -68,17 +72,16 @@ h4 {
   font-family: magra;
   color: #420447;
   width: 100%;
-  height: 150px;
+  height: 8.5em;
   background-image: url("../img/navImg.jpg");
-  background-size: cover;
+  background-size: 120vw;
+  background-position: center;
   background-repeat: no-repeat;
-  /* &__img{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        display: block;
-        justify-content: center;  
-        top: 0px;
+  /*&__divIcons:nth-child(1){
+        .nav__icon{
+            background-color:  rgb(137, 32, 145);
+        }
+       
     }*/
 }
 
@@ -115,8 +118,62 @@ h4 {
   color: #892091;
 }
 
-.nav__divIcons:nth-child(1) .nav__icon {
-  background-color: #892091;
+@media only screen and (max-width: 1078px) {
+  .nav {
+    font-size: medium;
+    color: #420447;
+    width: 100%;
+    height: 8.5em;
+    background-size: 144vw;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .nav__icon {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 20px;
+  }
+  .nav__options {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-family: magra;
+  }
+  .nav__option {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .nav__option:hover {
+    color: #892091;
+  }
+}
+
+@media only screen and (max-width: 791px) {
+  .nav {
+    font-size: medium;
+    width: 100%;
+    height: 7em;
+    background-size: 150vw;
+  }
+}
+
+@media only screen and (max-width: 677px) {
+  .nav {
+    width: 100%;
+    height: 6em;
+    background-size: 210vw;
+  }
 }
 
 .banner {
@@ -219,7 +276,7 @@ h4 {
   height: 50%;
 }
 
-@media only screen and (max-width: 863px) {
+@media only screen and (max-width: 917px) {
   .reasons__div {
     width: 100%;
     height: 120vh;
@@ -411,14 +468,18 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
 .interaction__img {
-  width: 40%;
+  width: 44%;
+  background-image: url("./../img/makeup__img.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .interaction__section {
-  width: 60%;
+  min-width: 56%;
   background-color: #f3e2f0;
   padding: 80px 0px;
   display: -webkit-box;
@@ -444,7 +505,6 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 10px;
 }
 
 .interaction__list {
@@ -473,10 +533,71 @@ button:hover {
 }
 
 .interaction__eye {
-  width: 90%;
+  width: 85%;
 }
 
+.interaction__sample {
+  width: 85%;
+}
+
+/*@media only screen and (max-width:917px){
+
+    .interaction{
+        display: flex;
+    
+        &__img{
+           min-width:70%;
+        }
+    
+        &__section{
+           min-width: 60%;
+           background-color: rgb(243, 226, 240);
+           padding: 80px 0px;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+        }
+    
+        &__options{
+            width:100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 10px;
+        }
+    
+        &__list{
+            width: 15%;
+            list-style: none;
+            display: flex; 
+            flex-direction: column;
+            margin-right: 20px;
+        }
+    
+        &__item{        
+           width: 100%;   
+        }
+    
+        &__li{
+            padding: 2% 0%;
+            //height: 60%;
+        }
+    
+        &__name{
+            margin: 0px;
+        }
+    
+        &__eye{
+            width: 90%;
+        }
+    
+    }
+
+
+
+}*/
 .gallery {
+  height: 50%;
   background-color: #fcd4e1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -525,7 +646,7 @@ button:hover {
 
 .inscription {
   background-image: url("../img/fondoInscription.jpg");
-  padding: 18% 0%;
+  padding: 17% 0%;
 }
 
 .inscription__information {
@@ -627,7 +748,7 @@ button:hover {
 }
 
 .video {
-  width: 800px;
-  height: 450px;
+  width: 60%;
+  height: 28.5em;
 }
 /*# sourceMappingURL=index.css.map */

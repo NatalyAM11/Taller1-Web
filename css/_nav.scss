@@ -3,19 +3,11 @@
     font-family: magra;
     color: rgb(66, 4, 71);
     width: 100%;
-    height: 150px;
+    height: 8.5em;
     background-image: url("../img/navImg.jpg");
-    background-size: cover;
+    background-size: 120vw;
+    background-position: center;
     background-repeat:no-repeat;
-
-   /* &__img{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        display: block;
-        justify-content: center;  
-        top: 0px;
-    }*/
 
     &__icon{
         box-sizing: border-box;
@@ -40,15 +32,69 @@
         color: rgb(137, 32, 145);
     }
 
-    &__divIcons:nth-child(1){
-         .nav__icon{
+    /*&__divIcons:nth-child(1){
+        .nav__icon{
             background-color:  rgb(137, 32, 145);
-            //src: url("./img/cartIcon.png");  
         }
        
-    }
+    }*/
 
 }
+
+
+//Media query
+@media only screen and (max-width:1078px){
+    .nav{
+        font-size:medium;
+        color: rgb(66, 4, 71);
+        width: 100%;
+        height: 8.5em;
+        background-size: 144vw;
+        background-position: center;
+        background-repeat:no-repeat;
+    
+        &__icon{
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+    
+        &__options{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+            font-family: magra;     
+        }
+    
+        &__option{
+            box-sizing: border-box;
+        }
+    
+        &__option:hover{
+            color: rgb(137, 32, 145);
+        }
+    }
+}
+
+@media only screen and (max-width:791px){
+    .nav{
+        font-size:medium;
+        width: 100%;
+        height: 7em;
+        background-size: 150vw;
+    }
+}
+
+@media only screen and (max-width:677px){
+    .nav{
+        width: 100%;
+        height: 6em;
+        background-size: 210vw; 
+    }
+}
+
 
 
 
