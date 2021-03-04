@@ -4,22 +4,20 @@
     //flex-wrap: wrap;
 
     &__img{
-        //necesito que la imagne mantenga su  proporción 
-        //min-width: 600px;
-        //min-width: 45%;
-        max-width: 40%;
+        width: 40%;
     }
 
     &__section{
+        width: 60%;
        background-color: rgb(243, 226, 240);
-       width: 100%;
-       padding: 40px 0px;
+       padding: 80px 0px;
        display: flex;
        flex-direction: column;
        justify-content: center;
     }
 
     &__options{
+        width:100%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -27,18 +25,28 @@
     }
 
     &__list{
+        width: 15%;
         list-style: none;
         display: flex; 
         flex-direction: column;
         margin-right: 20px;
     }
 
-    &__item{
-       padding: 2% 0%;
+    &__item{        
+       width: 100%;   
+    }
+
+    &__li{
+        padding: 2% 0%;
+        //height: 60%;
     }
 
     &__name{
         margin: 0px;
+    }
+
+    &__eye{
+        width: 90%;
     }
 
 }
