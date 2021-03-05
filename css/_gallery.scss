@@ -7,11 +7,15 @@
     padding: 16% 0%;
     position: relative;
 
-    &__clouds{
+    &__divClouds{
         width: 100%;
         position: absolute;
         display: flex;
         justify-content: space-between;
         top: 100px;
+    }
+
+    &__clouds{
+        width: 35%;
     }
 }

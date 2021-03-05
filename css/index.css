@@ -172,13 +172,18 @@ h4 {
   .nav {
     width: 100%;
     height: 6em;
-    background-size: 210vw;
+    background-size: 180vw;
   }
 }
 
 .banner {
   width: 100%;
+  height: 35em;
   position: relative;
+  background-image: url("../img/banner1.jpg");
+  background-size: 103vw;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .banner__section {
@@ -201,6 +206,25 @@ h4 {
 .banner__img {
   max-width: 100%;
   max-height: 100%;
+}
+
+@media only screen and (max-width: 1125px) {
+  .banner {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 791px) {
+  .banner {
+    width: 100%;
+    height: 30em;
+    background-position: center;
+    background-size: cover;
+    font-size: 10px;
+  }
 }
 
 .reasons {
@@ -479,7 +503,7 @@ button:hover {
 }
 
 .interaction__section {
-  min-width: 56%;
+  width: 56%;
   background-color: #f3e2f0;
   padding: 80px 0px;
   display: -webkit-box;
@@ -540,62 +564,80 @@ button:hover {
   width: 85%;
 }
 
-/*@media only screen and (max-width:917px){
-
-    .interaction{
-        display: flex;
-    
-        &__img{
-           min-width:70%;
-        }
-    
-        &__section{
-           min-width: 60%;
-           background-color: rgb(243, 226, 240);
-           padding: 80px 0px;
-           display: flex;
-           flex-direction: column;
-           justify-content: center;
-        }
-    
-        &__options{
-            width:100%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 0px 10px;
-        }
-    
-        &__list{
-            width: 15%;
-            list-style: none;
-            display: flex; 
+@media only screen and (max-width: 800px) {
+  .interaction {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
             flex-direction: column;
-            margin-right: 20px;
-        }
-    
-        &__item{        
-           width: 100%;   
-        }
-    
-        &__li{
-            padding: 2% 0%;
-            //height: 60%;
-        }
-    
-        &__name{
-            margin: 0px;
-        }
-    
-        &__eye{
-            width: 90%;
-        }
-    
-    }
+    width: 100%;
+  }
+  .interaction__img {
+    width: 100%;
+    height: 60em;
+    background-image: url("./../img/makeup__img.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .interaction__section {
+    width: 100%;
+    background-color: #f3e2f0;
+    padding: 80px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .interaction__options {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .interaction__list {
+    width: 15%;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 20px;
+  }
+  .interaction__item {
+    width: 100%;
+  }
+  .interaction__li {
+    padding: 2% 0%;
+  }
+  .interaction__name {
+    margin: 0px;
+  }
+  .interaction__eye {
+    width: 85%;
+  }
+  .interaction__sample {
+    width: 85%;
+  }
+}
 
-
-
-}*/
 .gallery {
   height: 50%;
   background-color: #fcd4e1;
@@ -613,7 +655,7 @@ button:hover {
   position: relative;
 }
 
-.gallery__clouds {
+.gallery__divClouds {
   width: 100%;
   position: absolute;
   display: -webkit-box;
@@ -623,6 +665,10 @@ button:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   top: 100px;
+}
+
+.gallery__clouds {
+  width: 35%;
 }
 
 .advertising {
