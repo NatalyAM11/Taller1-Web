@@ -68,7 +68,6 @@ h4{
 .text--product{
    width:35%;
    margin: 0px;
-   align-content: center;
 }
 
 .text--inscription{
@@ -89,10 +88,15 @@ h4{
 }
 
 
-@media only screen and (max-width:360px){
+@media only screen and (max-width:610px){
     .logo{
         width: 5.5em;
     }
+
+    .text--product{
+        width:75%;
+        margin: 0px;
+     }
 }
 
 

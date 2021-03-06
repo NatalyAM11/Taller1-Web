@@ -1,13 +1,8 @@
 .product{
     width: 100%;
-    position:relative;
     background-image: url("../img/fondoProduct.jpg");
     background-size: cover;
-    background-position:left;
-    display: flex;
-    
   
-
     &__section{
         width:100%;
         padding: 13% 0%;
@@ -15,6 +10,29 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+}
+
+
+///////////////////
+
+//Media query
+@media only screen and (max-width:610px){
+
+    .product{
+        width: 100%;
+        background-position: center;
+    
+        &__section{
+            width:100%;
+            padding: 13% 0%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
     }
 
 }

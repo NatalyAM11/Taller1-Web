@@ -1,5 +1,4 @@
 .advertising{
-    position: relative;
     background-image: url("../img/advertising.jpg");
     display: flex;
     align-items: center;
@@ -21,5 +20,23 @@
 
 //Media query 
 @media only screen and (max-width:1125px){
+
+    .advertising{
+        position: relative;
+        background-image: url("../img/advertising.jpg");
+        display: flex;
+        align-items: center;
+        
+        
+        &__information{
+            padding: 4%;
+        }
+    
+        &__h4{
+            margin: 0px
+        }
+    
+    }
+    
     
 }
