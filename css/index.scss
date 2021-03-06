@@ -51,6 +51,7 @@ h4{
 @import '_advertising';
 @import '_inscription';
 @import '_footer';
+@import '_logoStormi';
 
 .text{
     display: flex;
@@ -82,13 +83,16 @@ h4{
     color: rgb(182,116,170);
 }
 
-.logoStormi--banner{
-   width: 68%;
-}
-
 .video{
     width:60% ;
     height: 28.5em;
+}
+
+
+@media only screen and (max-width:360px){
+    .logo{
+        width: 5.5em;
+    }
 }
 
 

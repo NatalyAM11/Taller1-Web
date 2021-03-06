@@ -3,17 +3,17 @@
     margin-top: 80px;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+
 
     &__img{
-        //width: 45%;
-        max-width: 600px;
-        min-width: 400px;
+        width: 50%;
+        background-image: url("../img/makeupimg.jpg");
+        background-size: cover;
         margin-left: 5%;
     }
 
     &__section{
-        width: 50%;
+        width: 45%;
         padding: 0% 5%;
         box-sizing: border-box;
         display: flex;
@@ -23,7 +23,6 @@
     }
 
     &__list{
-        list-style: none;
         margin: 0px 0px;
     }
 
@@ -33,6 +32,38 @@
     }
 }
 
+
+
+@media only screen and (max-width:1125px){
+    .details{
+        width: 100%;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__img{
+            width: 70%;
+        }
+
+        &__section{
+            width: 65%;
+            padding: 0% 0%;
+            box-sizing: border-box;
+           /* display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;*/
+        }
+    
+        &__list{
+            padding: 0px;
+        }
+        
+    }
+
+}
 
 
 
