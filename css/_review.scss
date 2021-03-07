@@ -1,0 +1,27 @@
+.review{
+    height:50%;
+    background-color: rgb(252, 212,225);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 16%;
+    padding-bottom: 5%;
+    position: relative;
+
+    
+
+    &__divClouds{
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        top: 100px;
+    }
+
+    &__clouds{
+        width: 35%;
+    }
+    
+}
+
+

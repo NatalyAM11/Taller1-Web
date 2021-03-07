@@ -5,6 +5,7 @@
 
 $violet-color:rgb(66, 4, 71);
 
+
 body{
     margin: 0px;
     background-color: rgb(251,241,249);
@@ -47,11 +48,13 @@ h4{
 @import 'details';
 @import '_colors';
 @import '_interaction';
+@import '_review';
 @import '_gallery';
 @import '_advertising';
 @import '_inscription';
 @import '_footer';
 @import '_logoStormi';
+@import '_video';
 
 .text{
     display: flex;
@@ -82,15 +85,14 @@ h4{
     color: rgb(182,116,170);
 }
 
-.video{
-    width:60% ;
-    height: 28.5em;
-}
-
 
 @media only screen and (max-width:610px){
     .logo{
-        width: 5.5em;
+        display: none;
+    }
+
+    .logo--responsive{
+        width: 20%;
     }
 
     .text--product{

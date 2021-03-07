@@ -9,19 +9,30 @@
 
     <link rel="stylesheet" href="./css/index.css">
 
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+
 </head>
 
 <body>
 <article>
     <nav class="nav">
 
+        <div class="nav__responsive">
+            <img id="hamburgerBtn" class="nav__hamburger" src="./img/hIcon.png">
+            <img class="logo--responsive" src="./img/logo.png">
+            <div class="nav__divIconsResponsive">
+                <img class="nav__icon" src="./img/userIcon.png">
+                <img class="nav__icon" src="./img/cartIcon.png">
+            </div>
+        </div>
+
         <div class="nav__options">
-            <a class="nav__option">COLLECTION</a>
-            <a class="nav__option">SHOP</a>
-            <a class="nav__option">NEW</a>
+            <a class="nav__option nav__desaparecer">COLLECTION</a>
+            <a class="nav__option nav__desaparecer">SHOP</a>
+            <a class="nav__option nav__desaparecer">NEW</a>
             <img class="logo" src="./img/logo.png">
-            <a class="nav__option">ABOUT</a>
-            <a class="nav__option">KYLIE SKIN</a>
+            <a class="nav__option nav__desaparecer">ABOUT</a>
+            <a class="nav__option nav__desaparecer">KYLIE SKIN</a>
             <div class="nav__divIcons">
                 <img class="nav__icon" src="./img/userIcon.png">
                 <img class="nav__icon" src="./img/cartIcon.png">
@@ -174,28 +185,38 @@
 
             <div class="interaction__options">
                 <ul class="interaction__list">
-                    <li class="interaction__li"><img class="interaction__item" src="./img/option1.png"></li>
-                    <li class="interaction__li"><img class="interaction__item" src="./img/option2.png"></li>
-                    <li class="interaction__li"><img class="interaction__item" src="./img/option3.png"></li>
-                    <li class="interaction__li"><img class="interaction__item" src="./img/option4.png"></li>
+                    <li id="perfectStorm" class="interaction__li"><img class="interaction__item" src="./img/option1.png"></li>
+                    <li id="butterflyBae" class="interaction__li"><img class="interaction__item" src="./img/option2.png"></li>
+                    <li id="stormiWeather" class="interaction__li"><img class="interaction__item" src="./img/option3.png"></li>
+                    <li id="stormiWorld" class="interaction__li"><img class="interaction__item" src="./img/option4.png"></li>
                 </ul>
 
                 <div class="interaction__sample">
                     <h4 class="interaction__name">NAME</h4>
-                    <img class= "interaction__eye" src="./img/interaction11.png">
+                    <img class= "interaction__eye" src="./img/interaction1.png">
                 </div>
 
             </div>
         </section>
     </article>
 
-    <article class="gallery">
-        <div class="gallery__divClouds">
-            <img class="gallery__clouds" src="./img/cloudLeft.png">
-            <img class="gallery__clouds"src="./img/cloudRight.png">
+    <article class="review">
+        <div class="review__divClouds">
+            <img class="review__clouds" src="./img/cloudLeft.png">
+            <img class="review__clouds"src="./img/cloudRight.png">
         </div>
         <h1 class="title">REVIEWS AND PHOTOS</h1>
-        <iframe class="video" src="https://www.youtube.com/embed/9zx5YpUvI_k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="video" src="https://www.youtube.com/embed/9zx5YpUvI_k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
+    </article>
+
+    <article class="gallery">
+        <div class="gallery js-flickity">
+            <div class="gallery-cell photo--1"></div>
+            <div class="gallery-cell photo--2"></div>
+            <div class="gallery-cell photo--3"></div>
+            <div class="gallery-cell photo--4"></div>
+            <div class="gallery-cell photo--5"></div>
+        </div>
     </article>
 
     <article class="advertising">
@@ -235,3 +256,6 @@
 </body>
 
 </html>
+
+<script src="/path/to/flickity.pkgd.min.js"></script>
+<script src="js/index.js"></script>

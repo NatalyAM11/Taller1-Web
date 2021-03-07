@@ -142,6 +142,10 @@ h4 {
   color: #892091;
 }
 
+.nav__responsive {
+  display: none;
+}
+
 @media only screen and (max-width: 1078px) {
   .nav {
     font-size: medium;
@@ -156,26 +160,21 @@ h4 {
     font-size: medium;
     width: 100%;
     height: 7em;
-    background-size: 150vw;
+    background-size: 155vw;
   }
 }
 
-@media only screen and (max-width: 677px) {
+/*@media only screen and (max-width:677px){
+    .nav{
+        width: 100%;
+        height: 6em;
+        background-size: 180vw; 
+    }
+}*/
+@media only screen and (max-width: 610px) {
   .nav {
     width: 100%;
-    height: 6em;
-    background-size: 180vw;
-  }
-}
-
-@media only screen and (max-width: 619px) {
-  .nav {
-    width: 100%;
-    background-size: 226vw;
-  }
-  .nav__options {
-    width: 100%;
-    height: 100%;
+    height: 6 em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -183,9 +182,48 @@ h4 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    background-size: 261vw;
+    background-position: center;
+  }
+  .nav__options {
+    width: 6em;
+    height: auto;
+    margin-left: 35px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    left: 6%;
+    top: 14%;
+    background-color: white;
+    font-size: 10px;
+  }
+  .nav__options * {
+    padding-bottom: 3px;
+  }
+  .nav__responsive {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__divIcons {
+    display: none;
+  }
+  .nav__icon {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 10px;
+  }
+  .nav__desaparecer {
+    display: none;
   }
 }
 
@@ -484,7 +522,8 @@ button:hover {
 
 @media only screen and (max-width: 610px) {
   button {
-    padding: 1em 1.5em;
+    padding: 0.8em 1.5em;
+    margin-top: 9px;
   }
 }
 
@@ -791,7 +830,7 @@ button:hover {
   }
 }
 
-.gallery {
+.review {
   height: 50%;
   background-color: #fcd4e1;
   display: -webkit-box;
@@ -804,11 +843,12 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 16% 0%;
+  padding-top: 16%;
+  padding-bottom: 5%;
   position: relative;
 }
 
-.gallery__divClouds {
+.review__divClouds {
   width: 100%;
   position: absolute;
   display: -webkit-box;
@@ -820,8 +860,55 @@ button:hover {
   top: 100px;
 }
 
-.gallery__clouds {
+.review__clouds {
   width: 35%;
+}
+
+.gallery {
+  background-color: #fcd4e1;
+  height: 25%;
+  /* cell number */
+}
+
+.gallery-cell {
+  width: 60%;
+  height: 400px;
+  margin-right: 10px;
+  counter-increment: gallery-cell;
+}
+
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: rgba(255, 255, 255, 0);
+}
+
+.gallery .photo--1 {
+  background-image: url("../img/foto1.png");
+  background-size: cover;
+}
+
+.gallery .photo--2 {
+  background-image: url("../img/foto2.png");
+  background-size: cover;
+}
+
+.gallery .photo--3 {
+  background-image: url("../img/foto3.png");
+  background-size: cover;
+}
+
+.gallery .photo--4 {
+  background-image: url("../img/foto4.png");
+  background-size: cover;
+}
+
+.gallery .photo--5 {
+  background-image: url("../img/foto5.png");
+  background-size: cover;
 }
 
 .advertising {
@@ -1040,6 +1127,18 @@ button:hover {
   }
 }
 
+.video {
+  width: 60%;
+  height: 28.5em;
+}
+
+@media only screen and (max-width: 610px) {
+  .video {
+    width: 60%;
+    height: 18em;
+  }
+}
+
 .text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1072,14 +1171,12 @@ button:hover {
   color: #b674aa;
 }
 
-.video {
-  width: 60%;
-  height: 28.5em;
-}
-
 @media only screen and (max-width: 610px) {
   .logo {
-    width: 5.5em;
+    display: none;
+  }
+  .logo--responsive {
+    width: 20%;
   }
   .text--product {
     width: 75%;
