@@ -6,14 +6,51 @@
     padding: 4% 5%;
 
     &__icons{
-        width: 10%;
+        width: auto;
         display: flex;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         box-sizing: content-box;
         justify-content: center;
     }
 
     &__icons *{
-        padding-left: 10px;
+        padding-left: 20px;
+    }
+
+    &__text{
+        color: white;
+        margin: 0px;
+    }
+}
+
+
+///////////////////
+
+//Media query
+@media only screen and (max-width:610px){
+    .footer{
+        background-color:  rgb(182,116,170);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 7% 5%;
+    
+        &__icons{
+            width: auto;
+            display: flex;
+            margin-bottom: 20px;
+            box-sizing: content-box;
+            justify-content: center;
+        }
+    
+        &__icons *{
+            padding-left: 20px;
+        }
+    
+        &__text{
+            color: white;
+            margin: 0px;
+            font-size: x-small;
+        }
     }
 }

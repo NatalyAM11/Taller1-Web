@@ -5,7 +5,7 @@
     
     
     &__information{
-        padding: 4%;
+        padding: 35px;
     }
 
     &__h4{
@@ -22,21 +22,44 @@
 @media only screen and (max-width:1125px){
 
     .advertising{
-        position: relative;
         background-image: url("../img/advertising.jpg");
+        background-repeat:no-repeat;
+        background-position: left;
+        background-size: 205vw;
         display: flex;
         align-items: center;
         
         
         &__information{
-            padding: 4%;
+            padding: 30px;
         }
     
         &__h4{
             margin: 0px
         }
     
-    }
+    }  
+}
+
+@media only screen and (max-width:610px){
+
+    .advertising{
+        background-image: url("../img/advertising.jpg");
+        background-repeat:no-repeat;
+        background-position: left;
+        background-size: 560vw;
+        display: flex;
+        align-items: center;
+        
+        
+        &__information{
+            padding: 30px;
+            width: 50%;
+        }
     
+        &__h4{
+            margin: 0px
+        }
     
+    }  
 }

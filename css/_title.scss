@@ -30,6 +30,7 @@
 }
 
 
+///////////////////
 
 //Media query
 @media only screen and (max-width:610px){
@@ -42,6 +43,16 @@
 
     .title--list{
         font-size: 16px;
+    }
+
+    .title--advertising{
+        font-size: 28px;
+        margin: 0px;
+    }
+    
+    .title--main{
+        font-size: 58px;
+        margin: 0px;
     }
 }
     

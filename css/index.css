@@ -81,6 +81,14 @@ h4 {
   .title--list {
     font-size: 16px;
   }
+  .title--advertising {
+    font-size: 28px;
+    margin: 0px;
+  }
+  .title--main {
+    font-size: 58px;
+    margin: 0px;
+  }
 }
 
 .nav {
@@ -571,7 +579,7 @@ button:hover {
   background-color: #fcd4e1;
   margin-top: 80px;
   width: 100%;
-  padding: 50px 0px;
+  padding: 100px 0px;
 }
 
 .colors__div {
@@ -827,7 +835,7 @@ button:hover {
 }
 
 .advertising__information {
-  padding: 4%;
+  padding: 35px;
 }
 
 .advertising__h4 {
@@ -836,8 +844,10 @@ button:hover {
 
 @media only screen and (max-width: 1125px) {
   .advertising {
-    position: relative;
     background-image: url("../img/advertising.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 205vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -846,7 +856,29 @@ button:hover {
             align-items: center;
   }
   .advertising__information {
-    padding: 4%;
+    padding: 30px;
+  }
+  .advertising__h4 {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .advertising {
+    background-image: url("../img/advertising.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 560vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .advertising__information {
+    padding: 30px;
+    width: 50%;
   }
   .advertising__h4 {
     margin: 0px;
@@ -886,6 +918,38 @@ button:hover {
   margin-bottom: 25px;
 }
 
+@media only screen and (max-width: 610px) {
+  .inscription {
+    padding: 17% 10%;
+  }
+  .inscription__information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 25px;
+  }
+  .inscription__inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 25px;
+  }
+}
+
 .footer {
   background-color: #b674aa;
   display: -webkit-box;
@@ -902,11 +966,11 @@ button:hover {
 }
 
 .footer__icons {
-  width: 10%;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   -webkit-box-pack: center;
@@ -915,7 +979,49 @@ button:hover {
 }
 
 .footer__icons * {
-  padding-left: 10px;
+  padding-left: 20px;
+}
+
+.footer__text {
+  color: white;
+  margin: 0px;
+}
+
+@media only screen and (max-width: 610px) {
+  .footer {
+    background-color: #b674aa;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 7% 5%;
+  }
+  .footer__icons {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__icons * {
+    padding-left: 20px;
+  }
+  .footer__text {
+    color: white;
+    margin: 0px;
+    font-size: x-small;
+  }
 }
 
 .logoStormi--banner {
