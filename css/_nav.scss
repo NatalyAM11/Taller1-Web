@@ -84,16 +84,21 @@
         flex-direction: column;
         background-size: 261vw;
         background-position:center;
+        position: relative;
 
         &__options{
-            width: 6em;
+            width: 100%;
             height: auto;
-            margin-left: 35px;
+            margin: 0;
             flex-direction: column;
-            left: 6%;
-            top: 14%;
+            left: 0;
             background-color: white;  
-            font-size: 10px;  
+            font-size: 10px; 
+            position: absolute; 
+            bottom: -100%;
+            top:100%;
+            z-index: 10;
+            
     }
 
     &__options *{

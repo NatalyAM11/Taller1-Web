@@ -6,6 +6,7 @@ const cstormiWorld=document.getElementById ('stormiWorld');
 
 const hamburgerBtn=document.getElementById ('hamburgerBtn');
 
+
 //Variables interaction
 const imgEye=document.getElementById ('imgEye');
 const nameOption=document.getElementById ('nameOption');
@@ -14,12 +15,11 @@ const nameOption=document.getElementById ('nameOption');
 
 ///////interaction nav responsive
 hamburgerBtn.addEventListener('click', ()=>{
-    let navOptions=document.getElementsByClassName ('nav__option');
+    let navOptions=document.querySelector('.nav__options');
 
-    for(var i=0; i<navOptions.length; i++){
-        navOptions[i].classList.toggle('nav__desaparecer');
-        console.log(i);
-    }
+    console.log(navOptions);
+    navOptions.classList.toggle('nav__desaparecer');
+  
 });
 
 
