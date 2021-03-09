@@ -911,6 +911,46 @@ button:hover {
   background-size: cover;
 }
 
+@media only screen and (max-width: 610px) {
+  .gallery {
+    background-color: #fcd4e1;
+    height: 25%;
+    /* cell number */
+  }
+  .gallery-cell {
+    width: 60%;
+    height: 300px;
+    margin-right: 10px;
+    counter-increment: gallery-cell;
+  }
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0);
+  }
+  .gallery .photo--1 {
+    background-position: center;
+    background-size: cover;
+  }
+  .gallery .photo--2 {
+    background-position: center;
+    background-size: cover;
+  }
+  .gallery .photo--3 {
+    background-size: cover;
+  }
+  .gallery .photo--4 {
+    background-position: center;
+    background-size: cover;
+  }
+  .gallery .photo--5 {
+    background-size: cover;
+  }
+}
+
 .advertising {
   background-image: url("../img/advertising.jpg");
   display: -webkit-box;

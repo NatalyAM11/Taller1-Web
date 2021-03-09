@@ -48,6 +48,63 @@
         background-size: cover;
     }
   }
+
+
+  //////////
+
+  //Media Query
+  @media only screen and (max-width:610px){
+    .gallery {
+        background-color: rgb(252, 212,225);
+    height: 25%;
+
+    &-cell {
+        width: 60%;
+        height: 300px;
+        margin-right: 10px;
+        counter-increment: gallery-cell;
+      }
+      
+      &-cell.is-selected {
+
+      }
+      
+      /* cell number */
+         &-cell:before {
+        display: block;
+        text-align: center;
+        content: counter(gallery-cell);
+        line-height: 200px;
+        font-size: 80px;
+        color: rgba(255, 255, 255, 0);
+      }
+
+    .photo--1{
+         background-position: center;
+        background-size: cover;
+    }
+
+    .photo--2{
+        background-position: center;
+        background-size: cover;
+    }
+
+    .photo--3{
+       
+        background-size: cover;
+    }
+
+    .photo--4{
+        background-position: center;
+        background-size: cover;
+    }
+
+    .photo--5{
+        
+        background-size: cover;
+    }
+  }
+  }
   
   
   
