@@ -544,7 +544,7 @@ button:hover {
 
 .details__img {
   width: 50%;
-  background-image: url("../img/makeupimg.jpg");
+  background-image: url("../img/makeup__img.jpg");
   background-size: cover;
   margin-left: 5%;
 }
