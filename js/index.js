@@ -1,8 +1,8 @@
 //variables
-const cperfectStorm=document.getElementById ('perfectStorm');
-const cbutterflyBae=document.getElementById ('butterflyBae');
-const cstormiWeather=document.getElementById ('stormiWeather');
-const cstormiWorld=document.getElementById ('stormiWorld');
+const cperfectStorm=document.querySelector('.perfectStorm');
+const cbutterflyBae=document.querySelector ('.butterflyBae');
+const cstormiWeather=document.querySelector ('.stormiWeather');
+const cstormiWorld=document.querySelector ('.stormiWorld');
 
 const hamburgerBtn=document.getElementById ('hamburgerBtn');
 
@@ -26,8 +26,25 @@ hamburgerBtn.addEventListener('click', ()=>{
 
 //////interaction section
 
+function handleInteractionClick(){
+    imgEye.src='./img/interaction1.png'; 
+    
+    cperfectStorm.src='./img/option1Selected.png';
+
+    cbutterflyBae.src='./img/option2.png';
+    cstormiWeather.src='./img/option3.png';
+    cstormiWorld.src='./img/option4.png';
+
+    //Change the product's name
+    nameOption.innerHTML='PERFECT STORM';
+}
+
+
+cperfectStorm.addEventListener('click', handleInteractionClick);
+
+
 //first option
-cperfectStorm.addEventListener('click', ()=>{
+/*cperfectStorm.addEventListener('click', ()=>{
     //change the image sample
     imgEye.src='./img/interaction1.png'; 
     
@@ -38,7 +55,7 @@ cperfectStorm.addEventListener('click', ()=>{
     cstormiWorld.src='./img/option4.png';
    
 
-});
+});*/
 
 //second option
 cbutterflyBae.addEventListener('click', ()=>{
@@ -51,9 +68,9 @@ cbutterflyBae.addEventListener('click', ()=>{
     cstormiWeather.src='./img/option3.png';
     cstormiWorld.src='./img/option4.png';
 
-   /* nameOption.('BUTTERFLY BAE');
-    console.log(nameOption.innerHTML('BUTTERFLY BAE'));*/
-   
+    //Change the product's name
+    nameOption.innerHTML='BUTTERFLY BAE';
+  
 });
 
 
@@ -67,7 +84,9 @@ cstormiWeather.addEventListener('click', ()=>{
    cperfectStorm.src='./img/option1.png';
    cbutterflyBae.src='./img/option2.png';
    cstormiWorld.src='./img/option4.png';
-  
+
+    //Change the product's name
+    nameOption.innerHTML='STORMI WEATHER'; 
 });
 
 //fourth option
@@ -80,8 +99,12 @@ cstormiWorld.addEventListener('click', ()=>{
    cperfectStorm.src='./img/option1.png';
    cbutterflyBae.src='./img/option2.png';
    cstormiWeather.src='./img/option3.png';
+
+    //Change the product's name
+    nameOption.innerHTML='STORMI WORLD';    
   
-});
+})
+
 
 
 

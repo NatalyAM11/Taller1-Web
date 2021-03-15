@@ -164,17 +164,10 @@ h4 {
   }
 }
 
-/*@media only screen and (max-width:677px){
-    .nav{
-        width: 100%;
-        height: 6em;
-        background-size: 180vw; 
-    }
-}*/
 @media only screen and (max-width: 610px) {
   .nav {
     width: 100%;
-    height: 6 em;
+    height: 5em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -182,7 +175,7 @@ h4 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-size: 261vw;
+    background-size: 189vw;
     background-position: center;
     position: relative;
   }
@@ -224,7 +217,7 @@ h4 {
   .nav__icon {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding-left: 10px;
+    padding-left: 8px;
   }
   .nav__desaparecer {
     display: none;
@@ -324,11 +317,28 @@ h4 {
           align-items: center;
 }
 
+.reasons__characteristics:nth-child(1) .reasons__img {
+  background-image: url("../img/img-C1.jpg");
+}
+
+.reasons__characteristics:nth-child(1) .reasons__text {
+  background-image: url("../img/fondo-C1.jpg");
+  background-size: cover;
+}
+
+.reasons__characteristics:nth-child(1) .reasons__img:hover {
+  background-image: url("../img/img-C1Hoover.jpg");
+}
+
 .reasons__characteristics:nth-child(2) {
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+}
+
+.reasons__characteristics:nth-child(2) .reasons__img {
+  background-image: url("../img/img-C2.jpg");
 }
 
 .reasons__characteristics:nth-child(2) .reasons__text {
@@ -337,17 +347,22 @@ h4 {
 }
 
 .reasons__characteristics:nth-child(2) .reasons__img:hover {
-  src: url("../img/fondo-C3.jpg");
+  background-image: url("../img/img-C2Hoover.jpg");
 }
 
-.reasons__characteristics:nth-child(1) .reasons__text {
-  background-image: url("../img/fondo-C1.jpg");
+.reasons__characteristics:nth-child(3) .reasons__img {
+  background-image: url("../img/img-C3.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 .reasons__characteristics:nth-child(3) .reasons__text {
   background-image: url("../img/fondo-C3.jpg");
   background-size: cover;
+}
+
+.reasons__characteristics:nth-child(3) .reasons__img:hover {
+  background-image: url("../img/img-C3Hoover.jpg");
 }
 
 .reasons__img {
@@ -544,7 +559,7 @@ button:hover {
 
 .details__img {
   width: 50%;
-  background-image: url("../img/makeup__img.jpg");
+  background-image: url("../img/imgProduct.png");
   background-size: cover;
   margin-left: 5%;
 }

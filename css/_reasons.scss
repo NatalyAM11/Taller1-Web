@@ -22,30 +22,60 @@
         }
     }
 
+//Defino los fondos de cada hijo de los div
+
+//div 1
+&__characteristics:nth-child(1){
+
+    .reasons__img{
+        background-image: url("../img/img-C1.jpg");
+    }
+ 
+    .reasons__text{
+        background-image: url("../img/fondo-C1.jpg");
+        background-size: cover;
+    }
+
+    .reasons__img:hover{
+        background-image: url("../img/img-C1Hoover.jpg");
+    }
+}
+
+
+//div 2
     &__characteristics:nth-child(2){
         flex-direction: column-reverse;
-     
+
+        .reasons__img{
+            background-image: url("../img/img-C2.jpg");
+        }
+
         .reasons__text{
             background-image: url("../img/fondo-C2.jpg");
             background-size: cover;
         }
 
         .reasons__img:hover{
-            src: url("../img/fondo-C3.jpg");
+            background-image: url("../img/img-C2Hoover.jpg");
         }
     }
 
-    &__characteristics:nth-child(1){
-        .reasons__text{
-            background-image: url("../img/fondo-C1.jpg");
-            background-size: cover;
-        }
-    }
-
+//div 3
     &__characteristics:nth-child(3){
+
+        .reasons__img{
+            background-image: url("../img/img-C3.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
         .reasons__text{
             background-image: url("../img/fondo-C3.jpg");
             background-size: cover;
+        }
+
+        .reasons__img:hover{
+            background-image: url("../img/img-C3Hoover.jpg");
         }
     }
 
