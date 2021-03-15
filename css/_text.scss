@@ -1,0 +1,53 @@
+.text{
+    display: flex;
+    justify-content: center;
+    color: rgb(66, 4, 71);
+
+    &--reasons{
+        color: rgb(255, 241, 241);
+        padding: 0% 5%;   
+    }
+
+    &--product{
+        width:35%;
+        margin: 0px;
+     }
+
+    &--inscription{
+        margin: 6px 0px;
+     }
+}
+
+
+///////////////////
+//Media query: 610px
+
+@media only screen and (max-width:610px){
+
+    .text{
+        display: flex;
+        justify-content: center;
+        color: rgb(66, 4, 71);
+    
+        &--reasons{
+            color: rgb(255, 241, 241);
+            padding: 0% 5%;
+            
+        }
+    
+        &--product{
+            width:75%;
+            margin: 0px;
+         }
+    
+        &--inscription{
+            margin: 6px 0px;
+         }
+    }
+    
+}
+
+
+
+
+

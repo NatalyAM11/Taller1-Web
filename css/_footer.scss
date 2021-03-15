@@ -6,16 +6,13 @@
     padding: 4% 5%;
 
     &__icons{
-        width: auto;
+        width: 10em;
         display: flex;
         margin-bottom: 20px;
         box-sizing: content-box;
-        justify-content: center;
+        justify-content: space-between;
     }
 
-    &__icons *{
-        padding-left: 20px;
-    }
 
     &__text{
         color: white;
@@ -25,9 +22,10 @@
 
 
 ///////////////////
+//Media query: 610px
 
-//Media query
 @media only screen and (max-width:610px){
+
     .footer{
         background-color:  rgb(182,116,170);
         display: flex;
@@ -36,21 +34,17 @@
         padding: 7% 5%;
     
         &__icons{
-            width: auto;
+            width: 8em;
             display: flex;
             margin-bottom: 20px;
             box-sizing: content-box;
-            justify-content: center;
-        }
-    
-        &__icons *{
-            padding-left: 20px;
+            justify-content: space-between;
         }
     
         &__text{
             color: white;
             margin: 0px;
-            font-size: x-small;
+            font-size:x-small;
         }
     }
 }

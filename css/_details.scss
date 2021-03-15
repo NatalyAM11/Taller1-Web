@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-evenly;
 
-
     &__img{
         width: 50%;
         background-image: url("../img/imgProduct.png");
@@ -33,8 +32,11 @@
 }
 
 
+///////////////////
+//Media query: 1125px
 
 @media only screen and (max-width:1125px){
+    
     .details{
         width: 100%;
         margin-top: 80px;
@@ -51,10 +53,6 @@
             width: 65%;
             padding: 0% 0%;
             box-sizing: border-box;
-           /* display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;*/
         }
     
         &__list{

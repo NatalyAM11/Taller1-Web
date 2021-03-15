@@ -1,0 +1,11 @@
+//media query: 610px
+@media only screen and (max-width:610px){
+    .logo{
+        display: none;
+    }
+
+    .logo--responsive{
+        width: 19%;
+    }
+
+}

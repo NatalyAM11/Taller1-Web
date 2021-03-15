@@ -6,14 +6,15 @@
 
 
 ///////////////////
+//Media query: 790px
 
-//Media query 
 @media only screen and (max-width:790px){
     .logoStormi--banner{
         width: 23em;
     }
 }
 
+//360px
 @media only screen and (max-width:360px){
     .logoStormi--banner{
         width: 21em;

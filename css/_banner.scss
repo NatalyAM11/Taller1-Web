@@ -20,9 +20,10 @@
 
 
 ///////////////////
+//Media query: 1125px
 
-//Media query 
 @media only screen and (max-width:1125px){
+
     .banner{
         background-position: center;
         background-size: cover;
@@ -30,7 +31,9 @@
     }
 }
 
+//819px
 @media only screen and (max-width:819px){
+
     .banner{
         height: 30em;
         font-size: 11px;
@@ -42,17 +45,17 @@
     }
 }
 
+//610px
 @media only screen and (max-width:610px){
+
     .banner{
         font-size: 9px;
 
-             
     &__section{
         right: 10%;
 
         }   
     }
-
 }
 
 

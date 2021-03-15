@@ -1,8 +1,9 @@
-//tipografias
+//fonts
 @import url('https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
 
+//Color
 $violet-color:rgb(66, 4, 71);
 
 
@@ -11,15 +12,15 @@ body{
     background-color: rgb(251,241,249);
 }
 
-.todo{
-    height: 100%;
-}
 
+//general text
 p{
     font-family: Manrope;
     color: rgb(66, 4, 71);
 }
 
+
+//titles
 h1{
     font-family: magra;
     color: $violet-color;
@@ -40,7 +41,9 @@ h4{
 
 //scss
 @import '_title';
+@import '_text';
 @import '_nav';
+@import '_logo';
 @import '_banner';
 @import '_reasons';
 @import '_product';
@@ -55,51 +58,8 @@ h4{
 @import '_footer';
 @import '_logoStormi';
 @import '_video';
+@import '_input';
 
-.text{
-    display: flex;
-    justify-content: center;
-    color: rgb(66, 4, 71);
-}
-
-.text--reasons{
-    color: rgb(255, 241, 241);
-    padding: 0% 5%;
-    
-}
-
-.text--product{
-   width:35%;
-   margin: 0px;
-}
-
-.text--inscription{
-    margin: 6px 0px;
- }
-
-.input{
-    border-radius: 5px;
-    font-family: Manrope;
-    padding: 12px 10%;
-    margin-bottom: 10px;
-    color: rgb(182,116,170);
-}
-
-
-@media only screen and (max-width:610px){
-    .logo{
-        display: none;
-    }
-
-    .logo--responsive{
-        width: 20%;
-    }
-
-    .text--product{
-        width:75%;
-        margin: 0px;
-     }
-}
 
 
 
