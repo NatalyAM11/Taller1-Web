@@ -81,12 +81,12 @@
 
         &__options{
             width: 100%;
-            height: auto;
+            height: 9.5em;
             margin: 0;
             flex-direction: column;
             left: 0;
             background-color: white;  
-            font-size: 10px; 
+            font-size: 15px; 
             position: absolute; 
             bottom: -100%;
             top:100%;
@@ -95,7 +95,7 @@
     }
 
     &__options *{
-        padding-bottom: 3px;
+        padding-bottom: 3.5px;
     }
        
     //nav responsive
