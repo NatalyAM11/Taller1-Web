@@ -1,0 +1,99 @@
+.modal{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);  
+    z-index: 5;
+    opacity: 1;
+    transition: opacity .5s ease;
+     
+    &__content{
+        height: 510px;
+        padding: 30px;
+        display: flex;
+        background-image: url("../img/modalBackground.jpg");
+        margin: 6% auto;
+        width: 85%;      
+    }
+
+    &__img{
+        width: 25em;
+        height: 25em;
+        padding: 50px 0px;
+        background-image: url("../img/modal_img.jpg"); 
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__btn{
+        position: fixed;
+        right: 80px;
+    }
+
+    &__text{
+        width: 50%;
+        padding: 160px 0px;
+        padding-left: 20px;
+    }
+
+    &__h4{
+        margin: 0px
+    }
+}
+
+
+///////////////////
+//Media query: 1078px
+
+@media only screen and (max-width:610px){
+
+    .modal{
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .5);  
+        z-index: 5;
+        opacity: 1;
+        transition: opacity .5s ease;
+         
+        &__content{
+            height: 450px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            margin: 6% auto;
+            width: 85%;      
+        }
+    
+        &__img{
+            width: 25em;
+            height: 25em;
+            padding: 50px 0px;
+            background-size: cover;
+            display: none;
+        }
+    
+        &__btn{
+            position: fixed;
+            right: 30px;
+        }
+    
+        &__text{
+            width: 80%;
+            padding: 60px 0px;
+            padding-left: 20px;
+        }
+    
+        &__h4{
+            margin: 0px
+        }
+    }
+    
+
+
+
+}

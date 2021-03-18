@@ -4,6 +4,7 @@
 body {
   margin: 0px;
   background-color: #fbf1f9;
+  overflow: hidden;
 }
 
 p {
@@ -60,6 +61,10 @@ h4 {
 
 .title--banner {
   color: white;
+  margin: 0px;
+}
+
+.title--modal {
   margin: 0px;
 }
 
@@ -1263,5 +1268,100 @@ button:hover {
   padding: 12px 10%;
   margin-bottom: 10px;
   color: #b674aa;
+}
+
+.modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.modal__content {
+  height: 510px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../img/modalBackground.jpg");
+  margin: 6% auto;
+  width: 85%;
+}
+
+.modal__img {
+  width: 25em;
+  height: 25em;
+  padding: 50px 0px;
+  background-image: url("../img/modal_img.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.modal__btn {
+  position: fixed;
+  right: 80px;
+}
+
+.modal__text {
+  width: 50%;
+  padding: 160px 0px;
+  padding-left: 20px;
+}
+
+.modal__h4 {
+  margin: 0px;
+}
+
+@media only screen and (max-width: 610px) {
+  .modal {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    opacity: 1;
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+  }
+  .modal__content {
+    height: 450px;
+    padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 6% auto;
+    width: 85%;
+  }
+  .modal__img {
+    width: 25em;
+    height: 25em;
+    padding: 50px 0px;
+    background-size: cover;
+    display: none;
+  }
+  .modal__btn {
+    position: fixed;
+    right: 30px;
+  }
+  .modal__text {
+    width: 80%;
+    padding: 60px 0px;
+    padding-left: 20px;
+  }
+  .modal__h4 {
+    margin: 0px;
+  }
 }
 /*# sourceMappingURL=index.css.map */
