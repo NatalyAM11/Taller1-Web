@@ -15,7 +15,9 @@
         padding: 30px;
         display: flex;
         background-image: url("../img/modalBackground.jpg");
-         margin: 4% auto;     
+        margin: 4% auto;
+        transition: transform .5s ease;
+        //transform: translate(0px, -700px);     
     }
 
     &__img{
@@ -110,7 +112,7 @@
     
         &__text{
             width: 80%;
-            padding: 40px 0px;
+            padding: 35px 0px;
             padding-left: 20px;
         }
     

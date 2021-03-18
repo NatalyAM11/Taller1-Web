@@ -6,34 +6,40 @@ const cstormiWorld=document.querySelector ('.stormiWorld');
 const hamburgerBtn=document.querySelector ('.nav__hamburger');
 const interactionLi=document.querySelectorAll ('.interaction__li');
 const modal=document.querySelector ('.modal');
+const modalContent=document.querySelector ('.modal__content');
 const modalBtn=document.querySelector ('.modal__btn');
+const navOptions=document.querySelector('.nav__options');
 
 //variables interaction
-
 const imgEye=document.querySelector ('.interaction__eye');
 const nameOption=document.querySelector('.interaction__name');
 
 
-
 ///////interaction nav responsive
+//effect when the nav appear
+function handleNavEffect(){
+    navOptions.style.opacity=1;
+}
 
 hamburgerBtn.addEventListener('click', ()=>{
-    let navOptions=document.querySelector('.nav__options');
-
+    
     navOptions.classList.toggle('nav__desaparecer');
-  
+    
+    navOptions.style.opacity=0.6;
+    setTimeout(handleNavEffect,80);
 });
+
+
 
 
 //////interaction section
 
-
 //effect when the image change
-function handleInteractionEffect (){
+function handleInteractionEffect(){
     imgEye.style.opacity=1; 
 }
 
-
+//ForEach
 function handleForEach (element, i){
 
     function handleInteractionClick (){

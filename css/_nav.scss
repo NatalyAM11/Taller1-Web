@@ -84,7 +84,9 @@
             position: absolute; 
             bottom: -100%;
             top:100%;
-            z-index: 10;            
+            z-index: 10;
+            opacity: 0;  
+            transition: opacity .5s ease;            
     }
 
         &__options *{
@@ -97,7 +99,7 @@
             height: 100%;
             display: flex;
             justify-content:space-evenly;
-            align-items: center;     
+            align-items: center;   
         }
 
         &__divIcons{

@@ -236,6 +236,9 @@ h4 {
     bottom: -100%;
     top: 100%;
     z-index: 10;
+    opacity: 0;
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease;
   }
   .nav__options * {
     padding-bottom: 3.5px;
@@ -1182,7 +1185,9 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 4% 5%;
+  padding: 0% 5%;
+  padding-bottom: 80px;
+  padding-top: 50px;
 }
 
 .footer__icons {
@@ -1216,7 +1221,9 @@ button:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 7% 5%;
+    padding: 0% 5%;
+    padding-bottom: 60px;
+    padding-top: 30px;
   }
   .footer__icons {
     width: 8em;
@@ -1233,7 +1240,7 @@ button:hover {
   .footer__text {
     color: white;
     margin: 0px;
-    font-size: x-small;
+    font-size: 12.5px;
   }
 }
 
@@ -1295,6 +1302,10 @@ button:hover {
   display: flex;
   background-image: url("../img/modalBackground.jpg");
   margin: 4% auto;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
 .modal__img {
@@ -1379,7 +1390,7 @@ button:hover {
   }
   .modal__text {
     width: 80%;
-    padding: 40px 0px;
+    padding: 35px 0px;
     padding-left: 20px;
   }
   .modal__h4 {
