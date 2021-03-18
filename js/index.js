@@ -25,16 +25,29 @@ hamburgerBtn.addEventListener('click', ()=>{
 });
 
 
-/////interaction section
+//////interaction section
+
+
+//effect when the image change
+function handleInteractionEffect (){
+    imgEye.style.opacity=1; 
+}
+
+
 function handleForEach (element, i){
 
     function handleInteractionClick (){
-        console.log(element,i); 
+        //console.log(element,i); 
+
+     //effect
+        imgEye.style.opacity=0.5;
+        setTimeout(handleInteractionEffect,150);
+        
 
         //options interaction
         switch(i){
             case 0:
-                imgEye.src='./img/interaction1.png'; 
+                imgEye.src='./img/interaction1.png';
     
                 cperfectStorm.src='./img/option1Selected.png';
             

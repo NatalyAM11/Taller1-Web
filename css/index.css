@@ -810,6 +810,9 @@ button:hover {
 
 .interaction__eye {
   width: 80%;
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
 }
 
 .interaction__sample {
@@ -1284,41 +1287,60 @@ button:hover {
 }
 
 .modal__content {
+  width: 70%;
   height: 510px;
   padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-image: url("../img/modalBackground.jpg");
-  margin: 6% auto;
-  width: 85%;
+  margin: 4% auto;
 }
 
 .modal__img {
-  width: 25em;
-  height: 25em;
+  width: 45%;
   padding: 50px 0px;
   background-image: url("../img/modal_img.jpg");
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .modal__btn {
   position: fixed;
-  right: 80px;
+  right: 15%;
 }
 
 .modal__text {
   width: 50%;
-  padding: 160px 0px;
-  padding-left: 20px;
+  padding: 18% 0px;
+  padding-left: 40px;
 }
 
 .modal__h4 {
   margin: 0px;
 }
 
-@media only screen and (max-width: 610px) {
+.modal__bigTitle {
+  font-size: 60px;
+  margin: 0px;
+}
+
+@media only screen and (max-width: 1125px) {
+  .modal__text {
+    width: 55%;
+    padding: 13% 0px;
+    padding-left: 40px;
+  }
+  .modal__bigTitle {
+    margin: 0px;
+  }
+  .modal__img {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 719px) {
   .modal {
     position: fixed;
     left: 0px;
@@ -1332,7 +1354,8 @@ button:hover {
     transition: opacity .5s ease;
   }
   .modal__content {
-    height: 450px;
+    width: 70%;
+    height: 320px;
     padding: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1341,8 +1364,7 @@ button:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 6% auto;
-    width: 85%;
+    margin-top: 70px;
   }
   .modal__img {
     width: 25em;
@@ -1353,14 +1375,19 @@ button:hover {
   }
   .modal__btn {
     position: fixed;
-    right: 30px;
+    right: 15%;
   }
   .modal__text {
     width: 80%;
-    padding: 60px 0px;
+    padding: 40px 0px;
     padding-left: 20px;
   }
   .modal__h4 {
+    margin: 0px;
+    font-size: 15px;
+  }
+  .modal__bigTitle {
+    font-size: 40px;
     margin: 0px;
   }
 }

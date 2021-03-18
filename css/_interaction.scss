@@ -51,6 +51,8 @@
     
     &__eye{
         width: 80%;
+        opacity: 1;
+        transition: opacity .5s ease;
     }
 
     &__sample{
