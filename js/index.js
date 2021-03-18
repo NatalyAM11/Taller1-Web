@@ -15,6 +15,14 @@ const imgEye=document.querySelector ('.interaction__eye');
 const nameOption=document.querySelector('.interaction__name');
 
 
+//modal effect
+function effect(){
+    modalContent.style.transform = 'translate (0px, 0px)';
+    modal.style.opacity=1;
+}
+
+setTimeout(effect,80);
+
 ///////interaction nav responsive
 //effect when the nav appear
 function handleNavEffect(){

@@ -38,6 +38,7 @@ h4 {
           justify-content: center;
   font-size: 30px;
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .title--reasons {
@@ -68,6 +69,10 @@ h4 {
   margin: 0px;
 }
 
+.title--interaction {
+  font-size: 30px;
+}
+
 @media only screen and (max-width: 610px) {
   .title {
     display: -webkit-box;
@@ -89,6 +94,10 @@ h4 {
   .title--main {
     font-size: 58px;
     margin: 0px;
+  }
+  .title--interaction {
+    margin: 0px;
+    font-size: 24px;
   }
 }
 
@@ -342,7 +351,7 @@ h4 {
 }
 
 .reasons {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .reasons__div {
@@ -440,6 +449,9 @@ h4 {
 }
 
 @media only screen and (max-width: 917px) {
+  .reasons {
+    margin-top: 80px;
+  }
   .reasons__div {
     width: 100%;
     height: 120vh;
@@ -616,7 +628,7 @@ button:hover {
 
 .details {
   width: 100%;
-  margin-top: 80px;
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -749,6 +761,7 @@ button:hover {
   width: 44%;
   background-image: url("./../img/makeup__img.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -835,9 +848,10 @@ button:hover {
   }
   .interaction__img {
     width: 100%;
-    height: 60em;
+    height: 55em;
     background-image: url("./../img/makeup__img.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
   }
   .interaction__section {
@@ -900,7 +914,7 @@ button:hover {
     padding-bottom: 15px;
   }
   .interaction__eye {
-    width: 80%;
+    width: 68%;
   }
   .interaction__sample {
     width: 100%;
@@ -921,6 +935,26 @@ button:hover {
   }
 }
 
+@media only screen and (max-width: 360px) {
+  .interaction {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .interaction__img {
+    width: 100%;
+    height: 30em;
+    background-image: url("./../img/makeup__img.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 .review {
   height: 50%;
   background-color: #fcd4e1;
@@ -934,7 +968,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 16%;
+  padding-top: 19%;
   padding-bottom: 5%;
   position: relative;
 }
@@ -1288,7 +1322,7 @@ button:hover {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 5;
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: opacity .5s ease;
   transition: opacity .5s ease;
 }
@@ -1301,11 +1335,12 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   background-image: url("../img/modalBackground.jpg");
-  margin: 4% auto;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
+  margin: 3% auto;
+  -webkit-transition: -webkit-transform .5s ease-out;
+  transition: -webkit-transform .5s ease-out;
+  transition: transform .5s ease-out;
+  transition: transform .5s ease-out, -webkit-transform .5s ease-out;
+  border-radius: 5px;
 }
 
 .modal__img {
@@ -1315,6 +1350,7 @@ button:hover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 5px;
 }
 
 .modal__btn {
@@ -1351,6 +1387,12 @@ button:hover {
   }
 }
 
+@media only screen and (max-width: 982px) {
+  .modal__img {
+    background-position: -80px;
+  }
+}
+
 @media only screen and (max-width: 719px) {
   .modal {
     position: fixed;
@@ -1360,13 +1402,13 @@ button:hover {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 5;
-    opacity: 1;
+    opacity: 0;
     -webkit-transition: opacity .5s ease;
     transition: opacity .5s ease;
   }
   .modal__content {
     width: 70%;
-    height: 320px;
+    height: 290px;
     padding: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1375,7 +1417,8 @@ button:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 70px;
+    margin-top: 160px;
+    border-radius: 5px;
   }
   .modal__img {
     width: 25em;
@@ -1390,7 +1433,7 @@ button:hover {
   }
   .modal__text {
     width: 80%;
-    padding: 35px 0px;
+    padding: 20px 0px;
     padding-left: 20px;
   }
   .modal__h4 {

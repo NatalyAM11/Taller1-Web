@@ -3,36 +3,44 @@
     justify-content: center; 
     font-size: 30px;
     margin-bottom: 40px;
-}
+    margin-top: 20px;
 
-.title--reasons{
-    color: white;
-    margin: 0px;
-}
+    &--reasons{
+        color: white;
+        margin: 0px;
+    }
 
-.title--list{
-    margin: 0px 10px;
-}
+    &--list{
+        margin: 0px 10px;
+    }
 
-.title--advertising{
+    
+    &--advertising{
     font-size: 40px;
     margin: 0px;
+    }
+
+    &--main{
+        font-size: 60px;
+        margin: 0px;
+    }
+
+    &--banner{
+        color: white;
+        margin: 0px;
+    }
+
+    &--modal{
+        margin: 0px;
+    }
+
+    &--interaction{
+        font-size: 30px;
+    }
+
 }
 
-.title--main{
-    font-size: 60px;
-    margin: 0px;
-}
 
-.title--banner{
-    color: white;
-    margin: 0px;
-}
-
-
-.title--modal{
-    margin: 0px;
-}
 
 ///////////////////
 
@@ -43,20 +51,25 @@
         justify-content: center; 
         font-size: 23px;
         margin-bottom: 40px;
-    }
+         
+        &--list{
+            font-size: 16px;
+        }
 
-    .title--list{
-        font-size: 16px;
-    }
-
-    .title--advertising{
-        font-size: 28px;
-        margin: 0px;
-    }
-    
-    .title--main{
-        font-size: 58px;
-        margin: 0px;
+        &--advertising{
+            font-size: 28px;
+            margin: 0px;
+        }
+        
+        &--main{
+            font-size: 58px;
+            margin: 0px;
+        }
+        
+        &--interaction{
+            margin: 0px;
+            font-size: 24px;
+        }
     }
 }
     

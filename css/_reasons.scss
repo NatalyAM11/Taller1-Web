@@ -1,5 +1,5 @@
 .reasons{
-    margin-top: 100px;
+    margin-top: 150px;
 
     &__div{
         width: 100%;
@@ -101,6 +101,7 @@
 
 @media only screen and (max-width:917px){
     .reasons{
+        margin-top: 80px;
     
         &__div{
             width: 100%;
@@ -156,6 +157,7 @@
     }
 }
     
+
 //610px
 @media only screen and (max-width:610px){
     .reasons{

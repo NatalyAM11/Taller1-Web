@@ -6,7 +6,7 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, .5);  
     z-index: 5;
-    opacity: 1;
+    opacity: 0;
     transition: opacity .5s ease;
      
     &__content{
@@ -15,9 +15,9 @@
         padding: 30px;
         display: flex;
         background-image: url("../img/modalBackground.jpg");
-        margin: 4% auto;
-        transition: transform .5s ease;
-        //transform: translate(0px, -700px);     
+        margin: 3% auto;
+        transition: transform .5s ease-out;
+        border-radius: 5px;     
     }
 
     &__img{
@@ -27,6 +27,7 @@
         background-position:center;
         background-size: cover;
         background-repeat: no-repeat;
+        border-radius: 5px;
     }
 
     &__btn{
@@ -74,7 +75,17 @@
 }
 
 
-//Media query: 719px
+//982px
+@media only screen and (max-width:982px){
+    .modal{
+        &__img{
+            background-position: -80px;
+        }
+    }
+}
+
+
+//719px
 @media only screen and (max-width:719px){
 
     .modal{
@@ -85,16 +96,17 @@
         height: 100vh;
         background-color: rgba(0, 0, 0, .5);  
         z-index: 5;
-        opacity: 1;
+        opacity: 0;
         transition: opacity .5s ease;
          
         &__content{
             width: 70%;
-            height: 320px;
+            height: 290px;
             padding: 30px;
             display: flex;
             flex-direction: column;
-            margin-top: 70px;   
+            margin-top: 160px;  
+            border-radius: 5px; 
         }
     
         &__img{
@@ -112,7 +124,7 @@
     
         &__text{
             width: 80%;
-            padding: 35px 0px;
+            padding: 20px 0px;
             padding-left: 20px;
         }
     
