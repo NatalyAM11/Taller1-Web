@@ -3,9 +3,12 @@
     display: flex;
     align-items: center;
     
-    
+    &__a{
+        text-decoration: none;
+    }
+
     &__information{
-        padding: 35px;
+        padding: 60px;
     }
 
     &__h4{
@@ -24,13 +27,13 @@
         background-image: url("../img/advertising.jpg");
         background-repeat:no-repeat;
         background-position: left;
-        background-size: 205vw;
+        background-size: 248vw;
         display: flex;
         align-items: center;
         
         
         &__information{
-            padding: 30px;
+            padding: 60px;
         }
     
         &__h4{
@@ -48,14 +51,15 @@
         background-image: url("../img/advertising.jpg");
         background-repeat:no-repeat;
         background-position: left;
-        background-size: 560vw;
+        background-size: 520vw;
         display: flex;
         align-items: center;
         
         
         &__information{
-            padding: 30px;
-            width: 50%;
+            padding: 40px 0px;
+            padding-left: 45px;
+            width: 75%;
         }
     
         &__h4{

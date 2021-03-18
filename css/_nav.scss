@@ -110,6 +110,17 @@
             padding-left: 8px;
         }
 
+        &__hamburger{
+            background-image: url("../img/hIcon.png");
+            background-size: cover;
+            width: 36px;
+            height: 36px;
+        }
+
+        &__hamburger:hover{
+            background-image: url("../img/hIcon_hover.png");
+        }
+
         &__desaparecer{
             display: none;
         }

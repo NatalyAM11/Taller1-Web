@@ -17,7 +17,7 @@
     <nav class="nav">
 
         <div class="nav__responsive">
-            <img id="hamburgerBtn" class="nav__hamburger" src="./img/hIcon.png">
+            <div class="nav__hamburger"></div>
             <img class="logo--responsive" src="./img/logo.png">
             <div class="nav__divIconsResponsive">
                 <img class="nav__icon" src="./img/userIcon.png">
@@ -184,15 +184,18 @@
 
             <div class="interaction__options">
                 <ul class="interaction__list">
-                    <li class="interaction__li"><img class="interaction__item perfectStorm" src="./img/option1Selected.png"></li>
-                    <li class="interaction__li"><img class="interaction__item butterflyBae" src="./img/option2.png"></li>
-                    <li class="interaction__li"><img class="interaction__item stormiWeather" src="./img/option3.png"></li>
+                    <li class="interaction__li"><img class="interaction__item perfectStorm"
+                            src="./img/option1Selected.png"></li>
+                    <li class="interaction__li"><img class="interaction__item butterflyBae" src="./img/option2.png">
+                    </li>
+                    <li class="interaction__li"><img class="interaction__item stormiWeather" src="./img/option3.png">
+                    </li>
                     <li class="interaction__li"><img class="interaction__item stormiWorld" src="./img/option4.png"></li>
                 </ul>
 
                 <div class="interaction__sample">
                     <h4 id="nameOption" class="interaction__name">PERFECT STORM</h4>
-                    <img id="imgEye" class= "interaction__eye" src="./img/interaction1.png">
+                    <img class="interaction__eye" src="./img/interaction1.png">
                 </div>
 
             </div>
@@ -202,10 +205,12 @@
     <article class="review">
         <div class="review__divClouds">
             <img class="review__clouds" src="./img/cloudLeft.png">
-            <img class="review__clouds"src="./img/cloudRight.png">
+            <img class="review__clouds" src="./img/cloudRight.png">
         </div>
         <h1 class="title">REVIEWS AND PHOTOS</h1>
-        <iframe class="video" src="https://www.youtube.com/embed/9zx5YpUvI_k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
+        <iframe class="video" src="https://www.youtube.com/embed/9zx5YpUvI_k" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
     </article>
 
     <article class="gallery">
@@ -219,13 +224,15 @@
     </article>
 
     <article class="advertising">
-
-        <section class="advertising__information">
-            <h1 class="title--advertising">IT’S ALMOST</h1>
-            <h1 class="title--main">KYLIE’S BIRTHDAY</h1>
-            <h4 class="advertising__h4">get ready for kylie's 22nd birthday collection.</h4>
-            <p>During the week of August 10 there will be discounts throughout the KYLIE COSMETICS store.</p>
-        </section>
+        <a class="advertising__a" href="https://www.kyliecosmetics.com/collections/sale-1" target="_blank">
+            <section class="advertising__information">
+                <h1 class="title--advertising">IT’S ALMOST</h1>
+                <h1 class="title--main">KYLIE’S BIRTHDAY</h1>
+                <h4 class="advertising__h4">get ready for kylie's 22nd birthday collection.</h4>
+                <p class="advertisin__p">During the week of August 10 there will be discounts throughout the KYLIE
+                    COSMETICS store.</p>
+            </section>
+        </a>
 
     </article>
 
@@ -258,4 +265,3 @@
 
 <script src="./path/to/flickity.pkgd.min.js"></script>
 <script src="./js/index.js"></script>
-<script src="./components/makeupComponent.js"></script>

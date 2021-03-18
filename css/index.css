@@ -256,6 +256,15 @@ h4 {
             box-sizing: border-box;
     padding-left: 8px;
   }
+  .nav__hamburger {
+    background-image: url("../img/hIcon.png");
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+  }
+  .nav__hamburger:hover {
+    background-image: url("../img/hIcon_hover.png");
+  }
   .nav__desaparecer {
     display: none;
   }
@@ -1032,8 +1041,12 @@ button:hover {
           align-items: center;
 }
 
+.advertising__a {
+  text-decoration: none;
+}
+
 .advertising__information {
-  padding: 35px;
+  padding: 60px;
 }
 
 .advertising__h4 {
@@ -1045,7 +1058,7 @@ button:hover {
     background-image: url("../img/advertising.jpg");
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 205vw;
+    background-size: 248vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1054,7 +1067,7 @@ button:hover {
             align-items: center;
   }
   .advertising__information {
-    padding: 30px;
+    padding: 60px;
   }
   .advertising__h4 {
     margin: 0px;
@@ -1066,7 +1079,7 @@ button:hover {
     background-image: url("../img/advertising.jpg");
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 560vw;
+    background-size: 520vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1075,8 +1088,9 @@ button:hover {
             align-items: center;
   }
   .advertising__information {
-    padding: 30px;
-    width: 50%;
+    padding: 40px 0px;
+    padding-left: 45px;
+    width: 75%;
   }
   .advertising__h4 {
     margin: 0px;
