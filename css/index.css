@@ -1376,8 +1376,6 @@ button:hover {
     width: 55%;
     padding: 13% 0px;
     padding-left: 40px;
-    -webkit-transition: opacity .5s ease;
-    transition: opacity .5s ease;
   }
   .modal__bigTitle {
     margin: 0px;
@@ -1419,7 +1417,7 @@ button:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 160px;
+    margin-top: 108px;
     border-radius: 5px;
   }
   .modal__img {
