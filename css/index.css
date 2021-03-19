@@ -227,7 +227,7 @@ h4 {
         -ms-flex-direction: column;
             flex-direction: column;
     background-size: 189vw;
-    background-position: center;
+    background-position: -140px;
     position: relative;
   }
   .nav__options {
@@ -282,7 +282,7 @@ h4 {
   .nav__hamburger:hover {
     background-image: url("../img/hIcon_hover.png");
   }
-  .nav__desaparecer {
+  .nav__disappear {
     display: none;
   }
 }
@@ -849,7 +849,6 @@ button:hover {
   .interaction__img {
     width: 100%;
     height: 55em;
-    background-image: url("./../img/makeup__img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -949,7 +948,6 @@ button:hover {
   .interaction__img {
     width: 100%;
     height: 30em;
-    background-image: url("./../img/makeup__img.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -1274,7 +1272,7 @@ button:hover {
   .footer__text {
     color: white;
     margin: 0px;
-    font-size: 12.5px;
+    font-size: 10px;
   }
 }
 
@@ -1378,18 +1376,22 @@ button:hover {
     width: 55%;
     padding: 13% 0px;
     padding-left: 40px;
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease;
   }
   .modal__bigTitle {
     margin: 0px;
   }
   .modal__img {
-    width: 45%;
+    width: 280px;
+    background-position: -60px;
   }
 }
 
 @media only screen and (max-width: 982px) {
   .modal__img {
-    background-position: -80px;
+    width: 280px;
+    background-position: -60px;
   }
 }
 
@@ -1421,7 +1423,7 @@ button:hover {
     border-radius: 5px;
   }
   .modal__img {
-    width: 25em;
+    width: 280px;
     height: 25em;
     padding: 50px 0px;
     background-size: cover;

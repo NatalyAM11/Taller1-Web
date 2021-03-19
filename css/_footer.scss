@@ -1,3 +1,4 @@
+
 .footer{
     background-color:  rgb(182,116,170);
     display: flex;
@@ -25,7 +26,6 @@
 
 ///////////////////
 //Media query: 610px
-
 @media only screen and (max-width:610px){
 
     .footer{
@@ -48,7 +48,7 @@
         &__text{
             color: white;
             margin: 0px;
-            font-size:12.5px;
+            font-size:10px;
         }
     }
 }

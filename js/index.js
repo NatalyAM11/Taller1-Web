@@ -1,21 +1,26 @@
-//variables
+//varaibles modal
+const modal=document.querySelector ('.modal');
+const modalContent=document.querySelector ('.modal__content');
+const modalBtn=document.querySelector ('.modal__btn');
+
+
+const navOptions=document.querySelector('.nav__options');
+const navD=document.querySelector('.nav__desaparecer');
+
+//variables interaction
+const imgEye=document.querySelector ('.interaction__eye');
+const nameOption=document.querySelector('.interaction__name');
+const interactionLi=document.querySelectorAll ('.interaction__li');
 const cperfectStorm=document.querySelector('.perfectStorm');
 const cbutterflyBae=document.querySelector ('.butterflyBae');
 const cstormiWeather=document.querySelector ('.stormiWeather');
 const cstormiWorld=document.querySelector ('.stormiWorld');
 const hamburgerBtn=document.querySelector ('.nav__hamburger');
-const interactionLi=document.querySelectorAll ('.interaction__li');
-const modal=document.querySelector ('.modal');
-const modalContent=document.querySelector ('.modal__content');
-const modalBtn=document.querySelector ('.modal__btn');
-const navOptions=document.querySelector('.nav__options');
-
-//variables interaction
-const imgEye=document.querySelector ('.interaction__eye');
-const nameOption=document.querySelector('.interaction__name');
 
 
-//modal effect
+
+////////////modal effect
+//Effects when the modal appears for the first time
 function effect(){
     modalContent.style.transform = 'translate (0px, 0px)';
     modal.style.opacity=1;
@@ -24,25 +29,30 @@ function effect(){
 setTimeout(effect,80);
 
 ///////interaction nav responsive
-//effect when the nav appear
+//transition when the options of the hamburguer menu appears
 function handleNavEffect(){
     navOptions.style.opacity=1;
 }
 
-hamburgerBtn.addEventListener('click', ()=>{
+/////options of the nav appears when click the hamburguer menu
+function handleNavAppear(){
     
-    navOptions.classList.toggle('nav__desaparecer');
-    
+    //Add the class "nav__disappear" to make the nav's options appear
+    navOptions.classList.toggle('nav__disappear');
+  
+    //transition
     navOptions.style.opacity=0.6;
-    setTimeout(handleNavEffect,80);
-});
+    setTimeout(handleNavEffect,50);
+}
+
+hamburgerBtn.addEventListener('click', handleNavAppear);
 
 
 
 
-//////interaction section
+/////////////interaction section
 
-//effect when the image change
+//transition when the image changes
 function handleInteractionEffect(){
     imgEye.style.opacity=1; 
 }
@@ -53,13 +63,14 @@ function handleForEach (element, i){
     function handleInteractionClick (){
         //console.log(element,i); 
 
-     //effect
+        //transition when the image changes
         imgEye.style.opacity=0.5;
         setTimeout(handleInteractionEffect,150);
         
 
         //options interaction
         switch(i){
+            //option 1
             case 0:
                 imgEye.src='./img/interaction1.png';
     
@@ -74,7 +85,7 @@ function handleForEach (element, i){
 
                 break;
             
-
+            //option 2
             case 1:
                 //change the image sample
                 imgEye.src='./img/interaction2.png';
@@ -90,7 +101,7 @@ function handleForEach (element, i){
                 
                 break;
 
-
+            //option 3
             case 2:
                 //change the image sample
                 imgEye.src='./img/interaction3.png';
@@ -107,7 +118,7 @@ function handleForEach (element, i){
                 
                 break;
 
-
+            //option 4
             case 3:
                 //change the image sample
                 imgEye.src='./img/interaction4.png';
@@ -134,22 +145,21 @@ interactionLi.forEach(handleForEach);
 
 
 
-
-
-/////Modal
-
+/////////////////Modal
+//turn the display of the modal in none
 function handleModalDisappear(){
     modal.style.display='none';
 }
 
-function closeModal(){
+function handleCloseModal(){
+    //transition
     modal.style.opacity=0;
-    //modal.style.zIndex=1;
 
-    //body
+    //make the body visible then the modal disappear
     document.body.style.overflow= 'visible';
 
+    //wait a while for the transition to be seen and then return to the modal none
     setTimeout(handleModalDisappear,300);
 }
 
-modalBtn.addEventListener('click', closeModal);
+modalBtn.addEventListener('click', handleCloseModal);

@@ -21,9 +21,7 @@
     }
 
 
-
 //Define the backgrounds of each div
-
     //div 1
     &__characteristics:nth-child(1){
 
@@ -98,7 +96,6 @@
 
 ///////////////////
 //Media query: 917px
-
 @media only screen and (max-width:917px){
     .reasons{
         margin-top: 80px;
@@ -158,6 +155,7 @@
 }
     
 
+
 //610px
 @media only screen and (max-width:610px){
     .reasons{
@@ -204,8 +202,7 @@
         
             }
         }
-    
-      
+         
         &__img{
             width: 100%;
             height: 80%;

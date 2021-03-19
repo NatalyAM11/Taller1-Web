@@ -62,6 +62,7 @@
             width: 55%;
             padding: 13% 0px;
             padding-left: 40px;
+            transition: opacity .5s ease;
         }
 
         &__bigTitle{
@@ -69,7 +70,8 @@
         }
 
         &__img{
-            width: 45%;
+            width: 280px;
+            background-position: -60px;
         }
     }
 }
@@ -79,7 +81,8 @@
 @media only screen and (max-width:982px){
     .modal{
         &__img{
-            background-position: -80px;
+         width: 280px;
+         background-position: -60px;
         }
     }
 }
@@ -110,7 +113,7 @@
         }
     
         &__img{
-            width: 25em;
+            width: 280px;
             height: 25em;
             padding: 50px 0px;
             background-size: cover;

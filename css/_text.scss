@@ -19,9 +19,9 @@
 }
 
 
+
 ///////////////////
 //Media query: 610px
-
 @media only screen and (max-width:610px){
 
     .text{
@@ -31,8 +31,7 @@
     
         &--reasons{
             color: rgb(255, 241, 241);
-            padding: 0% 5%;
-            
+            padding: 0% 5%;         
         }
     
         &--product{

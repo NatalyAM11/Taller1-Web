@@ -50,15 +50,15 @@
   }
 
 
+
 ///////////////////
 //Media query: 610px
-
   @media only screen and (max-width:610px){
     .gallery {
         background-color: rgb(252, 212,225);
-    height: 25%;
+      height: 25%;
 
-    &-cell {
+      &-cell {
         width: 60%;
         height: 300px;
         margin-right: 10px;
@@ -80,7 +80,7 @@
       }
 
     .photo--1{
-         background-position: center;
+        background-position: center;
         background-size: cover;
     }
 
@@ -89,8 +89,7 @@
         background-size: cover;
     }
 
-    .photo--3{
-       
+    .photo--3{    
         background-size: cover;
     }
 
@@ -99,11 +98,10 @@
         background-size: cover;
     }
 
-    .photo--5{
-        
+    .photo--5{      
         background-size: cover;
+      }
     }
-  }
   }
   
   
