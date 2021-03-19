@@ -1341,6 +1341,14 @@ button:hover {
   border-radius: 5px;
 }
 
+.modal__a {
+  text-decoration: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .modal__img {
   width: 45%;
   padding: 50px 0px;
@@ -1354,6 +1362,7 @@ button:hover {
 .modal__btn {
   position: fixed;
   right: 15%;
+  z-index: 50;
 }
 
 .modal__text {

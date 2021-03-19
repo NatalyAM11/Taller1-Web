@@ -17,7 +17,13 @@
         background-image: url("../img/modalBackground.jpg");
         margin: 3% auto;
         transition: transform .5s ease-out;
-        border-radius: 5px;     
+        border-radius: 5px;    
+    }
+
+    &__a{
+        text-decoration: none; 
+        width: 100%;
+        display: flex;
     }
 
     &__img{
@@ -33,6 +39,7 @@
     &__btn{
         position: fixed;
         right: 15%;
+        z-index: 50;
     }
 
     &__text{
