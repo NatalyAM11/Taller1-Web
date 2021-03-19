@@ -1380,6 +1380,10 @@ button:hover {
   margin: 0px;
 }
 
+.modal__p {
+  color: #2f2430;
+}
+
 @media only screen and (max-width: 1125px) {
   .modal__text {
     width: 55%;
