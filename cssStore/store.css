@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Magra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
+.productStore {
+  background-color: #F3E0EF;
+  width: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2% 3%;
+  margin: 15px;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+.productStore__name {
+  font-size: 25px;
+  margin: 0px;
+}
+
+.productStore__img {
+  width: 95%;
+  margin-top: 5px;
+}
+
+.productStore__type {
+  color: #744378;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.productStore__price {
+  font-family: manrope;
+  color: #744378;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 15px;
+}
+
+.productStore__stars {
+  width: 65%;
+  margin-bottom: 15px;
+}
+
+.productStore:hover {
+  background-color: #e4d0df;
+}
+
+@media only screen and (max-width: 610px) {
+  .productStore {
+    background-color: #F3E0EF;
+    width: 30vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5%;
+    margin: 15px;
+  }
+  .productStore__name {
+    font-size: 24px;
+    margin: 0px;
+  }
+  .productStore__img {
+    width: 95%;
+  }
+  .productStore__type {
+    color: #744378;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0px;
+  }
+  .productStore__price {
+    font-family: manrope;
+    color: #744378;
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 15px;
+  }
+  .productStore__stars {
+    width: 65%;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 411px) {
+  .productStore {
+    background-color: #F3E0EF;
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5%;
+    margin: 15px;
+  }
+  .productStore__name {
+    font-size: 23px;
+    margin: 0px;
+  }
+  .productStore__img {
+    width: 95%;
+  }
+  .productStore__type {
+    color: #744378;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0px;
+  }
+  .productStore__price {
+    font-family: manrope;
+    color: #744378;
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 15px;
+  }
+  .productStore__stars {
+    width: 65%;
+    margin-bottom: 15px;
+  }
+}
+
+.productForm {
+  width: 50%;
+}
+
+.productForm__label {
+  display: block;
+  width: 100%;
+  font-family: manrope;
+  font-weight: 600;
+  margin: 7px 0px;
+}
+
+.productForm__input {
+  display: block;
+  border-color: #B674AA;
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  font-family: Manrope;
+  margin-bottom: 10px;
+  color: #854e7b;
+}
+
+.body {
+  overflow: visible;
+}
+
+.productList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* justify-content: center;
+    align-items: center;*/
+  padding: 0px 200px;
+}
+
+@media only screen and (max-width: 1125px) {
+  .productList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0px 100px;
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  .productList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0px 50px;
+  }
+}
+/*# sourceMappingURL=store.css.map */
