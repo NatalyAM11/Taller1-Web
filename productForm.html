@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,53 +9,121 @@
 
     <link rel="stylesheet" href="./cssStore/store.css">
     <link rel="stylesheet" href="./css/index.css">
-    
+
 </head>
+
 <body>
-    <h2>ADD A NEW PRODUCT</h2>
+    <nav class="nav">
+
+        <div class="nav__responsive">
+            <div class="nav__hamburger"></div>
+            <img class="logo--responsive" src="./img/logo.png">
+            <div class="nav__divIconsResponsive">
+                <img class="nav__icon" src="./img/userIcon.png">
+                <img class="nav__icon" src="./img/cartIcon.png">
+            </div>
+        </div>
+
+        <div class="nav__options nav__disappear">
+            <a class="nav__option">COLLECTION</a>
+            <a class="nav__option">SHOP</a>
+            <a class="nav__option">NEW</a>
+            <img class="logo" src="./img/logo.png">
+            <a class="nav__option">ABOUT</a>
+            <a class="nav__option">KYLIE SKIN</a>
+            <div class="nav__divIcons">
+                <img class="nav__icon" src="./img/userIcon.png">
+                <img class="nav__icon" src="./img/cartIcon.png">
+            </div>
+        </div>
+
+    </nav>
+
+
     <form class="productForm">
-        <label class="productForm__label" for="nameProduct">Name</label>
-        <input class= "productForm__input" type="text" id="nameProduct" placeholder="Name of the product"  name="name">
+        <div class="productForm__infoDiv">
+            <h2 class="productForm__title">ADD A NEW PRODUCT</h2>
 
-        <label class="productForm__label" for="product">Product</label>
-        <input class= "productForm__input" type="text" id="product" placeholder="Product" name="productP">
+            <div class="step">
+                <h2 class="step__title">STEP 1</h2>
+                <p>Fill the informetion of the product</p>
+            </div>
 
-        <label class="productForm__label" for="typeProduct">Type</label>
-        <select class="productForm__input" id="typeProduct" name="type">
-            <option value="">Select a type</option>
-            <option value="lips">LIPS</option>
-            <option value="face">FACE</option>
-            <option value="eyes">EYES</option>
-        </select>
+            <div class="productForm__reminder notifications hidden">
+                <p class="productForm__reminder--text">Remember that you must fill all the fields</p>
+            </div>
 
-        <label class="productForm__label" for="price">Price</label>
-        <input class="productForm__input" type="number" id="price" placeholder="Price" name="price">
+            <label class="productForm__label" for="nameProduct">Name</label>
+            <input class="productForm__input" type="text" id="nameProduct" placeholder="Name of the product"
+                name="name">
+
+            <label class="productForm__label" for="product">Product</label>
+            <input class="productForm__input" type="text" id="product" placeholder="Product" name="productP">
+
+            <label class="productForm__label" for="typeProduct">Type</label>
+            <select class="productForm__input" id="typeProduct" name="type">
+                <option value="">Select a type</option>
+                <option value="lips">LIPS</option>
+                <option value="face">FACE</option>
+                <option value="eyes">EYES</option>
+            </select>
+
+            <label class="productForm__label" for="price">Price</label>
+            <input class="productForm__input" type="number" id="price" placeholder="Price" name="price">
+
+
+            <label class="productForm__label" for="content">Content</label>
+            <input class="productForm__input" type="number" id="content"
+                placeholder="Content of the product in o.z or g" name="content">
+
+            <label class="productForm__label" for="typeProduct">Tone</label>
+            <select class="productForm__input" id="typeProduct" name="tone">
+                <option value="">Select a type</option>
+                <option value="light">LIGHT</option>
+                <option value="midtone">MIDTONE</option>
+                <option value="dark">DARK</option>
+            </select>
+
+            <label class="productForm__label" for="product">Collection</label>
+            <input class="productForm__input" type="text" id="product" placeholder="Collection of the product"
+                name="collection">
+
+            <label class="productForm__label" for="product">Description</label>
+            <input class="productForm__input" type="text" id="product" placeholder="Description of the product"
+                name="description">
+
+            <p class="productForm__loader notifications hidden">Loading...</p>
+            <div class="productForm__error  notifications hidden">
+                <h2>SOMETHING WENT WRONG</h2>
+                <p class="productForm__p">Try again, please</p>
+            </div>
+            <button class="button" type="submit">SAVE</button>
+        </div>
 
         
-        <label class="productForm__label" for="content">Content</label>
-        <input class="productForm__input" type="number" id="content" placeholder="Content of the product in o.z or g" name="content">
+    <div class="productForm__imgDiv">
+        <div class="step">
+            <h2 class="step__title">STEP 2</h2>
+            <p>Add 3 images to the gallery. Upload them in the order you want them to appear</p>
+        </div>
 
-        <label class="productForm__label" for="typeProduct">Tone</label>
-        <select class="productForm__input" id="typeProduct" name="tone">
-            <option value="">Select a type</option>
-            <option value="light">LIGHT</option>
-            <option value="midtone">MIDTONE</option>
-            <option value="dark">DARK</option>
-        </select>
+        <div class="productForm__images">
+            <div class="productForm__sideImg">
+                <img class="productForm__i" src="./img/defaultImage.jpg">
+                <img class="productForm__i" src="./img/defaultImage.jpg">
+                <img class="productForm__i" src="./img/defaultImage.jpg">
+            </div>
+            <img class="productForm__bigImg" src="./img/defaultImage.jpg">
+        </div>
+        <input accept='.jpg, .png' type="file" class="productForm__input" name="image">
+    </div>
 
-        <label class="productForm__label" for="product">Collection</label>
-        <input class= "productForm__input" type="text" id="product" placeholder="Collection of the product" name="collection">
-
-        <label class="productForm__label" for="product">Description</label>
-        <input class= "productForm__input" type="text" id="product" placeholder="Description of the product" name="description">
-        
-        <button class="button" type="submit">SAVE</button>
     </form>
-    
 </body>
+
 </html>
 
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
 <script src="./js/productForm.js"></script>

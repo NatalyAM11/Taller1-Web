@@ -1,6 +1,22 @@
 .productForm{
-    width: 50%;
+    width: 100%;
+    display: flex;
 
+    &__infoDiv{
+        width: 40%;
+        padding-top: 50px;
+        margin-left: 50px;
+        margin-right: 70px; 
+    }
+
+    &__imgDiv{
+        width: 50%;
+        padding-top: 50px;
+        margin-right: 70px; 
+        margin-top: 85px;
+        background-color: #F9EBF6;
+        padding: 30px;
+    }
 
     &__label{
         display: block;
@@ -18,6 +34,79 @@
         border-radius: 5px;
         font-family: Manrope;
         margin-bottom: 10px;
-        color: #854e7b
+        color: #854e7b;
+    }
+
+    &__loader{
+        font-size: x-large;
+    }
+
+    &__reminder{
+        margin: 30px 0px;
+        font-family: Manrope;
+        color: #854e7b;
+    }
+
+    .notifications{
+        background-color: #C8B5C4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 10px;
+    }
+
+    &__p{
+        margin: 0px;
+    }
+
+    &__title{
+        margin: 25px 0px;
+    }
+
+    &__imgDiv{
+        width: 50%;
+        height: 100vh;
+    }
+
+    &__images{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0px
+    }
+
+    &__sideImg{
+        width: 20%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__bigImg{
+        width: 60%;
+        height: 80vh;
+        margin: 0px 22px;
+    }
+
+    &__littleImg{
+        width: 100%;
+        height: 30%;
+    }
+
+}
+
+//title step
+.step{
+    display: flex;
+    align-items: center;
+    
+
+    &__title{
+        font-size: 20px;
+        margin-right: 10px;
+        width: 15%;
     }
 }
