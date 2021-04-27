@@ -1,0 +1,69 @@
+
+.filters{
+    display: flex;
+    justify-content: space-around;
+    width: 77%;
+    margin-left: 11vw;
+    margin-top: 80px;
+    margin-bottom: 25px;
+}
+
+.filterStore{
+    display: block;
+    border-color: #B674AA;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    font-family: Manrope;
+    margin-bottom: 10px;
+    color: #854e7b;
+}
+
+.filter__label{
+    display: block;
+    font-family: manrope;
+    font-weight: 600; 
+    margin:4px 0px;
+}
+
+
+@media only screen and (max-width:1125px){
+
+    .filters{
+        display: block;
+        justify-content: space-around;
+        width: 77%;
+        margin-left: 11vw;
+        margin-top: 80px;
+        margin-bottom: 25px;
+    }
+    
+    .filterStore{
+        display: block;
+        height: 30px;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 18px;
+    }
+}
+
+@media only screen and (max-width:610px){
+
+    .filters{
+        display: block;
+        justify-content: space-around;
+        width: 77%;
+        margin-left: 11vw;
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+    
+    .filterStore{
+        display: block;
+        height: 30px;
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+

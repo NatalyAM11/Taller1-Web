@@ -1,0 +1,35 @@
+.bannerStore{
+    width: 75%;
+    height: 18vw;
+    margin-left: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/bannerShop.png");
+    background-size: cover;
+
+    &__title{
+        font-size:50px;
+        color: white;
+    }
+}
+
+
+@media only screen and (max-width:610px){
+    .bannerStore{
+        width: 75%;
+        height: 20vw;
+        margin-left: 12vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../img/bannerShop.png");
+        background-size: cover;
+    
+        &__title{
+            font-size:35px;
+            color: white;
+        }
+    }
+    
+}

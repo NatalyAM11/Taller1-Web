@@ -1,12 +1,14 @@
 .productStore{
     background-color: #F3E0EF;
-    width: 15vw;
+    width: 210px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2% 3%;
-    margin: 15px;
+    padding: 2vw 2vw;
+    margin-top: 4vw;
+    margin-left: 4vw;
     text-decoration-line: none;
     
     &__name{
@@ -15,15 +17,19 @@
     }
 
     &__img{
-        width: 95%;
-        margin-top: 5px;
+        width: 100%;
+        height: 53%;
+        margin: 0px 5px;
     }
 
     &__type{
+        width: 90%;
         color: #744378;
         font-size: 18px;
         font-weight: 400;
         margin: 0px;
+        justify-content: center;
+        display: flex;
     }
 
     &__price{
@@ -32,7 +38,7 @@
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 6px;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     &__stars{
@@ -46,94 +52,11 @@
 }
 
 
-
-//610px
-@media only screen and (max-width:610px){
-
+@media only screen and (max-width:625px){
     .productStore{
-        background-color: #F3E0EF;
-        width: 30vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 5%;
-        margin: 15px;
-        
-        &__name{
-            font-size: 24px;
-            margin: 0px;
-        }
-    
-        &__img{
-            width: 95%;
-        }
-    
-        &__type{
-            color: #744378;
-            font-size: 18px;
-            font-weight: 400;
-            margin: 0px;
-        }
-    
-        &__price{
-            font-family: manrope;
-            color: #744378;
-            font-size: 27px;
-            font-weight: 600;
-            margin-bottom: 6px;
-            margin-top: 15px;
-        }
-
-        &__stars{
-            width: 65%;
-            margin-bottom: 15px;
-        }
+        margin-top: 10vw;
+        padding: 2vw 4vw;
     }
 }
 
-@media only screen and (max-width:411px){
 
-    .productStore{
-        background-color: #F3E0EF;
-        width: 60%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 5%;
-        margin: 15px;
-        
-        &__name{
-            font-size: 23px;
-            margin: 0px;
-        }
-    
-        &__img{
-            width: 95%;
-        }
-    
-        &__type{
-            color: #744378;
-            font-size: 18px;
-            font-weight: 400;
-            margin: 0px;
-        }
-    
-        &__price{
-            font-family: manrope;
-            color: #744378;
-            font-size: 27px;
-            font-weight: 600;
-            margin-bottom: 6px;
-            margin-top: 15px;
-        }
-
-        &__stars{
-            width: 65%;
-            margin-bottom: 15px;
-        }
-    }
-    
-  
-}

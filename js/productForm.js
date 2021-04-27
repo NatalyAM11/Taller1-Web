@@ -1,44 +1,29 @@
-//firebase
-const firebaseConfig = {
-    apiKey: "AIzaSyCorqNP_uv4krxv33LMwAWAraEaEtyl4Mw",
-    authDomain: "kylie-cosmetics-208ac.firebaseapp.com",
-    projectId: "kylie-cosmetics-208ac",
-    storageBucket: "kylie-cosmetics-208ac.appspot.com",
-    messagingSenderId: "629586722107",
-    appId: "1:629586722107:web:88f285dce23d3777f18b1e"
-  };
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-//database
-const db = firebase.firestore();
-const storage= firebase.storage();
-
-
 const productForm= document.querySelector('.productForm');
 const productFormLoading= document.querySelector('.productForm__loader');
 const productFormError= document.querySelector('.productForm__error');
 const productFormReminder= document.querySelector('.productForm__reminder');
 const reminderText= document.querySelector('.productForm__reminder--text');
 const productFormImg= document.querySelector('.productForm__bigImg');
-const littleImg= document.querySelector('.productForm__sideImg');
-const i= document.querySelector('.productForm__i');
+const sideImgCont= document.querySelector('.productForm__sideImg');
+const littleImg= document.querySelector('.productForm__i');
+const MImage= document.querySelector('.productForm__MImage');
+const mainImageCont= document.querySelector('.productForm__mainImg');
 
 const imgFiles= [];
+const mainImgFile=[];
 
 let popularityProduct;
 
-//image product
-productForm.image.addEventListener('change', function (){
+//step 2------images product
+productForm.images.addEventListener('change', function (){
     
-    const file= productForm.image.files[0];
+    const file= productForm.images.files[0];
 
     if(!file){
         return;
     }
 
-    i.classList.add('hidden');
+    littleImg.classList.add('hidden');
 
     const reader= new FileReader();
 
@@ -50,12 +35,40 @@ productForm.image.addEventListener('change', function (){
         const miniImg=document.createElement('img');
         miniImg.classList.add('productForm__littleImg');
         miniImg.setAttribute('src', event.target.result);
-        littleImg.appendChild(miniImg);
+        sideImgCont.appendChild(miniImg);
     }
 
     reader.readAsDataURL(file);
     imgFiles.push(file);
 });
+
+
+//step 3------main image
+productForm.mainImage.addEventListener('change', function (){
+    
+    const file= productForm.mainImage.files[0];
+
+    if(!file){
+        return;
+    }
+
+    MImage.classList.add('hidden');
+
+    const reader= new FileReader();
+
+    reader.onload= function(event){
+
+        //side images
+        const mainImg=document.createElement('img');
+        mainImg.classList.add('productForm__mainPreview');
+        mainImg.setAttribute('src', event.target.result);
+        mainImageCont.appendChild(mainImg);
+    }
+
+    reader.readAsDataURL(file);
+    mainImgFile.push(file);
+});
+
 
 
 //send the information
@@ -141,6 +154,8 @@ productForm.addEventListener('submit', function(event){
 
             });
 
+            /*var mainImgRef= storageRef.child(`products/${docRef.id}/${mainImgFile.name}`);*/
+
             //get the download URL of the image
             Promise.all(uploadPromises).then(function(snapshots){
                 snapshots.forEach((snapshot)=>{
@@ -181,22 +196,3 @@ productForm.addEventListener('submit', function(event){
         .catch(genericCatch);
 });
 
-/*.then((downloadURL)=>{
-
-                        //loading
-                        productFormLoading.classList.remove('hidden');
-
-                        product.imageUrl= downloadURL;
-                        product.imageRef= snapshot.ref.fullPath;
-
-                    
-                    });*/
-
-
-
-
-/*.then((snapshot)=>{
-
-                    //wait to get the download URL of the image
-                    snapshot.ref.getDownloadURL();
-                });*/
