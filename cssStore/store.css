@@ -438,8 +438,8 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-image: url("../img/bannerShop.png");
     background-size: cover;
+    background-position: left;
   }
   .bannerStore__title {
     font-size: 35px;

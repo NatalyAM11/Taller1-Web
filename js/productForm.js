@@ -14,6 +14,7 @@ const mainImgFile=[];
 
 let popularityProduct;
 
+
 //step 2------images product
 productForm.images.addEventListener('change', function (){
     
@@ -76,7 +77,8 @@ productForm.addEventListener('submit', function(event){
     //delete the event by default
     event.preventDefault();
 
-    popularityProduct= Math.floor(Math.random() * 6);    
+    popularityProduct= Math.floor(Math.random() * 6);  
+ 
 
     //product
     const product={
@@ -88,7 +90,8 @@ productForm.addEventListener('submit', function(event){
         tone: productForm.tone.value,
         collection: productForm.collection.value,
         description:productForm.description.value,
-        popularity: popularityProduct
+        popularity: popularityProduct,
+        creationDate: Date.now(),
     }
 
     //Errors if the client doesn't fill all the fields
