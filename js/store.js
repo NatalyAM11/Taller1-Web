@@ -5,23 +5,45 @@ const bannerStoreTitle=document.querySelector('.bannerStore__title');
 const bannerStore=document.querySelector('.bannerStore');
 
 const handleCollectionResult= (querySnapshot)=>{
+
+    //empty div so the products are not overwritten
     productList.innerHTML= " ";
+
     querySnapshot.forEach((doc=>{
         const data= doc.data();
 
         const product= document.createElement('a');
 
+        let stars;
+
+        if(data.popularity=="5"){
+            stars='./img/fiveStars.png';
+        }
+        if(data.popularity=="4"){
+            stars='./img/fourStars.png';
+        }
+        if(data.popularity=="3"){
+            stars='./img/threeStars.png';
+        }
+        if(data.popularity=="2"){
+            stars='./img/twoStars.png';
+        }
+        if(data.popularity=="1"){
+            stars='./img/twoStars.png';
+        }
+
+        //fill all the data
         product.innerHTML= ` 
         <h1 class="productStore__name">${data.name}</h1>
         <h4 class="productStore__type">${data.p}</h4>
         <img class="productStore__img" src="${data.images[0]?.url}">
         <h4 class="productStore__price"> $ ${data.price}</h4>
-        <img class="productStore__stars" src="./img/stars.png">
+        <img class="productStore__stars" src="${stars}">
         <button>ADD TO CART</button>
         `;
     
         product.classList.add('productStore');
-        product.setAttribute('href', `./productDetail.html?id=${doc.id}`);
+        product.setAttribute('href', `./productDetail.html?id=${doc.id}&name=${data.name}`);
     
         productList.appendChild(product);
     }));
@@ -29,12 +51,13 @@ const handleCollectionResult= (querySnapshot)=>{
 
 
 
-
+//filters
 filters.addEventListener('change', function(){
 console.log(filters.type.value);
 
 let productsCollection=db.collection('products');
 
+//filter type
 if(filters.type.value){
     productsCollection= productsCollection.where("type", "==", filters.type.value);
 
@@ -55,10 +78,12 @@ if(filters.type.value){
     }
 }
 
+//filter tone
 if(filters.tone.value){
     productsCollection= productsCollection.where("tone", "==", filters.tone.value);
 }
 
+//filter collection
 if(filters.collection.value){
     productsCollection= productsCollection.where("collection", "==", filters.collection.value);
 }
@@ -86,15 +111,6 @@ productsCollection.get().then(handleCollectionResult);
 
 });
 
-
-
-
-
 db.collection('products').get().then(handleCollectionResult);
 
 
-
-
-
-//forEach product
-//products.forEach(handleProductItem);

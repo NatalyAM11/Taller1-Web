@@ -76,8 +76,8 @@
 
 
                 <label class="productForm__label" for="content">Content</label>
-                <input class="productForm__input" type="number" id="content"
-                    placeholder="Content of the product in o.z or g" name="content">
+                <input class="productForm__input" type="text" id="content"
+                    placeholder="Content of the product. Example: Bronzer Stick (0.28 oz / 8.0 g)" name="content">
 
                 <label class="productForm__label" for="typeProduct">Tone</label>
                 <select class="productForm__input" id="typeProduct" name="tone">
@@ -92,8 +92,7 @@
                     name="collection">
 
                 <label class="productForm__label" for="product">Description</label>
-                <input class="productForm__input" type="text" id="product" placeholder="Description of the product"
-                    name="description">
+                <textarea class="productForm__input description" name="description" id="product" cols="30" rows="10" placeholder="Description of the product"></textarea>
 
                 <p class="productForm__loader notifications hidden">Loading...</p>
                 <div class="productForm__error  notifications hidden">

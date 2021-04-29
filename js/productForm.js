@@ -77,7 +77,7 @@ productForm.addEventListener('submit', function(event){
     //delete the event by default
     event.preventDefault();
 
-    popularityProduct= Math.floor(Math.random() * 6);  
+    popularityProduct= Math.floor(Math.random() * 5) + 2;   
  
 
     //product
