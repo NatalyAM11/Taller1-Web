@@ -10,7 +10,7 @@ const MImage= document.querySelector('.productForm__MImage');
 const mainImageCont= document.querySelector('.productForm__mainImg');
 
 const imgFiles= [];
-const mainImgFile=[];
+let mainImgFile;
 
 let popularityProduct;
 
@@ -67,7 +67,8 @@ productForm.mainImage.addEventListener('change', function (){
     }
 
     reader.readAsDataURL(file);
-    mainImgFile.push(file);
+    mainImgFile=file;
+    console.log(mainImgFile);
 });
 
 
@@ -134,6 +135,8 @@ productForm.addEventListener('submit', function(event){
         productFormError.classList.remove('hidden');
     }
 
+
+
     //send the product to firebase
     db.collection('products').add(product).then(
         function(docRef){
@@ -154,13 +157,20 @@ productForm.addEventListener('submit', function(event){
 
                 //add the images in the array
                 uploadPromises.push(productImgRef.put(file));
-
             });
 
-            /*var mainImgRef= storageRef.child(`products/${docRef.id}/${mainImgFile.name}`);*/
+            
+                //create the root reference
+                var storageRef=firebase.storage().ref();
+                var mainImgRef= storageRef.child(`products/${docRef.id}/${mainImgFile}`);
+                uploadPromises.push(mainImgRef.put(mainImgFile));
+    
+
+            /**/
 
             //get the download URL of the image
             Promise.all(uploadPromises).then(function(snapshots){
+                
                 snapshots.forEach((snapshot)=>{
 
                     //add the ulr in the array
@@ -173,6 +183,8 @@ productForm.addEventListener('submit', function(event){
 
                     //create an array for the url of the img
                     const images= [];
+
+                    const mainImg=[];
                     
                     downloadUrls.forEach(function(url, index){
                         images.push(
@@ -180,11 +192,19 @@ productForm.addEventListener('submit', function(event){
                                 url: url,
                                 ref: snapshots[index].ref.fullPath
                             });
+
+                        mainImg.push(
+                            {
+                                url: url,
+                                ref: snapshots[index].ref.fullPath
+                            }
+                        );
                     });
                     
                     //add the new information of the images to the product
                     db.collection('products').doc(docRef.id).update({
-                            images: images
+                            images: images,
+                            mainImg:mainImg
                     }).then(function(){
                         //all the product has been upload                      
                         console.log('document added', docRef.id);
@@ -192,6 +212,7 @@ productForm.addEventListener('submit', function(event){
                     })
                     .catch(genericCatch);
                 })
+                
                 .catch(genericCatch);
             })
             .catch(genericCatch);

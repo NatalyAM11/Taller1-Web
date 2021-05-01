@@ -1,21 +1,26 @@
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Magra&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
 
+@import "../css/nav";
+@import "../css/button";
+@import "../css/logo";
+
 //Color
-//$violet-color:rgb(66, 4, 71);
+$violet-color:rgb(66, 4, 71);
 
 
-/*body{
+body{
     margin: 0px;
     background-color: rgb(251,241,249);
-    overflow: hidden;
-}*/
+}
 
 
+//////
 //general text
-/*p{
+p{
     font-family: Manrope;
     color: rgb(66, 4, 71);
 }
@@ -37,47 +42,11 @@ h4{
     font-family: magra;
     font-size: 20px;
     color: rgb(66, 4, 71);
-}*/
+}
 
 
-//scss
-@import '_title';
-@import '_text';
-//@import '_nav';
-@import '_logo';
-@import '_banner';
-@import '_reasons';
-@import '_product';
-@import '_button';
-@import 'details';
-@import '_colors';
-@import '_interaction';
-@import '_review';
-@import '_gallery';
-@import '_advertising';
-@import '_inscription';
-@import '_footer';
-@import '_logoStormi';
-@import '_video';
-@import '_input';
-@import 'modal';
-@import '_general'
-//@import './cssStore/_general';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.hidden{
+    display: none !important;
+}
 
 

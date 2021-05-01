@@ -18,7 +18,15 @@
         width: 45%;
         height: 100%;
         background-size: cover;
+        background-position:initial;
         background-position: center;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-family: magra;
+        font-weight: 600;
     }
 
     &__item:hover{

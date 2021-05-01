@@ -1,33 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
-body {
-  margin: 0px;
-  background-color: #fbf1f9;
+/*body{
+    margin: 0px;
+    background-color: rgb(251,241,249);
+    overflow: hidden;
+}*/
+/*p{
+    font-family: Manrope;
+    color: rgb(66, 4, 71);
 }
 
-p {
-  font-family: Manrope;
-  color: #420447;
+
+//titles
+h1{
+    font-family: magra;
+    color: $violet-color;
 }
 
-h1 {
-  font-family: magra;
-  color: #420447;
+h2{
+    font-family: Manrope;
+    color: rgb(66, 4, 71);
+    margin: 0px;
 }
 
-h2 {
-  font-family: Manrope;
-  color: #420447;
-  margin: 0px;
-}
-
-h4 {
-  font-family: magra;
-  font-size: 20px;
-  color: #420447;
-}
-
+h4{
+    font-family: magra;
+    font-size: 20px;
+    color: rgb(66, 4, 71);
+}*/
+@import url("https://fonts.googleapis.com/css2?family=Magra:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Magra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
 .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,145 +149,6 @@ h4 {
   }
   .text--inscription {
     margin: 6px 0px;
-  }
-}
-
-.nav {
-  font-size: large;
-  font-family: magra;
-  color: #420447;
-  width: 100%;
-  height: 8.5em;
-  background-image: url("../img/navImg.jpg");
-  background-size: 120vw;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.nav__icon {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding-left: 20px;
-}
-
-.nav__options {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  font-family: magra;
-}
-
-.nav__option {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.nav__option:hover {
-  color: #892091;
-}
-
-.nav__responsive {
-  display: none;
-}
-
-@media only screen and (max-width: 1078px) {
-  .nav {
-    font-size: medium;
-    width: 100%;
-    height: 8em;
-    background-size: 144vw;
-  }
-}
-
-@media only screen and (max-width: 791px) {
-  .nav {
-    font-size: medium;
-    width: 100%;
-    height: 7em;
-    background-size: 155vw;
-  }
-}
-
-@media only screen and (max-width: 610px) {
-  .nav {
-    width: 100%;
-    height: 5em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-size: 189vw;
-    background-position: -140px;
-    position: relative;
-  }
-  .nav__options {
-    width: 100%;
-    height: 9.5em;
-    margin: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    left: 0;
-    background-color: white;
-    font-size: 15px;
-    position: absolute;
-    bottom: -100%;
-    top: 100%;
-    z-index: 10;
-    opacity: 0;
-    -webkit-transition: opacity .5s ease;
-    transition: opacity .5s ease;
-  }
-  .nav__options * {
-    padding-bottom: 3.5px;
-  }
-  .nav__responsive {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .nav__divIcons {
-    display: none;
-  }
-  .nav__icon {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding-left: 8px;
-  }
-  .nav__hamburger {
-    background-image: url("../img/hIcon.png");
-    background-size: cover;
-    width: 36px;
-    height: 36px;
-  }
-  .nav__hamburger:hover {
-    background-image: url("../img/hIcon_hover.png");
-  }
-  .nav__disappear {
-    display: none;
   }
 }
 
@@ -1456,5 +1322,206 @@ button:hover {
     font-size: 40px;
     margin: 0px;
   }
+}
+
+.nav {
+  font-size: large;
+  font-family: magra;
+  font-weight: 600;
+  width: 100%;
+  height: 8.5em;
+  background-image: url("../img/navImg.jpg");
+  background-size: 120vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nav__icon {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 20px;
+}
+
+.nav__options {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-family: magra;
+}
+
+.nav__option {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: #420447;
+}
+
+.nav__option:hover {
+  color: #892091;
+}
+
+.nav__responsive {
+  display: none;
+}
+
+@media only screen and (max-width: 1078px) {
+  .nav {
+    font-size: medium;
+    width: 100%;
+    height: 8em;
+    background-size: 144vw;
+  }
+}
+
+@media only screen and (max-width: 791px) {
+  .nav {
+    font-size: medium;
+    width: 100%;
+    height: 7em;
+    background-size: 155vw;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .nav {
+    width: 100%;
+    height: 5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-size: 189vw;
+    background-position: -140px;
+    position: relative;
+  }
+  .nav__options {
+    width: 100%;
+    height: 9.5em;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    left: 0;
+    background-color: white;
+    font-size: 15px;
+    position: absolute;
+    bottom: -100%;
+    top: 100%;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+  }
+  .nav__options * {
+    padding-bottom: 3.5px;
+  }
+  .nav__responsive {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__divIcons {
+    display: none;
+  }
+  .nav__icon {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 8px;
+  }
+  .nav__hamburger {
+    background-image: url("../img/hIcon.png");
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+  }
+  .nav__hamburger:hover {
+    background-image: url("../img/hIcon_hover.png");
+  }
+  .nav__disappear {
+    display: none;
+  }
+}
+
+button {
+  border-radius: 5px;
+  background-color: #420447;
+  color: white;
+  padding: 1em 3em;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #892091;
+}
+
+@media only screen and (max-width: 610px) {
+  button {
+    padding: 0.8em 1.5em;
+    margin-top: 9px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .logo {
+    display: none;
+  }
+  .logo--responsive {
+    width: 19%;
+  }
+}
+
+body {
+  margin: 0px;
+  background-color: #fbf1f9;
+}
+
+p {
+  font-family: Manrope;
+  color: #420447;
+}
+
+h1 {
+  font-family: magra;
+  color: #420447;
+}
+
+h2 {
+  font-family: Manrope;
+  color: #420447;
+  margin: 0px;
+}
+
+h4 {
+  font-family: magra;
+  font-size: 20px;
+  color: #420447;
+}
+
+.hidden {
+  display: none !important;
 }
 /*# sourceMappingURL=index.css.map */

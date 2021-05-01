@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     padding: 2vw 2vw;
-    margin-top: 4vw;
+    margin-top: 30px;
     margin-left: 4vw;
     text-decoration-line: none;
     
@@ -52,10 +52,11 @@
 }
 
 
-@media only screen and (max-width:625px){
+@media only screen and (max-width:610px){
     .productStore{
-        margin-top: 10vw;
+        margin-top: 40px;
         padding: 2vw 4vw;
+        margin-left: 0px;
     }
 }
 

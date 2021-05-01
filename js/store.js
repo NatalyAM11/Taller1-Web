@@ -36,7 +36,7 @@ const handleCollectionResult= (querySnapshot)=>{
         product.innerHTML= ` 
         <h1 class="productStore__name">${data.name}</h1>
         <h4 class="productStore__type">${data.p}</h4>
-        <img class="productStore__img" src="${data.images[0]?.url}">
+        <img class="productStore__img" src="${data.mainImg[3]?.url}">
         <h4 class="productStore__price"> $ ${data.price}</h4>
         <img class="productStore__stars" src="${stars}">
         <button>ADD TO CART</button>

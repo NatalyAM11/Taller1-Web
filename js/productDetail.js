@@ -49,12 +49,15 @@ db.collection('products').doc(id)
     if(data.popularity=="3"){productPopularity.setAttribute('src','./img/threeStars.png');}
     if(data.popularity=="2"){productPopularity.setAttribute('src','./img/twoStars.png');}
 
-    //bannerTitle.innerText=`${data.type}`;
-
+ 
     if(data.type=="lips"){
         bannerTitle.innerText="LIPS";
         bannerProduct.style.backgroundImage = "url('../img/bannerLips.png')";
+
         item1.style.backgroundImage = "url('../img/recommendationFace.png')";
+        item1.innerText= "FACE";
+        item1.setAttribute('href', `/store.html?type=face`);
+
         item2.style.backgroundImage = "url('../img/recommendationEyes.png')";
     };
 
@@ -62,14 +65,19 @@ db.collection('products').doc(id)
         bannerTitle.innerText="FACE";
         bannerProduct.style.backgroundImage = "url('../img/bannerFace.png')";
         item1.style.backgroundImage = "url('../img/recommendationLips.png')";
+        item1.innerText= "LIPS";
         item2.style.backgroundImage = "url('../img/recommendationEyes.png')";
+        item2.innerText= "EYES";
     };
 
     if(data.type=="eyes"){
         bannerTitle.innerText="EYES";
         bannerProduct.style.backgroundImage = "url('../img/bannerEyes.png')";
         item1.style.backgroundImage = "url('../img/recommendationFace.png')";
+        item1.innerText= "FACE";
+        item1.setAttribute('href', `/store.html?type=face`);
         item2.style.backgroundImage = "url('../img/recommendationLips.png')";
+        item2.innerText= "LIPS";
     };
 });
 
@@ -85,6 +93,12 @@ for(let i=0; i<productLittleImg.length; i++){
    }
 
    thumb.addEventListener('click', handleThumClick);
+}
+
+const productCollection=db.collection('products');
+
+if(params.get('type')){
+    productCollection=productCollection.where('type', "==", params.get('type'));
 }
 
 
