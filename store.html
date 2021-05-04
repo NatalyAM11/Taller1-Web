@@ -8,7 +8,6 @@
     <title>KYLIE COSMETICS</title>
 
     <link rel="stylesheet" href="./cssStore/store.css">
-    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -78,12 +77,39 @@
     <section class="productList">
   
     </section>
+
+    <article class="modal">
+        <section class="modal__content">
+            <img class="modal__btn" src="./img/btnClose.png">
+    
+                <div class="modal__img"></div>
+    
+                <form class="modal__text">
+                    <label class="productForm__label" for="name">Name</label>
+                    <input class="productForm__input" type="text" id="nameUser" placeholder="Your name" name="nameUser">
+
+                    <label class="productForm__label" for="email">Email</label>
+                    <input class="productForm__input" type="text" id="email" placeholder="youremail@gmail.com" name="email">
+
+                    <label class="productForm__label" for="product">Password</label>
+                    <input class="productForm__input" type="text" id="password" placeholder="Your password" name="password">
+
+                    <button class="buttonRegister">Go to register</button>
+                    <button class="buttonLogin">Go to login</button>
+                    <button class="buttonSend" type="submit">SEND</button>
+                </form>
+            </a>
+        </section>
+    
+    </article>
     
 </body>
 
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
 
 <script src="./js/general.js"></script>
 <script src="./js/store.js"></script>
+<script src="./js/authModal.js"></script>
