@@ -1,15 +1,24 @@
 .productStore{
-    background-color: #F3E0EF;
     width: 210px;
     height: 450px;
+    background-color: #F3E0EF;
+    padding: 1.5vw 2vw;
+    margin-top: 30px;
+    margin-left: 4vw; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2vw 2vw;
-    margin-top: 30px;
-    margin-left: 4vw;
-    text-decoration-line: none;
+
+    &__content{
+        width: 100%;
+        height: 390px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration-line: none;
+    }
     
     &__name{
         font-size: 25px;
@@ -18,7 +27,7 @@
 
     &__img{
         width: 100%;
-        height: 53%;
+        height: 60%;
         margin: 0px 5px;
     }
 
@@ -49,15 +58,36 @@
     &:hover{
         background-color: #e4d0df;  
     }
+
+    &__cartBtn{
+        margin-top: 0px;
+    }
 }
 
 
 @media only screen and (max-width:610px){
     .productStore{
-        margin-top: 40px;
-        padding: 2vw 4vw;
-        margin-left: 0px;
-    }
+        width: 230px;
+        height: 455px;
+    
+        &__content{
+            height: 390px;
+            padding: 1vw 5vw;
+            margin-left: 0px;
+        }
+            
+        &__img{
+            width: 95%;
+            height: 60%;
+            margin: 0px 5px;
+        }
+
 }
+}
+
+
+/*        margin-top: 40px;
+        padding: 2vw 4vw;
+        margin-left: 0px;*/
 
 

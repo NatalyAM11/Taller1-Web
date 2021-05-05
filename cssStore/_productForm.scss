@@ -47,21 +47,22 @@
 
     &__loader{
         font-size: x-large;
+        width: 80%;
     }
 
     &__reminder{
         margin: 30px 0px;
         font-family: Manrope;
-        color: #854e7b;
+        color:#e03442;;
     }
 
     .notifications{
-        background-color: #C8B5C4;
+        background-color: #e4d5e1;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 25px 10px;
+        padding: 20px 10px;
     }
 
     &__p{
@@ -89,7 +90,7 @@
         height: 80vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     &__bigImg{

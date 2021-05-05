@@ -1,0 +1,82 @@
+.authModal{
+    .modal__content{
+        height:auto;
+    }
+}
+
+
+.authForm{
+    width: 50%;
+    margin-top: 45px;
+    margin-left: 28px;
+
+    &__buttons{
+        width: 100%;
+    }
+
+    &__a{
+        width: 100%;
+        font-family: magra;
+        color: #5c3a56;
+        font-size: 20px;
+    }
+
+
+    &__a:hover{
+        color:  rgb(137, 32, 145);
+    }
+
+    &__loginBtn{
+        width: 100%;
+    }
+
+    &__sendBtn{
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    &__img{
+        width: 40%;
+        height: 400px;
+        padding: 50px 0px;
+        background-image: url("../img/authImg.png"); 
+        background-position:center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+    }
+
+    &__error{
+        color:#e03442;
+    }
+}
+
+
+
+//719px
+@media only screen and (max-width:719px){
+
+    .authForm{
+        width: 100%;
+        margin-top: 25px;
+        margin-left: 0px;
+
+        &__img{
+            display: none;
+         }
+
+         &__a{
+            width: 100%;
+            font-family: magra;
+            color: #5c3a56;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        &__sendBtn{
+            margin-top: 20px;
+        }
+    
+    }
+
+}

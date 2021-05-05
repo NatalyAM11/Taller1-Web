@@ -1,0 +1,7 @@
+function userLoggerdIn(){
+
+}
+
+function userLoggedOut(){
+    
+}

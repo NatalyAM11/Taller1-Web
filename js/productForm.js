@@ -5,7 +5,7 @@ const productFormReminder= document.querySelector('.productForm__reminder');
 const reminderText= document.querySelector('.productForm__reminder--text');
 const productFormImg= document.querySelector('.productForm__bigImg');
 const sideImgCont= document.querySelector('.productForm__sideImg');
-const littleImg= document.querySelector('.productForm__i');
+const littleImg= document.querySelectorAll('.productForm__i');
 const MImage= document.querySelector('.productForm__MImage');
 const mainImageCont= document.querySelector('.productForm__mainImg');
 
@@ -24,7 +24,6 @@ productForm.images.addEventListener('change', function (){
         return;
     }
 
-    littleImg.classList.add('hidden');
 
     const reader= new FileReader();
 
@@ -37,6 +36,10 @@ productForm.images.addEventListener('change', function (){
         miniImg.classList.add('productForm__littleImg');
         miniImg.setAttribute('src', event.target.result);
         sideImgCont.appendChild(miniImg);
+
+        littleImg.forEach(function(element){
+            element.classList.add('hidden');
+        });
     }
 
     reader.readAsDataURL(file);
@@ -219,4 +222,9 @@ productForm.addEventListener('submit', function(event){
         })
         .catch(genericCatch);
 });
+
+
+/*if(!loggedUser || !loggedUser.admin){
+    location.href='./store.html';
+}*/
 

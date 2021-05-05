@@ -12,7 +12,7 @@ const handleCollectionResult= (querySnapshot)=>{
     querySnapshot.forEach((doc=>{
         const data= doc.data();
 
-        const product= document.createElement('a');
+        const product= document.createElement('div');
 
         let stars;
 
@@ -33,17 +33,19 @@ const handleCollectionResult= (querySnapshot)=>{
         }
 
         //fill all the data
-        product.innerHTML= ` 
+        product.innerHTML= `
+        <a class="productStore__content" href="./productDetail.html?id=${doc.id}&name=${data.name}"> 
         <h1 class="productStore__name">${data.name}</h1>
         <h4 class="productStore__type">${data.p}</h4>
         <img class="productStore__img" src="${data.mainImg[3]?.url}">
         <h4 class="productStore__price"> $ ${data.price}</h4>
         <img class="productStore__stars" src="${stars}">
-        <button>ADD TO CART</button>
+        </a>
+        <button class="productStore__cartBtn">ADD TO CART</button>
         `;
     
         product.classList.add('productStore');
-        product.setAttribute('href', `./productDetail.html?id=${doc.id}&name=${data.name}`);
+        /*product.setAttribute('href', ``);*/
     
         productList.appendChild(product);
     }));
@@ -56,6 +58,7 @@ filters.addEventListener('change', function(){
 console.log(filters.type.value);
 
 let productsCollection=db.collection('products');
+
 
 //filter type
 if(filters.type.value){

@@ -1184,6 +1184,7 @@ button:hover {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 5;
+  opacity: 0;
   -webkit-transition: opacity .5s ease;
   transition: opacity .5s ease;
 }
@@ -1499,6 +1500,7 @@ button:hover {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 5;
+  opacity: 0;
   -webkit-transition: opacity .5s ease;
   transition: opacity .5s ease;
 }
