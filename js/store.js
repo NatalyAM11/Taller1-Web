@@ -79,6 +79,12 @@ if(filters.type.value){
         bannerStoreTitle.innerHTML="FACE";
         bannerStore.style.backgroundImage = "url('../img/bannerSkin.png')";
     }
+
+    
+    if(filters.type.value==" "){
+        bannerStoreTitle.innerHTML="SHOP";
+        bannerStore.style.backgroundImage = "url('../img/bannerShop.png')";
+    }
 }
 
 //filter tone

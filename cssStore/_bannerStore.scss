@@ -32,21 +32,28 @@
     }
 }
 
+@media only screen and (max-width:1125px){
+    .bannerStore{
+        width: 80%;
+        height: 20vw;
+        height: 17vw;
+        margin-left: 10vw;
+    
+        &__title{
+            font-size:35px;
+        }
+    }
+}
+
 
 @media only screen and (max-width:610px){
     .bannerStore{
         width: 75%;
         height: 20vw;
         margin-left: 12vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-size: cover;
-        background-position: left;
     
         &__title{
             font-size:35px;
-            color: white;
         }
     }
 
@@ -54,7 +61,6 @@
         width: 86%;
         height: 15vw;
         margin-left: 7vw;
-        background-image: url("../img/bannerShop.png");
         background-size: cover;
         margin-top: 10vw;
         margin-bottom: 15px;

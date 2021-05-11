@@ -4,8 +4,8 @@ const modalContent=document.querySelector ('.modal__content');
 const modalBtn=document.querySelector ('.modal__btn');
 
 
-const navOptions=document.querySelector('.nav__options');
-const navD=document.querySelector('.nav__desaparecer');
+/*const navOptions=document.querySelector('.nav__options');
+const navD=document.querySelector('.nav__desaparecer');*/
 
 //variables interaction
 const imgEye=document.querySelector ('.interaction__eye');
@@ -15,7 +15,7 @@ const cperfectStorm=document.querySelector('.perfectStorm');
 const cbutterflyBae=document.querySelector ('.butterflyBae');
 const cstormiWeather=document.querySelector ('.stormiWeather');
 const cstormiWorld=document.querySelector ('.stormiWorld');
-const hamburgerBtn=document.querySelector ('.nav__hamburger');
+//const hamburgerBtn=document.querySelector ('.nav__hamburger');
 
 
 
@@ -28,7 +28,7 @@ function effect(){
 
 setTimeout(effect,80);
 
-///////interaction nav responsive
+/*///////interaction nav responsive
 //transition when the options of the hamburguer menu appears
 function handleNavEffect(){
     navOptions.style.opacity=1;
@@ -45,7 +45,7 @@ function handleNavAppear(){
     setTimeout(handleNavEffect,50);
 }
 
-hamburgerBtn.addEventListener('click', handleNavAppear);
+hamburgerBtn.addEventListener('click', handleNavAppear);*/
 
 
 

@@ -1,7 +1,9 @@
 //nav 
+
 const hamburgerBtn=document.querySelector ('.nav__hamburger');
 const navOptions=document.querySelector('.nav__options');
 const navD=document.querySelector('.nav__desaparecer');
+
 
 ///////interaction nav responsive
 //transition when the options of the hamburguer menu appears
@@ -44,18 +46,21 @@ let loggedUser= null;
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    //console.log('onAuthStateChanged', user);
+    console.log(user)
 
     db.collection('users').doc(user.uid).get().then(function(doc){
       loggedUser=doc.data();
       loggedUserUid=user.uid;
 
-      userLoggerdIn();
+      //user is logged
+      userAuthChanged(true);
     });
+    
   } else {
     // User is signed out
+    userAuthChanged(false);
     loggedUser=null;
-
-    userLoggedOut();
   }
 });
+
+

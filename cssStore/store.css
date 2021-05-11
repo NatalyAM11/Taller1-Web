@@ -3,8 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
 .nav {
-  font-size: large;
-  font-family: magra;
   font-weight: 600;
   width: 100%;
   height: 8.5em;
@@ -39,6 +37,8 @@
 }
 
 .nav__option {
+  font-size: large;
+  font-family: magra;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-text-decoration-line: none;
@@ -54,12 +54,39 @@
   display: none;
 }
 
+.authButtons {
+  width: 100%;
+  height: 8em;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 0;
+  background-color: white;
+  font-size: 15px;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 25px;
+  top: 10vw;
+  /*opacity: 0;  
+    transition: opacity .5s ease;  */
+}
+
 @media only screen and (max-width: 1078px) {
   .nav {
     font-size: medium;
     width: 100%;
     height: 8em;
     background-size: 144vw;
+  }
+  .authButtons {
+    top: 12vw;
   }
 }
 
@@ -69,6 +96,9 @@
     width: 100%;
     height: 7em;
     background-size: 155vw;
+  }
+  .authButtons {
+    top: 15vw;
   }
 }
 
@@ -142,6 +172,9 @@
   .nav__disappear {
     display: none;
   }
+  .authButtons {
+    top: 14vw;
+  }
 }
 
 button {
@@ -167,8 +200,11 @@ button:hover {
   .logo {
     display: none;
   }
-  .logo--responsive {
+  .logo--responsiveCont {
     width: 19%;
+  }
+  .logo--responsive {
+    width: 100%;
   }
 }
 
@@ -438,7 +474,7 @@ h4 {
   margin-top: 0px;
 }
 
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 641px) {
   .productStore {
     width: 230px;
     height: 455px;
@@ -733,7 +769,7 @@ h4 {
 
 .productList {
   width: 100%;
-  padding-left: 11%;
+  padding-left: 12%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -746,17 +782,17 @@ h4 {
 
 @media only screen and (max-width: 1125px) {
   .productList {
-    padding-left: 5%;
+    padding-left: 7%;
   }
 }
 
-@media only screen and (max-width: 911px) {
+@media only screen and (max-width: 939px) {
   .productList {
-    padding-left: 10%;
+    padding-left: 9%;
   }
 }
 
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 641px) {
   .productList {
     width: 90%;
     padding-left: 7%;
@@ -812,32 +848,31 @@ h4 {
   color: white;
 }
 
+@media only screen and (max-width: 1125px) {
+  .bannerStore {
+    width: 80%;
+    height: 20vw;
+    height: 17vw;
+    margin-left: 10vw;
+  }
+  .bannerStore__title {
+    font-size: 35px;
+  }
+}
+
 @media only screen and (max-width: 610px) {
   .bannerStore {
     width: 75%;
     height: 20vw;
     margin-left: 12vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background-size: cover;
-    background-position: left;
   }
   .bannerStore__title {
     font-size: 35px;
-    color: white;
   }
   .bannerProduct {
     width: 86%;
     height: 15vw;
     margin-left: 7vw;
-    background-image: url("../img/bannerShop.png");
     background-size: cover;
     margin-top: 10vw;
     margin-bottom: 15px;
@@ -1327,6 +1362,13 @@ h4 {
   .recommendation__item:hover {
     opacity: 85%;
   }
+}
+
+.authModal {
+  z-index: 5;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
 }
 
 .authModal .modal__content {

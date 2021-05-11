@@ -1,6 +1,6 @@
 .productList{
     width: 100%;
-    padding-left:11%;
+    padding-left:12%;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -10,19 +10,19 @@
 
 @media only screen and (max-width:1125px){
     .productList{
-        padding-left:5%;
+        padding-left:7%;
     }
 }
 
-@media only screen and (max-width:911px){
+@media only screen and (max-width:939px){
     .productList{
-        padding-left:10%;
+        padding-left:9%;
     }
 }
 
 
 
-@media only screen and (max-width:610px){
+@media only screen and (max-width:641px){
     .productList{
         width: 90%;
         padding-left:7%;

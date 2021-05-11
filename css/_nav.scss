@@ -1,6 +1,4 @@
 .nav{
-    font-size:large;
-    font-family: magra;
     font-weight: 600;
     width: 100%;
     height: 8.5em;
@@ -25,6 +23,8 @@
     }
 
     &__option{
+        font-size:large;
+        font-family: magra;
         box-sizing: border-box;
         text-decoration-line: none;
         color: rgb(66, 4, 71);
@@ -41,6 +41,25 @@
 
 }
 
+.authButtons{
+    width: 100%;
+    height: 8em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    background-color: rgb(255, 255, 255);  
+    font-size: 15px; 
+    position: absolute; 
+    align-items: center;
+    padding-top: 25px;
+    //bottom: -100%;
+    top:10vw;
+    //z-index: 10;
+    /*opacity: 0;  
+    transition: opacity .5s ease;  */   
+}
+
 
 ///////////////////
 //Media query: 1078px
@@ -52,6 +71,10 @@
         height: 8em;
         background-size: 144vw;
     }
+
+    .authButtons{
+        top:12vw;
+    }
 }
 
 //791px
@@ -61,6 +84,10 @@
         width: 100%;
         height: 7em;
         background-size: 155vw;
+    }
+
+    .authButtons{
+        top:15vw;
     }
 }
 
@@ -128,6 +155,10 @@
             display: none;
         }
 
+    }
+
+    .authButtons{
+        top:14vw;
     }
 
 }

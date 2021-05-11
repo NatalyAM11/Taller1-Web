@@ -63,7 +63,7 @@ db.collection('products').doc(id)
 
     if(data.type=="face"){
         bannerTitle.innerText="FACE";
-        bannerProduct.style.backgroundImage = "url('../img/bannerFace.png')";
+        bannerProduct.style.backgroundImage = "url('../img/bannerSkin.png')";
         item1.style.backgroundImage = "url('../img/recommendationLips.png')";
         item1.innerText= "LIPS";
         item2.style.backgroundImage = "url('../img/recommendationEyes.png')";

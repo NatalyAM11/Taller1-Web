@@ -16,7 +16,7 @@
 
         <div class="nav__responsive">
             <div class="nav__hamburger"></div>
-            <img class="logo--responsive" src="./img/logo.png">
+            <a href= "./index.html" class="logo--responsiveCont"><img class="logo--responsive" src="./img/logo.png"></a>
             <div class="nav__divIconsResponsive">
                 <img class="nav__icon" src="./img/userIcon.png">
                 <img class="nav__icon" src="./img/cartIcon.png">
@@ -87,11 +87,16 @@
                 </select>
 
                 <label class="productForm__label" for="product">Collection</label>
-                <input class="productForm__input" type="text" id="product" placeholder="Collection of the product"
-                    name="collection">
+                <select class="productForm__input" id="collectionProduct" name="collection">
+                    <option value="">SELECT THE COLLECTION OF THE PRODUCT</option>
+                    <option value="BIRTHDAY COLLECTION">BIRTHDAY COLLECTION</option>
+                    <option value="HOLIDAY COLLECTION">HOLIDAY COLLECTION</option>
+                    <option value="STORMI COLLECTION">STORMI COLLECTION</option>
+                </select>
 
                 <label class="productForm__label" for="product">Description</label>
-                <textarea class="productForm__input description" name="description" id="product" cols="5" rows="3" maxlength= "300" placeholder="Description of the product"></textarea>
+                <textarea class="productForm__input description" name="description" id="product" cols="5" rows="3"
+                    maxlength="300" placeholder="Description of the product"></textarea>
             </div>
 
 
@@ -125,7 +130,7 @@
             <input accept='.png' type="file" class="productForm__input imgInput" name="mainImage">
         </div>
 
-        
+
         <p class="productForm__loader notifications hidden">Loading...</p>
         <div class="productForm__error  notifications hidden">
             <h2>SOMETHING WENT WRONG</h2>

@@ -34,8 +34,20 @@ authModal.innerHTML=`
 </a>
 </section>`;
 
-document.body.appendChild(authModal);
+/////////////////Modal
+//turn the display of the modal in none
+function handleModalDisappear(){
+    authModal.style.opacity='0';    
+    authModal.style.display='none';
+}
 
+function handleModalAppear(){
+    authModal.style.display='block';
+    authModal.style.opacity='1';    
+}
+
+document.body.appendChild(authModal);
+handleModalDisappear();
 /*<button class="authForm__registerBtn" type="button">Register</button>
 <button class="authForm__loginBtn" type="button">LOGIN</button>*/
 
@@ -53,12 +65,6 @@ function effect(){
 
 setTimeout(effect,80);
 
-
-/////////////////Modal
-//turn the display of the modal in none
-function handleModalDisappear(){
-    modal.style.display='none';
-}
 
 function handleCloseModal(){
     //transition
@@ -131,6 +137,7 @@ authForm.addEventListener('submit', function(event){
     if(isLogin==true){
         //login
         firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(res => console.log(res))
             .catch((error) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
@@ -156,4 +163,49 @@ authForm.addEventListener('submit', function(event){
             modalError.innerText=error.message;
         });
     }
+});
+
+
+
+//auth buttons
+
+const authBtns=document.querySelectorAll('.authButtons');
+const userIcon=document.querySelectorAll('.userIcon');
+
+
+//aqui solo funciona con uno
+userIcon.forEach(icon =>{
+
+    authBtns.forEach(element => {
+        element.innerHTML=`
+        <a class="nav__option hideLoggedIn authButton__LogIn">Login/Register</a>
+        <a class="nav__option showLoggedIn authButton__LogOut">Log Out</a>
+        `;
+        
+        icon.addEventListener('click', ()=>{
+            element.classList.toggle('hidden');
+        });
+    });
+});
+
+
+
+//////Login y Logout
+const authLogin=document.querySelectorAll('.authButton__LogIn');
+const authLogOut=document.querySelectorAll('.authButton__LogOut');
+console.log(authLogin)
+//Log Out
+authLogOut.forEach(item => {
+    item.addEventListener('click', ()=>{
+        firebase.auth().signOut();
+    });
+});
+
+//Login
+authLogin.forEach(item => {
+    item.addEventListener('click', ()=>{
+        document.body.appendChild(authModal);
+        handleModalAppear()
+        console.log("snfkjnsdkjfnskdj");
+    });    
 });
