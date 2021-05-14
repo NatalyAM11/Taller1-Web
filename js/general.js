@@ -1,5 +1,15 @@
-//nav 
 
+//////firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyCorqNP_uv4krxv33LMwAWAraEaEtyl4Mw",
+  authDomain: "kylie-cosmetics-208ac.firebaseapp.com",
+  projectId: "kylie-cosmetics-208ac",
+  storageBucket: "kylie-cosmetics-208ac.appspot.com",
+  messagingSenderId: "629586722107",
+  appId: "1:629586722107:web:88f285dce23d3777f18b1e"
+};
+
+//nav 
 const hamburgerBtn=document.querySelector ('.nav__hamburger');
 const navOptions=document.querySelector('.nav__options');
 const navD=document.querySelector('.nav__desaparecer');
@@ -25,16 +35,6 @@ function handleNavAppear(){
 hamburgerBtn.addEventListener('click', handleNavAppear);
 
 
-//////firebase
-const firebaseConfig = {
-    apiKey: "AIzaSyCorqNP_uv4krxv33LMwAWAraEaEtyl4Mw",
-    authDomain: "kylie-cosmetics-208ac.firebaseapp.com",
-    projectId: "kylie-cosmetics-208ac",
-    storageBucket: "kylie-cosmetics-208ac.appspot.com",
-    messagingSenderId: "629586722107",
-    appId: "1:629586722107:web:88f285dce23d3777f18b1e"
-  };
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
@@ -54,6 +54,8 @@ firebase.auth().onAuthStateChanged((user) => {
 
       //user is logged
       userAuthChanged(true);
+
+      handleModalDisappear();
     });
     
   } else {
@@ -62,5 +64,27 @@ firebase.auth().onAuthStateChanged((user) => {
     loggedUser=null;
   }
 });
+
+
+//////cart
+
+let cart= [];
+
+const cartIconNumber= document.querySelectorAll('.cartIcon span');
+
+const cartFromLS= localStorage.getItem('store__cart');
+
+//bring the information of the local storage
+if(cartFromLS){
+    cart=JSON.parse(cartFromLS);
+
+    //add the number to the spam of the cart icon
+    cartIconNumber.forEach(icon =>{
+        if(icon){
+          icon.innerText=cart.length;
+        }
+    });
+    
+}
 
 

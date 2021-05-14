@@ -4,6 +4,7 @@ const filters= document.querySelector('.filters');
 const bannerStoreTitle=document.querySelector('.bannerStore__title');
 const bannerStore=document.querySelector('.bannerStore');
 
+
 const handleCollectionResult= (querySnapshot)=>{
 
     //empty div so the products are not overwritten
@@ -48,6 +49,18 @@ const handleCollectionResult= (querySnapshot)=>{
         /*product.setAttribute('href', ``);*/
     
         productList.appendChild(product);
+
+        //add the product in the cart array
+        const cartBtn= product.querySelector('.productStore__cartBtn');
+        cartBtn.addEventListener('click', ()=>{
+            cart.push(data);
+            localStorage.setItem('store__cart', JSON.stringify(cart));
+
+            //add the number to the spam of the cart icon
+            cartIconNumber.forEach(icon =>{
+                icon.innerText=cart.length;
+            });
+        })
     }));
 }
 

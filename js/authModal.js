@@ -47,9 +47,8 @@ function handleModalAppear(){
 }
 
 document.body.appendChild(authModal);
+
 handleModalDisappear();
-/*<button class="authForm__registerBtn" type="button">Register</button>
-<button class="authForm__loginBtn" type="button">LOGIN</button>*/
 
 //variables modal
 const modal=document.querySelector ('.modal');
@@ -88,9 +87,6 @@ const submitBtn= authForm.querySelector('.authForm__sendBtn');
 const modalError= authForm.querySelector('.authForm__error');
 let isLogin= true;
 
-//regFields.addEventListener('click',console.log("quepasa"));
-
-
 
 function handleGoToLogin(){
     //hidde the fields of register and the boton of login
@@ -119,8 +115,8 @@ registerBtn.addEventListener('click', function(){
     loginBtn.classList.remove('hidden');
     registerBtn.classList.add('hidden');  
     isLogin=false;  
-
 });
+
 
 authForm.addEventListener('submit', function(event){
     event.preventDefault();
@@ -137,11 +133,12 @@ authForm.addEventListener('submit', function(event){
     if(isLogin==true){
         //login
         firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(res => console.log(res))
+            .then(()=>{
+                handleCloseModal();
+            })
             .catch((error) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
-                console.log(error);
                 modalError.innerText=error.message;
         });
 
@@ -157,6 +154,8 @@ authForm.addEventListener('submit', function(event){
                     lastName: lastName,
                     email:email
                 });
+
+                handleCloseModal();
     
          })
         .catch((error) => {
@@ -168,12 +167,9 @@ authForm.addEventListener('submit', function(event){
 
 
 //auth buttons
-
 const authBtns=document.querySelectorAll('.authButtons');
 const userIcon=document.querySelectorAll('.userIcon');
 
-
-//aqui solo funciona con uno
 userIcon.forEach(icon =>{
 
     authBtns.forEach(element => {
@@ -184,6 +180,9 @@ userIcon.forEach(icon =>{
         
         icon.addEventListener('click', ()=>{
             element.classList.toggle('hidden');
+
+            element.style.opacity=0.5;
+            setTimeout(element.style.opacity=1,100);
         });
     });
 });
@@ -193,7 +192,7 @@ userIcon.forEach(icon =>{
 //////Login y Logout
 const authLogin=document.querySelectorAll('.authButton__LogIn');
 const authLogOut=document.querySelectorAll('.authButton__LogOut');
-console.log(authLogin)
+
 //Log Out
 authLogOut.forEach(item => {
     item.addEventListener('click', ()=>{
@@ -205,7 +204,8 @@ authLogOut.forEach(item => {
 authLogin.forEach(item => {
     item.addEventListener('click', ()=>{
         document.body.appendChild(authModal);
-        handleModalAppear()
-        console.log("snfkjnsdkjfnskdj");
+        handleModalAppear();
     });    
 });
+
+
