@@ -149,12 +149,14 @@ authForm.addEventListener('submit', function(event){
                 // Signed in 
                 var user = userCredential.user;
 
-                db.collection('users').doc(user.uid).set({
+                const userDoc={
                     firstName: firstName,
                     lastName: lastName,
                     email:email
-                });
+                };
 
+                db.collection('users').doc(user.uid).set(userDoc);
+                setLoggedUser(userDoc, user.uid);
                 handleCloseModal();
     
          })

@@ -52,15 +52,16 @@ const handleCollectionResult= (querySnapshot)=>{
 
         //add the product in the cart array
         const cartBtn= product.querySelector('.productStore__cartBtn');
-        cartBtn.addEventListener('click', ()=>{
-            cart.push(data);
-            localStorage.setItem('store__cart', JSON.stringify(cart));
 
-            //add the number to the spam of the cart icon
-            cartIconNumber.forEach(icon =>{
-                icon.innerText=cart.length;
+        
+        cartBtn.addEventListener('click', ()=>{
+
+            addToMyCart({
+                ...data,
+                id: doc.id,
             });
-        })
+            //localStorage.setItem('store__cart', JSON.stringify(cart));
+        });
     }));
 }
 

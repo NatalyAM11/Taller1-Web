@@ -44,24 +44,40 @@ const storage= firebase.storage();
 
 let loggedUser= null;
 
+const setLoggedUser= (info, id)=>{
+  loggedUser=info;
+  loggedUser.uid=id;
+
+  //user is logged
+  userAuthChanged(true);
+
+  handleModalDisappear();
+}
+
+ 
 firebase.auth().onAuthStateChanged((user) => {
+
   if (user) {
     console.log(user)
 
     db.collection('users').doc(user.uid).get().then(function(doc){
-      loggedUser=doc.data();
-      loggedUserUid=user.uid;
-
-      //user is logged
-      userAuthChanged(true);
-
-      handleModalDisappear();
+      if(!doc.data()) return;
+      setLoggedUser(doc.data(), user.uid);
     });
+
+    getMyCart(user.uid);
     
   } else {
     // User is signed out
     userAuthChanged(false);
     loggedUser=null;
+
+    cart=[];
+
+    cartIconNumber.forEach(icon =>{
+      icon.innerText=" ";
+    });
+
   }
 });
 
@@ -74,8 +90,51 @@ const cartIconNumber= document.querySelectorAll('.cartIcon span');
 
 const cartFromLS= localStorage.getItem('store__cart');
 
+
+const cartCollection=db.collection('cart');
+
+const addToMyCart= (product)=>{
+    cart.push(product);
+    
+
+    //Update all the cart in firebase
+    cartCollection.doc(loggedUser.uid).set({
+      cart
+    });
+
+    //add the number to the spam of the cart icon
+    cartIconNumber.forEach(icon =>{
+        icon.innerText=cart.length;
+    });
+}
+
+
+
+let renderCart= null;
+
+const getMyCart=(uid)=>{
+      cartCollection.doc(uid).get().then(snapShot=>{
+        const data=snapShot.data();
+        console.log(data);
+        if(!data)return;
+
+        cartIconNumber.forEach(icon =>{
+          icon.innerText=data.cart.length;
+        });
+
+        cart=data.cart;
+
+        if(renderCart){
+          renderCart();
+        }
+        
+  });
+}
+
+
+
 //bring the information of the local storage
-if(cartFromLS){
+/*if(cartFromLS){
     cart=JSON.parse(cartFromLS);
 
     //add the number to the spam of the cart icon
@@ -85,6 +144,6 @@ if(cartFromLS){
         }
     });
     
-}
+}*/
 
 
