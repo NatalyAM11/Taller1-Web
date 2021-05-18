@@ -10,17 +10,17 @@ authModal.innerHTML=`
     <div class="authForm__img"></div>
 
     <form class="authForm">
-        <label class="authForm__regField productForm__label" for="name">Name</label>
-        <input class="authForm__regField productForm__input" type="text" id="nameUser" placeholder="Your name" name="nameUser">
+        <label class="authForm__regField authForm__label" for="name">Name</label>
+        <input class="authForm__regField authForm__input" type="text" id="nameUser" placeholder="Your name" name="nameUser">
 
-        <label class="authForm__regField productForm__label for="LastName">Last name</label>
-        <input class="authForm__regField productForm__input" type="text" id="LastNameUser" placeholder="Your last name" name="lastNameUser">
+        <label class="authForm__regField authForm__label for="LastName">Last name</label>
+        <input class="authForm__regField authForm__input" type="text" id="LastNameUser" placeholder="Your last name" name="lastNameUser">
 
-        <label class="productForm__label" for="email">Email</label>
-        <input class="productForm__input" type="text" id="email" placeholder="youremail@gmail.com" name="email">
+        <label class="authForm__label" for="email">Email</label>
+        <input class="authForm__input" type="text" id="email" placeholder="youremail@gmail.com" name="email">
 
-        <label class="productForm__label" for="product">Password</label>
-        <input class="productForm__input" type="password" id="password" placeholder="Your password" name="password">
+        <label class="authForm__label" for="product">Password</label>
+        <input class="authForm__input" type="password" id="password" placeholder="Your password" name="password">
 
         <div class="authForm__buttons">
         <a class="authForm__a authForm__registerBtn">Don't have an account yet? <b class="authForm__b">Register</b></a>

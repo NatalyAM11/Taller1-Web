@@ -26,25 +26,6 @@
         padding: 30px;
     }
 
-    &__label{
-        display: block;
-        width: 100%;
-        font-family: manrope;
-        font-weight: 600; 
-        margin:7px 0px;
-    }
-
-    &__input{
-        display: block;
-        border-color: #B674AA;
-        height: 30px;
-        width: 100%;
-        border-radius: 5px;
-        font-family: Manrope;
-        margin-bottom: 10px;
-        color: #854e7b;
-    }
-
     &__loader{
         font-size: x-large;
         width: 80%;
@@ -160,4 +141,5 @@
 .description{
     height: 90px;
 }
+
 

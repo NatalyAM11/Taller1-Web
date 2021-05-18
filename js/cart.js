@@ -10,17 +10,32 @@ renderCart= ()=>{
     
         //fill all the data
         product.innerHTML= ` 
-        <h1 class="productStore__name">${data.name}</h1>
-        <h4 class="productStore__type">${data.p}</h4>
-        <img class="productStore__img" src="${data.mainImg[3]?.url}">
-        <h4 class="productStore__price"> $ ${data.price}</h4>
-        </a>
-      
+            <div class="productCart">
+            <div class="productCart__noButton">
+                <div class="productCart__info">
+                    <img class="productCart__img" src="${data.mainImg[3]?.url}">
+                    <div class="productCart__text">
+                        <h4 class="productCart__name">${data.name}</h4>
+                        <h5 class="productCart__type">${data.p}</h5>
+                    </div>
+                </div>
+
+                <div class="counter productCart__counter">
+                    <button class="counter__btn productCart__btn rest">
+                        <span>−</span>
+                    </button>
+                    <input type="number" class="counter__input" placeholder="0"></input>
+                    <button class="counter__btn  productCart__btn plus">
+                        <span>+</span>
+                    </button>
+                </div>
+
+                <h4 class="productCart__price">$12.00</h4>
+            </div>
+            <img class="productCart__deleteBtn" src="./img/DeleteCartBtn.png">
+        </div>
         `;
-    
-        product.classList.add('productStore');
-    
-    
+     
         cartList.appendChild(product);
     
         total+=data.price;
@@ -29,7 +44,7 @@ renderCart= ()=>{
 
 }
 
-console.log(loggedUser)
+console.log(loggedUser);
 
 
 

@@ -1,0 +1,165 @@
+.checkout{
+    width: 90%;
+    padding-top: 100px;
+    display: flex;
+    margin: 0px 70px;
+    box-sizing: border-box;
+
+    &__table{
+        width: 69%;
+        padding-top: 20px;
+    }
+
+    &__title{
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-around;
+        box-sizing: border-box;
+        background-color: rgb(243, 224, 239);
+    }
+
+    &__form{
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__button{
+        width: 100%;
+    }
+
+    &__h2{
+        margin-bottom: 25px;
+    }
+}
+
+.checkoutInfo{
+    flex-grow: 1;
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+.checkoutSummary{
+    width: 100%;
+    height: 210px;
+    display: flex;
+    background-color:rgb(243, 224, 239);
+
+    &__div{
+        display: flex;
+        justify-content: space-around;
+        background-color:rgb(243, 224, 239);
+    }
+
+    &__prices{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 25px;
+        background-color: rgb(249, 235, 246);
+    }
+
+    &__price{
+        width: auto;
+        box-sizing: border-box;
+        margin: 0px;
+        font-family: manrope;
+        font-weight: 500;
+    }
+
+    &__titles{
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 25px;
+    }
+    
+    &__title{
+        margin: 0px;
+    }
+
+    &__totalTitle{
+        width: 100%;
+        height: 50px;
+        color: white;
+        background-color:rgba(182, 116, 170, 0.8);
+        box-sizing: border-box;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__TPrice{
+        color: rgb(66, 4, 71);
+        background-color:rgb(245, 224, 241);
+        font-family: manrope;
+        font-weight: 500;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width:980px){
+
+    .checkout{
+        width: 100%;
+        padding-top: 100px;
+        flex-direction: column;
+        margin: 0px 0px;
+        align-items: center;
+        
+        &__table{
+            width: 90%;
+            padding-top: 20px;
+        }
+      
+        &__button{
+            width: 60%;
+        }
+    }
+
+    .checkoutInfo{
+        width: 90%;
+        margin-left: 0px;
+        margin-top: 70px;
+    }
+}
+
+
+
+@media only screen and (max-width:606px){
+
+    .checkout{
+        width: 80%;
+        padding-top: 90px;
+        margin: 0px 40px;
+
+        
+        &__table{
+            width: 90%;
+            padding-top:0px;
+        }
+
+        
+        &__title{
+            display: none;
+        }
+    }
+
+    .checkoutInfo{
+        margin-left: 0px;
+        margin-top: 70px;
+    }
+
+}

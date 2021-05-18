@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +9,28 @@
 
     <link rel="stylesheet" href="./cssStore/store.css">
 </head>
+
 <body>
 
     <body>
         <nav class="nav">
-    
+
             <div class="nav__responsive">
                 <div class="nav__hamburger"></div>
-                <a href= "./index.html" class="logo--responsiveCont"><img class="logo--responsive" src="./img/logo.png"></a>
+                <a href="./index.html" class="logo--responsiveCont"><img class="logo--responsive"
+                        src="./img/logo.png"></a>
                 <div class="nav__divIconsResponsive">
                     <img class="nav__icon userIcon" src="./img/userIcon.png">
                     <a class="nav__icon cartIcon"><img src="./img/cartIcon.png"><span></span></a>
                 </div>
                 <section class="authButtons hidden"></section>
             </div>
-    
+
             <div class="nav__options nav__disappear">
                 <a class="nav__option">COLLECTION</a>
-                <a href= "./store.html" class="nav__option">SHOP</a>
+                <a href="./store.html" class="nav__option">SHOP</a>
                 <a class="nav__option">NEW</a>
-                <a href= "./index.html"><img class="logo" src="./img/logo.png"></a>
+                <a href="./index.html"><img class="logo" src="./img/logo.png"></a>
                 <a class="nav__option">ABOUT</a>
                 <a class="nav__option">KYLIE SKIN</a>
                 <div class="nav__divIcons">
@@ -36,13 +39,61 @@
                 </div>
                 <section class="authButtons hidden"></section>
             </div>
-            
+
         </nav>
 
-    <section class="cartList"></section>
-    
-    
-</body>
+        <main class="checkout">
+
+            <section class="checkout__table">
+                <h2>MY CART</h2>
+                <div class="checkout__title">
+                    <h4>PRODUCT</h4>
+                    <h4>AMOUNT</h4>
+                    <h4>SUBTOTAL</h4>
+                </div>
+
+                <section class="cartList">
+                    
+                </section>
+        
+            </section>
+
+
+            <section class="checkoutInfo">
+                <div class="checkoutSummary">
+
+                <div class="checkoutSummary__titles">
+                    <h4 class="checkoutSummary__title">SUBTOTAL</h4>
+                    <h4 class="checkoutSummary__title">SHIPPING</h4>
+                    <h4 class="checkoutSummary__totalTitle">Total</h4>
+                </div>
+
+                <div class="checkoutSummary__prices">
+                    <h4 class="checkoutSummary__price checkoutSubtotal">$56.00</h4>
+                    <h4 class="checkoutSummary__price checkoutShipping">$56.00</h4>
+                    <h4 class="checkoutSummary__totalTitle checkoutSummary__TPrice checkoutTotal">$56.00</h4>
+                </div>
+            </div>
+
+                <form class="checkout__form">
+                    <h2 class="checkout__h2">INFORMATION</h2>
+                    <label class="field__label" for="IdNumber">Identification number</label>
+                    <input class="field__input" type="number" id="IdNumber" placeholder="Your identifaction number" name="IdNumber">
+                    <label class="field__label" for="address">Credit card number</label>
+                    <input class="field__input" type="text" id="ccNumber" placeholder="Your credit card number" name="ccNumber">
+                    <label class="field__label" for="city">City</label>
+                    <input class="field__input" type="text" id="city" placeholder="City delivery" name="city">
+                    <label class="field__label" for="address">Address</label>
+                    <input class="field__input" type="text" id="address" placeholder="Address delivery" name="address">                    
+                    <button class="button checkout__button" type="submit">CHECK OUT</button>
+                </form>
+            </section>
+        </main>
+
+
+
+    </body>
+
 </html>
 
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
@@ -56,5 +107,3 @@
 
 <script src="./js/authModal.js"></script>
 <script src="./js/authUtils.js"></script>
-
-  
