@@ -1,7 +1,7 @@
 //varaibles modal
-const modal=document.querySelector ('.modal');
+/*const modal=document.querySelector ('.modal');
 const modalContent=document.querySelector ('.modal__content');
-const modalBtn=document.querySelector ('.modal__btn');
+const modalBtn=document.querySelector ('.modal__btn');*/
 
 
 /*const navOptions=document.querySelector('.nav__options');
@@ -21,12 +21,12 @@ const cstormiWorld=document.querySelector ('.stormiWorld');
 
 ////////////modal effect
 //Effects when the modal appears for the first time
-function effect(){
+/*function effect(){
     modalContent.style.transform = 'translate (0px, 0px)';
     modal.style.opacity=1;
 }
 
-setTimeout(effect,80);
+setTimeout(effect,80);*/
 
 /*///////interaction nav responsive
 //transition when the options of the hamburguer menu appears

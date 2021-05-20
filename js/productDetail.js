@@ -38,6 +38,19 @@ db.collection('products').doc(id)
     productDescription.innerText=data.description;
     productContents.innerText=data.content;
     productPrice.innerText="$ "+data.price+"USD";
+    // Que pasa si solo puse 2 imagenes // 1?¨
+    //TODO :¨borrar esto
+   /* data.images.forEach(element => {
+        const image;
+        element.url
+    });*/
+
+    data.images.forEach(element=>{
+        //side images
+         const miniImg=document.createElement('img');
+
+    });
+
     productImg1.setAttribute('src',  data.images[0].url);
     productImg2.setAttribute('src',  data.images[1].url);
     productImg3.setAttribute('src',  data.images[2].url);
@@ -108,20 +121,3 @@ if(params.get('type')){
 
 
 
-    /*        switch(data.popularity.value){
-            case "1":
-
-                break;
-            case "2":
-                stars='./img/twoStars.png';
-                break;
-            case "3":
-                stars='./img/threeStars.png';
-                break;
-            case "4":
-                stars='./img/fourStars.png';
-                break; 
-            case "5":
-                stars='./img/fiveStars.png';
-                break;                               
-        }*/

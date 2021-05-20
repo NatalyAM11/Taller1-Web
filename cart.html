@@ -69,22 +69,23 @@
                 </div>
 
                 <div class="checkoutSummary__prices">
-                    <h4 class="checkoutSummary__price checkoutSubtotal">$56.00</h4>
-                    <h4 class="checkoutSummary__price checkoutShipping">$56.00</h4>
-                    <h4 class="checkoutSummary__totalTitle checkoutSummary__TPrice checkoutTotal">$56.00</h4>
+                    <h4 class="checkoutSummary__price checkoutSubtotal">$0.00</h4>
+                    <h4 class="checkoutSummary__price checkoutShipping">$0.00</h4>
+                    <h4 class="checkoutSummary__totalTitle checkoutSummary__TPrice checkoutTotal">$0.00</h4>
                 </div>
             </div>
 
                 <form class="checkout__form">
                     <h2 class="checkout__h2">INFORMATION</h2>
-                    <label class="field__label" for="IdNumber">Identification number</label>
-                    <input class="field__input" type="number" id="IdNumber" placeholder="Your identifaction number" name="IdNumber">
-                    <label class="field__label" for="address">Credit card number</label>
+                    <label class="field__label" for="idNumber">Identification number</label>
+                    <input class="field__input" type="idNumber" id="idNumber" placeholder="Your identifaction number" name="idNumber">
+                    <label class="field__label" for="ccNumber">Credit card number</label>
                     <input class="field__input" type="text" id="ccNumber" placeholder="Your credit card number" name="ccNumber">
                     <label class="field__label" for="city">City</label>
                     <input class="field__input" type="text" id="city" placeholder="City delivery" name="city">
                     <label class="field__label" for="address">Address</label>
-                    <input class="field__input" type="text" id="address" placeholder="Address delivery" name="address">                    
+                    <input class="field__input" type="text" id="address" placeholder="Address delivery" name="address">  
+                    <p class="checkout__reminder notifications hidden">Loading...</p>                 
                     <button class="button checkout__button" type="submit">CHECK OUT</button>
                 </form>
             </section>

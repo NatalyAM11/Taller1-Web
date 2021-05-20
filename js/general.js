@@ -52,13 +52,16 @@ const setLoggedUser= (info, id)=>{
   userAuthChanged(true);
 
   handleModalDisappear();
+
+  //make sure the variable exists
+  if(typeof checkProductFormAdmin!== 'undefined') checkProductFormAdmin();
 }
 
  
 firebase.auth().onAuthStateChanged((user) => {
 
   if (user) {
-    console.log(user)
+    console.log(user);
 
     db.collection('users').doc(user.uid).get().then(function(doc){
       if(!doc.data()) return;
@@ -92,6 +95,7 @@ const cartFromLS= localStorage.getItem('store__cart');
 
 
 const cartCollection=db.collection('cart');
+const ordersCollection=db.collection('orders');
 
 const addToMyCart= (product)=>{
     cart.push(product);

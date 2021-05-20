@@ -5,13 +5,13 @@ const bannerStoreTitle=document.querySelector('.bannerStore__title');
 const bannerStore=document.querySelector('.bannerStore');
 
 
-const handleCollectionResult= (querySnapshot)=>{
+const handleCollectionResult = (querySnapshot)=>{
 
     //empty div so the products are not overwritten
     productList.innerHTML= " ";
 
     querySnapshot.forEach((doc=>{
-        const data= doc.data();
+        const data = doc.data();
 
         const product= document.createElement('div');
 
@@ -38,7 +38,7 @@ const handleCollectionResult= (querySnapshot)=>{
         <a class="productStore__content" href="./productDetail.html?id=${doc.id}&name=${data.name}"> 
         <h1 class="productStore__name">${data.name}</h1>
         <h4 class="productStore__type">${data.p}</h4>
-        <img class="productStore__img" src="${data.mainImg[3]?.url}">
+        <img class="productStore__img" src="${data.mainImg[0].url}">
         <h4 class="productStore__price"> $ ${data.price}</h4>
         <img class="productStore__stars" src="${stars}">
         </a>
@@ -65,40 +65,47 @@ const handleCollectionResult= (querySnapshot)=>{
     }));
 }
 
+const updateBannerStore = (txt, img) => {
+    bannerStoreTitle.innerHTML = txt;
+    bannerStore.style.backgroundImage = img;
+}
 
 
 //filters
 filters.addEventListener('change', function(){
 console.log(filters.type.value);
 
-let productsCollection=db.collection('products');
+let productsCollection = db.collection('products');
 
 
 //filter type
 if(filters.type.value){
-    productsCollection= productsCollection.where("type", "==", filters.type.value);
-
-    //change the image and the text of the banner
-    if(filters.type.value=="lips"){
-        bannerStoreTitle.innerHTML="LIPS";
-        bannerStore.style.backgroundImage = "url('../img/bannerLips.png')";
+    if(filters.type.value === "shop") {
+     productsCollection =  db.collection('products');
+    } else {
+        productsCollection= productsCollection.where("type", "==", filters.type.value);
     }
 
-    if(filters.type.value=="eyes"){
-        bannerStoreTitle.innerHTML="EYES";
-        bannerStore.style.backgroundImage = "url('../img/bannerEyes.png')";
-    }
-
-    if(filters.type.value=="face"){
-        bannerStoreTitle.innerHTML="FACE";
-        bannerStore.style.backgroundImage = "url('../img/bannerSkin.png')";
-    }
 
     
-    if(filters.type.value==" "){
-        bannerStoreTitle.innerHTML="SHOP";
-        bannerStore.style.backgroundImage = "url('../img/bannerShop.png')";
+
+    //change the image and the text of the banner
+    if(filters.type.value == "lips"){
+        updateBannerStore("LIPS", "url('../img/bannerLips.png')");
     }
+
+    if(filters.type.value == "eyes"){
+        updateBannerStore("EYES", "url('../img/bannerEyes.png')");
+    }
+
+    if(filters.type.value == "face"){
+        updateBannerStore("FACE", "url('../img/bannerSkin.png')");
+    }
+
+    if(filters.type.value == "shop"){
+        updateBannerStore("SHOP", "url('../img/bannerSkin.png')");
+    }
+
 }
 
 //filter tone

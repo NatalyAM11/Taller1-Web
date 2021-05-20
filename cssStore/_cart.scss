@@ -29,10 +29,22 @@
 
     &__button{
         width: 100%;
+        margin-top: 25px;
     }
 
     &__h2{
         margin-bottom: 25px;
+    }
+
+    &__reminder{
+        margin: 20px 0px;
+        font-family: Manrope;
+        color:#e03442;
+        background-color: #f3e0ef;
+        width: 90%;
+        padding: 40px 10%;
+        display: flex;
+        justify-content: center;
     }
 }
 

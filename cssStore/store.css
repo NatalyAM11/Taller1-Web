@@ -1096,6 +1096,9 @@ h4 {
             flex-direction: column;
     margin-top: 20px;
   }
+  .productDetail__title {
+    font-size: 25px;
+  }
   .counter {
     width: 90%;
     display: -webkit-box;
@@ -1479,10 +1482,26 @@ h4 {
 
 .checkout__button {
   width: 100%;
+  margin-top: 25px;
 }
 
 .checkout__h2 {
   margin-bottom: 25px;
+}
+
+.checkout__reminder {
+  margin: 20px 0px;
+  font-family: Manrope;
+  color: #e03442;
+  background-color: #f3e0ef;
+  width: 90%;
+  padding: 40px 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .checkoutInfo {

@@ -70,7 +70,7 @@ productForm.mainImage.addEventListener('change', function (){
     }
 
     reader.readAsDataURL(file);
-    mainImgFile=file;
+    mainImgFile = file;
     console.log(mainImgFile);
 });
 
@@ -136,6 +136,7 @@ productForm.addEventListener('submit', function(event){
         productFormError.innerHTML="Something went wrong, try again please";
         productFormLoading.classList.add('hidden');
         productFormError.classList.remove('hidden');
+        console.log(error);
     }
 
 
@@ -150,6 +151,7 @@ productForm.addEventListener('submit', function(event){
             //array with url promises
             const downloadUrlPromises=[];
 
+            console.log(imgFiles);
             //////image reference
             imgFiles.forEach(function(file){
                 //create the root reference
@@ -164,17 +166,16 @@ productForm.addEventListener('submit', function(event){
 
             
                 //create the root reference
-                var storageRef=firebase.storage().ref();
-                var mainImgRef= storageRef.child(`products/${docRef.id}/${mainImgFile}`);
+                var storageRef = firebase.storage().ref();
+                var mainImgRef = storageRef.child(`products/${docRef.id}/${mainImgFile}`);
                 uploadPromises.push(mainImgRef.put(mainImgFile));
     
 
-            /**/
 
             //get the download URL of the image
             Promise.all(uploadPromises).then(function(snapshots){
                 
-                snapshots.forEach((snapshot)=>{
+                snapshots.forEach( (snapshot) => {
 
                     //add the ulr in the array
                     downloadUrlPromises.push(snapshot.ref.getDownloadURL());
@@ -182,32 +183,33 @@ productForm.addEventListener('submit', function(event){
 
                 //wait till all the promises are done
                 Promise.all(downloadUrlPromises).then(function (downloadUrls){
+                    console.log(downloadUrlPromises);
                     console.log(downloadUrls);
 
                     //create an array for the url of the img
-                    const images= [];
+                    const images = [];
 
-                    const mainImg=[];
-                    
+                    const mainImg = [];
+
                     downloadUrls.forEach(function(url, index){
                         images.push(
                             {
                                 url: url,
                                 ref: snapshots[index].ref.fullPath
                             });
-
-                        mainImg.push(
-                            {
-                                url: url,
-                                ref: snapshots[index].ref.fullPath
-                            }
-                        );
                     });
+
+                    mainImg.push(
+                        {
+                            url: downloadUrls[downloadUrls.length - 1],
+                            ref: snapshots[downloadUrlPromises.length - 1].ref.fullPath
+                        }
+                    );
                     
                     //add the new information of the images to the product
                     db.collection('products').doc(docRef.id).update({
                             images: images,
-                            mainImg:mainImg
+                            mainImg: mainImg
                     }).then(function(){
                         //all the product has been upload                      
                         console.log('document added', docRef.id);
@@ -224,7 +226,10 @@ productForm.addEventListener('submit', function(event){
 });
 
 
-/*if(!loggedUser || !loggedUser.admin){
-    location.href='./store.html';
-}*/
+const checkProductFormAdmin= ()=>{
+    if(!loggedUser || !loggedUser.admin){
+        location.href='./store.html';
+    }
+}
+
 
