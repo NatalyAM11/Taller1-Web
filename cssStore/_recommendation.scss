@@ -5,6 +5,7 @@
     padding-left: 7vw;
     box-sizing: border-box;
     flex-wrap: wrap;
+    
 
     &__options{
         width: 100%;
@@ -27,6 +28,7 @@
         font-size: 30px;
         font-family: magra;
         font-weight: 600;
+        text-decoration-line: none;
     }
 
     &__item:hover{

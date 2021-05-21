@@ -102,10 +102,13 @@ const addToMyCart= (product)=>{
     
 
     //Update all the cart in firebase
-    cartCollection.doc(loggedUser.uid).set({
+    cartCollection.doc(loggedUser.uid).set({    
       cart
     });
 
+    //console.log(product.id);
+    sameProduct(product.id);
+  
     //add the number to the spam of the cart icon
     cartIconNumber.forEach(icon =>{
         icon.innerText=cart.length;
@@ -132,6 +135,23 @@ const getMyCart=(uid)=>{
           renderCart();
         }
         
+  });
+}
+
+
+const sameProduct=(idProduct)=>{
+    
+    cartCollection.doc(loggedUser.uid).get().then(snapShot=>{
+      const data=snapShot.data();
+      console.log(data);
+      if(!data)return;
+ 
+     /* snapShot.forEach(p =>{
+        + 'cart'
+      });*/
+     /* if(data.id == idProduct)  {
+        console.log('otro más');
+      }*/  
   });
 }
 

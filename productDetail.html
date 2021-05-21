@@ -31,7 +31,7 @@
             <a class="nav__option">KYLIE SKIN</a>
             <div class="nav__divIcons">
                 <img class="nav__icon userIcon" src="./img/userIcon.png">
-                <a class="nav__icon"><img class="cartIcon" src="./img/cartIcon.png"></a>
+                <a class="nav__icon cartIcon"><img src="./img/cartIcon.png"><span></span></a>
             </div>
             <section class="authButtons hidden"></section>
         </div>
@@ -44,9 +44,7 @@
     <article class="productDetail">
         <div class="productDetail__imgDiv">
             <div class="productDetail__sideImg">
-                <img class="productDetail__littleImg optionImg_1" src="./img/defaultImage.jpg">
-                <img class="productDetail__littleImg optionImg_2" src="./img/defaultImage.jpg">
-                <img class="productDetail__littleImg optionImg_3" src="./img/defaultImage.jpg">
+
             </div>
             <img class="productDetail__bigImg" src="./img/defaultImage.jpg">
         </div>
@@ -68,14 +66,9 @@
             <h3 class="productDetail__price">$20.00 USD</h3>
             <div class="productDetail__check">
                 <div class="counter">
-                    <button class="counter__btn rest">
-                        <span>−</span>
-                    </button>
-                    <input type="number" class="counter__input" placeholder="0"></input>
-                    <button class="counter__btn plus">
-                        <span>+</span>
-                    </button>
+                    <input type="number" class="counter__input" placeholder="1"  min="1" max="10" value="1"></input>
                 </div>
+                  
                 <button class="productDetail__addCartBtn">ADD TO CART</button>
             </div>
         </div>

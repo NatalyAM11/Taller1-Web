@@ -60,7 +60,7 @@
 }
 
 
-@media only screen and (max-width:606px){
+@media only screen and (max-width:629px){
     .productCart{
         width: 100%;
         flex-direction: column;
@@ -106,6 +106,12 @@
         &__price{
             margin-top: 35px;
             width: 30%;
+            display: flex;
+            justify-content:center;
+        }
+
+        &__counter{
+            width:100px ;
         }
     }
 

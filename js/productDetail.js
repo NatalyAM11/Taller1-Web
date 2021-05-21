@@ -12,12 +12,17 @@ const productImg1= document.querySelector('.optionImg_1');
 const productImg2= document.querySelector('.optionImg_2');
 const productImg3= document.querySelector('.optionImg_3');
 const productBigImg= document.querySelector('.productDetail__bigImg');
-const productLittleImg=document.querySelectorAll('.productDetail__littleImg');
+const sideImg=document.querySelector('.productDetail__sideImg');
 
 const bannerTitle=document.querySelector('.bannerProduct__title');
 const bannerProduct=document.querySelector('.bannerProduct');
 const item1=document.querySelector('.item1');
 const item2=document.querySelector('.item2');
+
+const cartBtn= document.querySelector('.productDetail__addCartBtn');
+
+const counterStore= document.querySelector('.counter__input');
+
 
 //error
 if(!id){
@@ -38,81 +43,107 @@ db.collection('products').doc(id)
     productDescription.innerText=data.description;
     productContents.innerText=data.content;
     productPrice.innerText="$ "+data.price+"USD";
-    // Que pasa si solo puse 2 imagenes // 1?¨
-    //TODO :¨borrar esto
-   /* data.images.forEach(element => {
-        const image;
-        element.url
-    });*/
 
     data.images.forEach(element=>{
         //side images
          const miniImg=document.createElement('img');
-
+         miniImg.classList.add('productDetail__littleImg');
+         miniImg.setAttribute('src', element.url);
+         sideImg.appendChild(miniImg);
     });
 
-    productImg1.setAttribute('src',  data.images[0].url);
-    productImg2.setAttribute('src',  data.images[1].url);
-    productImg3.setAttribute('src',  data.images[2].url);
     productBigImg.setAttribute('src', data.images[0].url);
 
+   /* productImg1.setAttribute('src',  data.images[0].url);
+    productImg2.setAttribute('src',  data.images[1].url);
+    productImg3.setAttribute('src',  data.images[2].url);
+  */
+
     //stars popularity
-    if(data.popularity=="5"){productPopularity.setAttribute('src','./img/fiveStars.png');}
-    if(data.popularity=="4"){productPopularity.setAttribute('src','./img/fourStars.png');}
-    if(data.popularity=="3"){productPopularity.setAttribute('src','./img/threeStars.png');}
-    if(data.popularity=="2"){productPopularity.setAttribute('src','./img/twoStars.png');}
+    const starsProduct = (n) => {
+        productPopularity.setAttribute('src',`./img/${n}stars.png`);
+        stars=`./img/${n}stars.png`;
+    }
+
+   /* if(data.popularity=="5"){starsProduct('./img/fiveStars.png');}
+    if(data.popularity=="4"){starsProduct('./img/fourStars.png');}
+    if(data.popularity=="3"){starsProduct('./img/threeStars.png');}
+    if(data.popularity=="2"){starsProduct('./img/twoStars.png');}*/
+
+
+   starsProduct(data.popularity);
+
+
+    cartBtn.addEventListener('click', ()=>{
+
+        addToMyCart({
+            ...data,
+            id: doc.id,
+            amount: counterStore.value
+        });
+    });
+
+
+    const updateBanner= (txt, img) => {
+        bannerTitle.innerHTML = txt;
+        bannerProduct.style.backgroundImage = img;
+    }
+
+    const updateBanners= (txt, img, txt2, img2) =>{
+        item1.innerText= txt;
+        item1.style.backgroundImage = img;
+
+        item2.innerText= txt2;
+        item2.style.backgroundImage = img2;
+    }
+
+    const recommendationRoot=(root, root2) =>{
+        item1.setAttribute('href', `store.html?type=${root}`);
+        item2.setAttribute('href', `store.html?type=${root2}`);
+    }
 
  
     if(data.type=="lips"){
-        bannerTitle.innerText="LIPS";
-        bannerProduct.style.backgroundImage = "url('../img/bannerLips.png')";
+        updateBanner("LIPS", "url('../img/bannerLips.png')");
+        updateBanners("FACE", "url('../img/recommendationFace.png')", "EYES", "url('../img/recommendationEyes.png')" );
 
-        item1.style.backgroundImage = "url('../img/recommendationFace.png')";
-        item1.innerText= "FACE";
-        item1.setAttribute('href', `/store.html?type=face`);
+        recommendationRoot ("face", "eyes");
 
-        item2.style.backgroundImage = "url('../img/recommendationEyes.png')";
     };
 
     if(data.type=="face"){
-        bannerTitle.innerText="FACE";
-        bannerProduct.style.backgroundImage = "url('../img/bannerSkin.png')";
-        item1.style.backgroundImage = "url('../img/recommendationLips.png')";
-        item1.innerText= "LIPS";
-        item2.style.backgroundImage = "url('../img/recommendationEyes.png')";
-        item2.innerText= "EYES";
+        updateBanner("FACE", "url('../img/bannerSkin.png')");
+        updateBanners("EYES", "url('../img/recommendationEyes.png')", "LIPS", "url('../img/recommendationLips.png')");
+
+        recommendationRoot ("eyes", "lips");
     };
 
     if(data.type=="eyes"){
-        bannerTitle.innerText="EYES";
-        bannerProduct.style.backgroundImage = "url('../img/bannerEyes.png')";
-        item1.style.backgroundImage = "url('../img/recommendationFace.png')";
-        item1.innerText= "FACE";
-        item1.setAttribute('href', `/store.html?type=face`);
-        item2.style.backgroundImage = "url('../img/recommendationLips.png')";
-        item2.innerText= "LIPS";
+        updateBanner("EYES", "url('../img/bannerEyes.png')");
+        updateBanners("FACE", "url('../img/recommendationFace.png')", "LIPS", "url('../img/recommendationLips.png')");
+
+        recommendationRoot ("face", "lips");
+ 
     };
 });
 
 
+const productLittleImg=document.querySelectorAll('.productDetail__littleImg');
 
-//interaction photos
-for(let i=0; i<productLittleImg.length; i++){
-    const thumb=productLittleImg[i];
+    //interaction photos
+    for(let i=0; i<productLittleImg.length; i++){
+        const thumb=productLittleImg[i];
 
-    function handleThumClick(){
-        const thumbSrc= thumb.getAttribute('src');
-        productBigImg.setAttribute('src', thumbSrc);
-   }
+        function handleThumClick(){
+            const thumbSrc= thumb.getAttribute('src');
+            
+            productBigImg.setAttribute('src', thumbSrc);
+        }
 
-   thumb.addEventListener('click', handleThumClick);
-}
+        thumb.addEventListener('click', handleThumClick);
+    }
 
-const productCollection=db.collection('products');
 
-if(params.get('type')){
-    productCollection=productCollection.where('type', "==", params.get('type'));
-}
 
 
 

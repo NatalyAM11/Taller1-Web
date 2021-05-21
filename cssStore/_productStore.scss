@@ -1,6 +1,7 @@
 .productStore{
     width: 210px;
-    height: 450px;
+    //height: 450px;
+    height: auto;
     background-color: #F3E0EF;
     padding: 1.5vw 2vw;
     margin-top: 30px;
@@ -62,16 +63,25 @@
     &__cartBtn{
         margin-top: 0px;
     }
+
+    &__deleteBtn{
+        margin-left: 95%;
+    }
+
+    &__editBtn{
+        padding: 13px 60px;
+        margin-bottom: 15px;
+    }
 }
 
 
 @media only screen and (max-width:641px){
     .productStore{
         width: 230px;
-        height: 455px;
+       // height: 455px;
     
         &__content{
-            height: 390px;
+            height: 400px;
             padding: 1vw 5vw;
             margin-left: 0px;
         }
@@ -82,7 +92,20 @@
             margin: 0px 5px;
         }
 
-}
+        &__deleteBtn{
+            margin-left: 80%;
+            margin-top: 10px;
+        }
+
+        &__editBtn{
+            margin-bottom: 10px;
+        }
+
+        &__cartBtn{
+            margin-bottom: 15px;
+        }
+
+    }
 }
 
 

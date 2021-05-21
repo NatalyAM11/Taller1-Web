@@ -17,6 +17,7 @@
         justify-content: space-around;
         box-sizing: border-box;
         background-color: rgb(243, 224, 239);
+        padding-left: 90px;
     }
 
     &__form{
@@ -150,7 +151,7 @@
 
 
 
-@media only screen and (max-width:606px){
+@media only screen and (max-width:629px){
 
     .checkout{
         width: 80%;

@@ -5,6 +5,7 @@ const checkoutShipping=document.querySelector('.checkoutShipping');
 const checkoutSubtotal=document.querySelector('.checkoutSubtotal');
 const checkoutReminder= document.querySelector('.checkout__reminder');
 
+let subProduct=0;
 let shipping=25.00;
 
 let subtotal=0;
@@ -15,7 +16,9 @@ renderCart= ()=>{
     cart.forEach((data=>{
   
         const product= document.createElement('div');
-    
+   
+        subProduct=data.price*data.amount;
+
         //fill all the data
         product.innerHTML= ` 
             <div class="productCart">
@@ -29,16 +32,12 @@ renderCart= ()=>{
                 </div>
 
                 <div class="counter productCart__counter">
-                    <button class="counter__btn productCart__btn rest">
-                        <span>−</span>
-                    </button>
-                    <input type="number" class="counter__input" placeholder="0"></input>
-                    <button class="counter__btn  productCart__btn plus">
-                        <span>+</span>
-                    </button>
+                  
+                      <input type="number" class="counter__input"  placeholder="1"  min="1" max="10" value="${data.amount}"></input>
+
                 </div>
 
-                <h4 class="productCart__price">$ ${data.price}</h4>
+                <h4 class="productCart__price">$ ${subProduct} </h4>
             </div>
             <img class="productCart__deleteBtn" src="./img/DeleteCartBtn.png">
         </div>
@@ -46,18 +45,27 @@ renderCart= ()=>{
      
         cartList.appendChild(product);
 
+         
+        //keep the amount of products
+        const counter= document.querySelector('.counter__input');  
+        const price= document.querySelector('.productCart__price'); 
+        
+        /*subProduct=data.price*counter.value;
+        price.innerHTML=subProduct;*/
+        
         checkoutShipping.innerHTML=`$ ${shipping}`;
     
-        subtotal+=data.price;
+        subtotal+=subProduct;
         checkoutSubtotal.innerHTML= "$"+ subtotal;
 
         total=subtotal+shipping;
         checkoutTotal.innerHTML="$"+ total;
 
+
         const deleteBtn=product.querySelector(".productCart__deleteBtn");
 
         deleteBtn.addEventListener("click", ()=>{
-
+           // cartCollection.doc(loggedUser.uid).set(null);
         });
 
     }));

@@ -4,6 +4,7 @@ const filters= document.querySelector('.filters');
 const bannerStoreTitle=document.querySelector('.bannerStore__title');
 const bannerStore=document.querySelector('.bannerStore');
 
+const params=new URLSearchParams(location.search);
 
 const handleCollectionResult = (querySnapshot)=>{
 
@@ -17,24 +18,17 @@ const handleCollectionResult = (querySnapshot)=>{
 
         let stars;
 
-        if(data.popularity=="5"){
-            stars='./img/fiveStars.png';
+         //change the images of the stars
+        const giveStars=(n)=>{
+            stars=`./img/${n}stars.png`;
         }
-        if(data.popularity=="4"){
-            stars='./img/fourStars.png';
-        }
-        if(data.popularity=="3"){
-            stars='./img/threeStars.png';
-        }
-        if(data.popularity=="2"){
-            stars='./img/twoStars.png';
-        }
-        if(data.popularity=="1"){
-            stars='./img/twoStars.png';
-        }
+
+        giveStars(data.popularity);
+
 
         //fill all the data
         product.innerHTML= `
+        <img class="productStore__deleteBtn hidden" src="./img/DeleteCartBtn.png">
         <a class="productStore__content" href="./productDetail.html?id=${doc.id}&name=${data.name}"> 
         <h1 class="productStore__name">${data.name}</h1>
         <h4 class="productStore__type">${data.p}</h4>
@@ -43,6 +37,8 @@ const handleCollectionResult = (querySnapshot)=>{
         <img class="productStore__stars" src="${stars}">
         </a>
         <button class="productStore__cartBtn">ADD TO CART</button>
+        <button class="productStore__editBtn hidden">EDIT</button>
+          
         `;
     
         product.classList.add('productStore');
@@ -59,11 +55,13 @@ const handleCollectionResult = (querySnapshot)=>{
             addToMyCart({
                 ...data,
                 id: doc.id,
+                amount: 1
             });
             //localStorage.setItem('store__cart', JSON.stringify(cart));
         });
     }));
 }
+
 
 const updateBannerStore = (txt, img) => {
     bannerStoreTitle.innerHTML = txt;
@@ -144,3 +142,9 @@ productsCollection.get().then(handleCollectionResult);
 db.collection('products').get().then(handleCollectionResult);
 
 
+let productCollection=db.collection('products');
+
+
+if(params.get('type')){
+    productCollection=productCollection.where('type', "==", params.get('type'));
+}
