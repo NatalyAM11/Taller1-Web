@@ -44,7 +44,9 @@ db.collection('products').doc(id)
     productContents.innerText=data.content;
     productPrice.innerText="$ "+data.price+"USD";
 
-    data.images.forEach(element=>{
+    const i= data.images.slice(0,3);
+
+    i.forEach(element=>{
         //side images
          const miniImg=document.createElement('img');
          miniImg.classList.add('productDetail__littleImg');
@@ -54,22 +56,11 @@ db.collection('products').doc(id)
 
     productBigImg.setAttribute('src', data.images[0].url);
 
-   /* productImg1.setAttribute('src',  data.images[0].url);
-    productImg2.setAttribute('src',  data.images[1].url);
-    productImg3.setAttribute('src',  data.images[2].url);
-  */
-
     //stars popularity
     const starsProduct = (n) => {
         productPopularity.setAttribute('src',`./img/${n}stars.png`);
         stars=`./img/${n}stars.png`;
     }
-
-   /* if(data.popularity=="5"){starsProduct('./img/fiveStars.png');}
-    if(data.popularity=="4"){starsProduct('./img/fourStars.png');}
-    if(data.popularity=="3"){starsProduct('./img/threeStars.png');}
-    if(data.popularity=="2"){starsProduct('./img/twoStars.png');}*/
-
 
    starsProduct(data.popularity);
 

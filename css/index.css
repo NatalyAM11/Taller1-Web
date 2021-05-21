@@ -1087,6 +1087,7 @@ button:hover {
   padding: 0% 5%;
   padding-bottom: 80px;
   padding-top: 50px;
+  margin-top: 180px;
 }
 
 .footer__icons {
@@ -1107,6 +1108,10 @@ button:hover {
   margin: 0px;
 }
 
+.footerIndex {
+  margin-top: 0px;
+}
+
 @media only screen and (max-width: 610px) {
   .footer {
     background-color: #b674aa;
@@ -1123,6 +1128,7 @@ button:hover {
     padding: 0% 5%;
     padding-bottom: 60px;
     padding-top: 30px;
+    margin-top: 130px;
   }
   .footer__icons {
     width: 8em;
@@ -1683,6 +1689,83 @@ button:hover {
   .modal__bigTitle {
     font-size: 40px;
     margin: 0px;
+  }
+}
+
+.footer {
+  background-color: #b674aa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0% 5%;
+  padding-bottom: 80px;
+  padding-top: 50px;
+  margin-top: 180px;
+}
+
+.footer__icons {
+  width: 10em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__text {
+  color: white;
+  margin: 0px;
+}
+
+.footerIndex {
+  margin-top: 0px;
+}
+
+@media only screen and (max-width: 610px) {
+  .footer {
+    background-color: #b674aa;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0% 5%;
+    padding-bottom: 60px;
+    padding-top: 30px;
+    margin-top: 130px;
+  }
+  .footer__icons {
+    width: 8em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer__text {
+    color: white;
+    margin: 0px;
+    font-size: 10px;
   }
 }
 

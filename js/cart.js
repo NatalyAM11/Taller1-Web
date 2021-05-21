@@ -50,13 +50,14 @@ renderCart= ()=>{
         const counter= document.querySelector('.counter__input');  
         const price= document.querySelector('.productCart__price'); 
         
-        /*subProduct=data.price*counter.value;
-        price.innerHTML=subProduct;*/
-        
+     
         checkoutShipping.innerHTML=`$ ${shipping}`;
     
         subtotal+=subProduct;
         checkoutSubtotal.innerHTML= "$"+ subtotal;
+
+        subProduct=data.price*counter.value;
+        price.innerHTML=subProduct;
 
         total=subtotal+shipping;
         checkoutTotal.innerHTML="$"+ total;
@@ -65,7 +66,8 @@ renderCart= ()=>{
         const deleteBtn=product.querySelector(".productCart__deleteBtn");
 
         deleteBtn.addEventListener("click", ()=>{
-           // cartCollection.doc(loggedUser.uid).set(null);
+            console.log(data.id);
+            //cartCollection.doc(loggedUser.uid + '/cart' + data.id).set(null);
         });
 
     }));
@@ -117,6 +119,16 @@ renderCart= ()=>{
 
 }
 
+
+
+const checkUser= ()=>{
+    if(!loggedUser){
+        location.href='./store.html';
+    }
+}
+console.log(loggedUser);
+
+//
 
 
 

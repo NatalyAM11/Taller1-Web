@@ -145,29 +145,10 @@ const sameProduct=(idProduct)=>{
       const data=snapShot.data();
       console.log(data);
       if(!data)return;
- 
-     /* snapShot.forEach(p =>{
-        + 'cart'
-      });*/
-     /* if(data.id == idProduct)  {
-        console.log('otro más');
-      }*/  
+
   });
 }
 
 
-
-//bring the information of the local storage
-/*if(cartFromLS){
-    cart=JSON.parse(cartFromLS);
-
-    //add the number to the spam of the cart icon
-    cartIconNumber.forEach(icon =>{
-        if(icon){
-          icon.innerText=cart.length;
-        }
-    });
-    
-}*/
 
 

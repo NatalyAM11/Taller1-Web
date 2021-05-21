@@ -28,7 +28,7 @@ const handleCollectionResult = (querySnapshot)=>{
 
         //fill all the data
         product.innerHTML= `
-        <img class="productStore__deleteBtn hidden" src="./img/DeleteCartBtn.png">
+        <img class="productStore__deleteBtn showLoggedAdmin" src="./img/DeleteCartBtn.png">
         <a class="productStore__content" href="./productDetail.html?id=${doc.id}&name=${data.name}"> 
         <h1 class="productStore__name">${data.name}</h1>
         <h4 class="productStore__type">${data.p}</h4>
@@ -37,12 +37,12 @@ const handleCollectionResult = (querySnapshot)=>{
         <img class="productStore__stars" src="${stars}">
         </a>
         <button class="productStore__cartBtn">ADD TO CART</button>
-        <button class="productStore__editBtn hidden">EDIT</button>
+        <button class="productStore__editBtn showLoggedAdmin">EDIT</button>
           
         `;
     
         product.classList.add('productStore');
-        /*product.setAttribute('href', ``);*/
+
     
         productList.appendChild(product);
 
@@ -71,22 +71,20 @@ const updateBannerStore = (txt, img) => {
 
 //filters
 filters.addEventListener('change', function(){
-console.log(filters.type.value);
 
-let productsCollection = db.collection('products');
+    let productsCollection = db.collection('products');
 
 
-//filter type
-if(filters.type.value){
-    if(filters.type.value === "shop") {
-     productsCollection =  db.collection('products');
-    } else {
-        productsCollection= productsCollection.where("type", "==", filters.type.value);
+    //filter type
+    if(filters.type.value){
+        if(filters.type.value === "shop") {
+        productsCollection =  db.collection('products');
+        } else {
+            productsCollection= productsCollection.where("type", "==", filters.type.value);
     }
 
 
     
-
     //change the image and the text of the banner
     if(filters.type.value == "lips"){
         updateBannerStore("LIPS", "url('../img/bannerLips.png')");
@@ -114,6 +112,10 @@ if(filters.tone.value){
 //filter collection
 if(filters.collection.value){
     productsCollection= productsCollection.where("collection", "==", filters.collection.value);
+}
+
+if(productCollection.value==" "){
+
 }
 
 
@@ -148,3 +150,10 @@ let productCollection=db.collection('products');
 if(params.get('type')){
     productCollection=productCollection.where('type', "==", params.get('type'));
 }
+
+
+/*const checkStoreAdmin= ()=>{
+    if(!loggedUser || !loggedUser.admin){
+        
+    }
+}*/

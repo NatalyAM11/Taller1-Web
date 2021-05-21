@@ -81,7 +81,7 @@ productForm.addEventListener('submit', function(event){
     //delete the event by default
     event.preventDefault();
 
-    popularityProduct= Math.floor(Math.random() * 5) + 2;   
+    popularityProduct= Math.floor(Math.random() * 5) + 1;   
  
 
     //product
@@ -89,7 +89,7 @@ productForm.addEventListener('submit', function(event){
         name: productForm.name.value,
         p:productForm.productP.value,
         type:productForm.type.value,
-        price: parseFloat(productForm.price.value),
+        price:productForm.price.value,
         content: productForm.content.value,
         tone: productForm.tone.value,
         collection: productForm.collection.value,
@@ -213,7 +213,8 @@ productForm.addEventListener('submit', function(event){
                     }).then(function(){
                         //all the product has been upload                      
                         console.log('document added', docRef.id);
-                        productFormLoading.classList.add('hidden');
+                        productFormLoading.innerHTML="The product has been uploaded successfully";
+                        location.href=`./productDetail.html?id=${docRef.id}&name=${docRef.name}`;
                     })
                     .catch(genericCatch);
                 })
@@ -230,6 +231,7 @@ const checkProductFormAdmin= ()=>{
     if(!loggedUser || !loggedUser.admin){
         location.href='./store.html';
     }
-}
+  }
 
+//checkProductFormAdmin();
 
