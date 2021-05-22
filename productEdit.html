@@ -12,134 +12,105 @@
 </head>
 
 <body>
-    <nav class="nav">
+    <nav class="nav"></nav>
 
-        <div class="nav__responsive">
-            <div class="nav__hamburger"></div>
-            <a href= "./index.html" class="logo--responsiveCont"><img class="logo--responsive" src="./img/logo.png"></a>
-            <div class="nav__divIconsResponsive">
-                <img class="nav__icon userIcon" src="./img/userIcon.png">
-                <a class="nav__icon cartIcon"><img src="./img/cartIcon.png"><span></span></a>
-            </div>
-            <section class="authButtons hidden"></section>
-        </div>
+    <form class="productEdit">
 
-        <div class="nav__options nav__disappear">
-            <a class="nav__option">COLLECTION</a>
-            <a href= "./store.html" class="nav__option">SHOP</a>
-            <a class="nav__option">NEW</a>
-            <a href= "./index.html"><img class="logo" src="./img/logo.png"></a>
-            <a class="nav__option">ABOUT</a>
-            <a class="nav__option">KYLIE SKIN</a>
-            <div class="nav__divIcons">
-                <img class="nav__icon userIcon" src="./img/userIcon.png">
-                <a class="nav__icon cartIcon"><img src="./img/cartIcon.png"><span></span></a>
-            </div>
-            <section class="authButtons hidden"></section>
-        </div>
-        
-    </nav>
+        <div class="productEdit__firstSteps">
 
-
-    <form class="productForm">
-
-        <div class="productForm__firstSteps">
-
-            <div class="productForm__infoDiv">
-                <h2 class="productForm__title">EDIT THE PRODUCT</h2>
+            <div class="productEdit__infoDiv">
+                <h2 class="productEdit__title">EDIT THE PRODUCT</h2>
 
                 <div class="step">
                     <h2 class="step__title">STEP 1</h2>
-                    <p>Fill the informetion of the product</p>
+                    <p>Fill the information of the product</p>
                 </div>
 
-                <div class="productForm__reminder notifications hidden">
-                    <p class="productForm__reminder--text">Remember that you must fill all the fields</p>
+                <div class="productEdit__reminder notifications hidden">
+                    <p class="productEdit__reminder--text">Remember that you must fill all the fields</p>
                 </div>
 
-                <label class="productForm__label" for="nameProduct">Name</label>
-                <input class="productForm__input" type="text" id="nameProduct" placeholder="Name of the product"
+                <label class="productEdit__label" for="nameProduct">Name</label>
+                <input class="productEdit__input" type="text" id="nameProduct" placeholder="Name of the product"
                     name="name">
 
-                <label class="productForm__label" for="product">Product</label>
-                <input class="productForm__input" type="text" id="product" placeholder="Product" name="productP">
+                <label class="productEdit__label" for="product">Product</label>
+                <input class="productEdit__input" type="text" id="product" placeholder="Product" name="productP">
 
-                <label class="productForm__label" for="typeProduct">Type</label>
-                <select class="productForm__input" id="typeProduct" name="type">
+                <label class="productEdit__label" for="typeProduct">Type</label>
+                <select class="productEdit__input" id="typeProduct" name="type">
                     <option value="">Select a type</option>
                     <option value="lips">LIPS</option>
                     <option value="face">FACE</option>
                     <option value="eyes">EYES</option>
                 </select>
 
-                <label class="productForm__label" for="price">Price</label>
-                <input class="productForm__input" type="number" id="price" placeholder="Price" name="price">
+                <label class="productEdit__label" for="price">Price</label>
+                <input class="productEdit__input" type="number" id="price" placeholder="Price" name="price">
 
 
-                <label class="productForm__label" for="content">Content</label>
-                <input class="productForm__input" type="text" id="content"
+                <label class="productEdit__label" for="content">Content</label>
+                <input class="productEdit__input" type="text" id="content"
                     placeholder="Content of the product. Example: Bronzer Stick (0.28 oz / 8.0 g)" name="content">
 
-                <label class="productForm__label" for="toneProduct">Tone</label>
-                <select class="productForm__input" id="toneProduct" name="tone">
+                <label class="productEdit__label" for="toneProduct">Tone</label>
+                <select class="productEdit__input" id="toneProduct" name="tone">
                     <option value="">SELECT A TONE</option>
                     <option value="light">LIGHT</option>
                     <option value="midtone">MIDTONE</option>
                     <option value="dark">DARK</option>
                 </select>
 
-                <label class="productForm__label" for="product">Collection</label>
-                <select class="productForm__input" id="collectionProduct" name="collection">
+                <label class="productEdit__label" for="product">Collection</label>
+                <select class="productEdit__input" id="collectionProduct" name="collection">
                     <option value="">SELECT THE COLLECTION OF THE PRODUCT</option>
                     <option value="BIRTHDAY COLLECTION">BIRTHDAY COLLECTION</option>
                     <option value="HOLIDAY COLLECTION">HOLIDAY COLLECTION</option>
                     <option value="STORMI COLLECTION">STORMI COLLECTION</option>
                 </select>
 
-                <label class="productForm__label" for="description">Description</label>
-                <textarea class="productForm__input description" name="description" id="description" cols="5" rows="3"
+                <label class="productEdit__label" for="description">Description</label>
+                <textarea class="productEdit__input description" name="description" id="description" cols="5" rows="3"
                     maxlength="300" placeholder="Description of the product"></textarea>
             </div>
 
 
 
-            <div class="productForm__imgDiv">
+            <div class="productEdit__imgDiv">
                 <div class="step">
                     <h2 class="step__title">STEP 2</h2>
                     <p>Add 3 images to the gallery. Upload them in the order you want them to appear</p>
                 </div>
 
-                <div class="productForm__images">
-                    <div class="productForm__sideImg">
-                        <img class="productForm__i" src="./img/defaultImage.jpg">
-                        <img class="productForm__i" src="./img/defaultImage.jpg">
-                        <img class="productForm__i" src="./img/defaultImage.jpg">
+                <div class="productEdit__images">
+                    <div class="productEdit__sideImg">
+
                     </div>
-                    <img class="productForm__bigImg" src="./img/defaultImage.jpg">
+                    <img class="productEdit__bigImg" src="./img/defaultImage.jpg">
                 </div>
-                <input accept='.jpg, .png' type="file" class="productForm__input imgInput" name="images">
+                <input accept='.jpg, .png' type="file" class="productEdit__input imgInput" name="images">
             </div>
         </div>
 
-        <div class="productForm__mainImgCont">
+        <div class="productEdit__mainImgCont">
             <div class="step">
                 <h2 class="step__title">STEP 3</h2>
                 <p>Upload the cover image. This is the first image that users will see of the product</p>
             </div>
-            <div class="productForm__mainImg">
-                <img class="productForm__MImage" src="./img/defaultImage.jpg">
+            <div class="productEdit__mainImg">
+                <img class="productEdit__MImage" src="./img/defaultImage.jpg">
             </div>
-            <input accept='.png' type="file" class="productForm__input imgInput" name="mainImage">
+            <input accept='.png' type="file" class="productEdit__input imgInput" name="mainImage">
         </div>
 
 
-        <p class="productForm__loader notifications hidden">Loading...</p>
-        <div class="productForm__error  notifications hidden">
+        <p class="productEdit__loader notifications hidden">Loading...</p>
+        <div class="productEdit__error  notifications hidden">
             <h2>SOMETHING WENT WRONG</h2>
-            <p class="productForm__p">Try again, please</p>
+            <p class="productEdit__p">Try again, please</p>
         </div>
 
-        <button class="button bForm" type="submit">SAVE</button>
+        <button class="button bEdit" type="submit">SAVE</button>
 
     </form>
 
@@ -159,3 +130,4 @@
 <script src="./js/nav.js"></script>
 <script src="./js/footer.js"></script>
 <script src="./js/general.js"></script>
+<script src="./js/productEdit.js"></script>

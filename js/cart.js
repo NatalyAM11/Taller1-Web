@@ -65,9 +65,9 @@ renderCart= ()=>{
 
         const deleteBtn=product.querySelector(".productCart__deleteBtn");
 
-        deleteBtn.addEventListener("click", ()=>{
+        deleteBtn.addEventListener("click", (event)=>{
             console.log(data.id);
-            //cartCollection.doc(loggedUser.uid + '/cart' + data.id).set(null);
+            let father=event.target.closest('productCart');
         });
 
     }));
@@ -127,8 +127,6 @@ const checkUser= ()=>{
     }
 }
 console.log(loggedUser);
-
-//
 
 
 

@@ -44,9 +44,9 @@ db.collection('products').doc(id)
     productContents.innerText=data.content;
     productPrice.innerText="$ "+data.price+"USD";
 
-    const i= data.images.slice(0,3);
+    const img= data.images.slice(0,3);
 
-    i.forEach(element=>{
+    img.forEach(element=>{
         //side images
          const miniImg=document.createElement('img');
          miniImg.classList.add('productDetail__littleImg');
@@ -70,7 +70,7 @@ db.collection('products').doc(id)
         addToMyCart({
             ...data,
             id: doc.id,
-            amount: counterStore.value
+            amount: parseInt(counterStore.value) 
         });
     });
 

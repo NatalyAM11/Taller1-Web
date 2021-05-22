@@ -48,8 +48,7 @@ const handleCollectionResult = (querySnapshot)=>{
 
         //add the product in the cart array
         const cartBtn= product.querySelector('.productStore__cartBtn');
-
-        
+    
         cartBtn.addEventListener('click', ()=>{
 
             addToMyCart({
@@ -57,8 +56,17 @@ const handleCollectionResult = (querySnapshot)=>{
                 id: doc.id,
                 amount: 1
             });
-            //localStorage.setItem('store__cart', JSON.stringify(cart));
         });
+
+
+        //edit
+        const editBtn=product.querySelector('.productStore__editBtn');
+
+        editBtn.addEventListener('click', ()=>{
+            location.href=`./productEdit.html?id=${doc.id}&name=${data.name}`;
+            console.log(doc.id);
+        });
+
     }));
 }
 
@@ -157,3 +165,4 @@ if(params.get('type')){
         
     }
 }*/
+
