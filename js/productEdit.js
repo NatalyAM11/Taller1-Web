@@ -73,7 +73,5 @@ db.collection('products').doc(id)
     productBigImg.setAttribute('src', data.images[0].url);
     mainImg.setAttribute('src', data.mainImg[0].url);
     
-
 });
 
-//productForm.name.value

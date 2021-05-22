@@ -67,6 +67,12 @@ const handleCollectionResult = (querySnapshot)=>{
             console.log(doc.id);
         });
 
+        
+        const deleteBtn=product.querySelector('.productStore__deleteBtn');
+        deleteBtn.addEventListener('click', ()=>{
+            db.collection('products').doc(doc.id).set(null);
+        })
+
     }));
 }
 
@@ -120,10 +126,6 @@ if(filters.tone.value){
 //filter collection
 if(filters.collection.value){
     productsCollection= productsCollection.where("collection", "==", filters.collection.value);
-}
-
-if(productCollection.value==" "){
-
 }
 
 

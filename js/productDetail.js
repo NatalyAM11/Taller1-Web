@@ -53,8 +53,21 @@ db.collection('products').doc(id)
          miniImg.setAttribute('src', element.url);
          sideImg.appendChild(miniImg);
     });
-
+    
     productBigImg.setAttribute('src', data.images[0].url);
+
+    //interaction galley images
+    const productLittleImg=document.querySelectorAll('.productDetail__littleImg');
+        productLittleImg.forEach((imgItem)=>{
+                
+            function handleThumClick(){
+                const thumbSrc= imgItem.getAttribute('src');
+                productBigImg.setAttribute('src', thumbSrc);
+            }
+            
+            imgItem.addEventListener('click', handleThumClick);
+     });
+
 
     //stars popularity
     const starsProduct = (n) => {
@@ -118,21 +131,6 @@ db.collection('products').doc(id)
     };
 });
 
-
-const productLittleImg=document.querySelectorAll('.productDetail__littleImg');
-
-    //interaction photos
-    for(let i=0; i<productLittleImg.length; i++){
-        const thumb=productLittleImg[i];
-
-        function handleThumClick(){
-            const thumbSrc= thumb.getAttribute('src');
-            
-            productBigImg.setAttribute('src', thumbSrc);
-        }
-
-        thumb.addEventListener('click', handleThumClick);
-    }
 
 
 

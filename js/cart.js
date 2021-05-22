@@ -19,6 +19,15 @@ renderCart= ()=>{
    
         subProduct=data.price*data.amount;
 
+             
+        checkoutShipping.innerHTML=`$ ${shipping}`;
+    
+        subtotal+=subProduct;
+        checkoutSubtotal.innerHTML= "$"+ subtotal;
+
+        total=subtotal+shipping;
+        checkoutTotal.innerHTML="$"+ total;
+
         //fill all the data
         product.innerHTML= ` 
             <div class="productCart">
@@ -37,37 +46,57 @@ renderCart= ()=>{
 
                 </div>
 
-                <h4 class="productCart__price">$ ${subProduct} </h4>
+                <h4 class="productCart__price"> $<span>${subProduct}</span></h4>
             </div>
             <img class="productCart__deleteBtn" src="./img/DeleteCartBtn.png">
         </div>
         `;
      
         cartList.appendChild(product);
-
          
         //keep the amount of products
-        const counter= document.querySelector('.counter__input');  
-        const price= document.querySelector('.productCart__price'); 
-        
-     
-        checkoutShipping.innerHTML=`$ ${shipping}`;
+        const counter= product.querySelector('.counter__input');  
+        const price= product.querySelector('.productCart__price span'); 
+
+        counter.addEventListener('change', function (){    
+            subProduct=data.price*counter.value;
+            price.innerHTML=subProduct;    
+
+            subtotal+=subProduct;
+            checkoutSubtotal.innerHTML= "$"+ subtotal;
+            
+            total=subtotal+shipping;
+            checkoutTotal.innerHTML="$"+ total;
+        })
+
+    
+       
+     /*   checkoutShipping.innerHTML=`$ ${shipping}`;
     
         subtotal+=subProduct;
         checkoutSubtotal.innerHTML= "$"+ subtotal;
 
-        subProduct=data.price*counter.value;
-        price.innerHTML=subProduct;
-
         total=subtotal+shipping;
-        checkoutTotal.innerHTML="$"+ total;
+        checkoutTotal.innerHTML="$"+ total;*/
 
 
         const deleteBtn=product.querySelector(".productCart__deleteBtn");
 
         deleteBtn.addEventListener("click", (event)=>{
             console.log(data.id);
-            let father=event.target.closest('productCart');
+
+           // let father=event.target.closest('productCart');
+
+           cart[cart.findIndex(item=>data.id)]={
+            
+          }
+
+          cartCollection.doc(loggedUser.uid).set(
+            {
+              cart   
+            }
+          )
+          
         });
 
     }));
@@ -126,7 +155,7 @@ const checkUser= ()=>{
         location.href='./store.html';
     }
 }
-console.log(loggedUser);
+
 
 
 
