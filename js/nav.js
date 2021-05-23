@@ -19,6 +19,7 @@ nav.innerHTML=
             <a href= "./index.html"><img class="logo" src="./img/logo.png"></a>
             <a class="nav__option">ABOUT</a>
             <a class="nav__option">KYLIE SKIN</a>
+            <a class="nav__option showLoggedAdmin">ORDERS</a>
             <div class="nav__divIcons">
                 <img class="nav__icon userIcon" src="./img/userIcon.png">
                 <a class="nav__icon cartIcon"><img src="./img/cartIcon.png"><span></span></a>

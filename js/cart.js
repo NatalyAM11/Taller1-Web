@@ -11,10 +11,13 @@ let shipping=25.00;
 let subtotal=0;
 let total=0;
 
+let today;
+
 renderCart= ()=>{
 
     cart.forEach((data=>{
-  
+        today =new Date();
+
         const product= document.createElement('div');
    
         subProduct=data.price*data.amount;
@@ -27,6 +30,8 @@ renderCart= ()=>{
 
         total=subtotal+shipping;
         checkoutTotal.innerHTML="$"+ total;
+
+        
 
         //fill all the data
         product.innerHTML= ` 
@@ -85,11 +90,7 @@ renderCart= ()=>{
         deleteBtn.addEventListener("click", (event)=>{
             console.log(data.id);
 
-           // let father=event.target.closest('productCart');
-
-           cart[cart.findIndex(item=>data.id)]={
-            
-          }
+           cart[cart.findIndex(item=>data.id)];
 
           cartCollection.doc(loggedUser.uid).set(
             {
@@ -106,7 +107,7 @@ renderCart= ()=>{
 
         const productIds=[];
         cart.forEach(function (data){
-            productIds.push(data.id);
+            productIds.push(data);
         });
 
         const order={
@@ -118,6 +119,9 @@ renderCart= ()=>{
             productIds,
             total,
             uid: loggedUser.uid,
+            uName: loggedUser.firstName+loggedUser.lastName,
+            creationDate: Date.now(),
+            numberDate: today.getDate()+ "." +today.getMonth()+ "." +today.getFullYear(),
         }
 
 
@@ -147,7 +151,6 @@ renderCart= ()=>{
     });
 
 }
-
 
 
 const checkUser= ()=>{

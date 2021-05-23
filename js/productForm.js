@@ -83,7 +83,6 @@ productForm.addEventListener('submit', function(event){
 
     popularityProduct= Math.floor(Math.random() * 5) + 1;   
  
-
     //product
     const product={
         name: productForm.name.value,

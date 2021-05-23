@@ -69,8 +69,13 @@ const handleCollectionResult = (querySnapshot)=>{
 
         
         const deleteBtn=product.querySelector('.productStore__deleteBtn');
+
         deleteBtn.addEventListener('click', ()=>{
-            db.collection('products').doc(doc.id).set(null);
+            db.collection('products').doc(doc.id).delete().then( ()=>{
+                console.log('Se borro')
+            }).catch((error) =>{
+                console.log('No se borro nada', error)
+            });
         })
 
     }));

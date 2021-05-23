@@ -1,4 +1,5 @@
-.productCart{
+.productCart,
+.order{
     width: 100%;
     background-color: rgba(247, 228, 243, 0.5);
     display: flex;
@@ -62,7 +63,8 @@
 
 
 @media only screen and (max-width:629px){
-    .productCart{
+    .productCart,
+    .order {
         width: 100%;
         flex-direction: column;
         justify-content: space-around; 
