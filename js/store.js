@@ -86,19 +86,19 @@ filters.addEventListener('change', function(){
     
     //change the image and the text of the banner
     if(filters.type.value == "lips"){
-        updateBannerStore("LIPS", "url('../img/bannerLips.png')");
+        updateBannerStore("LIPS", "url('./img/bannerLips.png')");
     }
 
     if(filters.type.value == "eyes"){
-        updateBannerStore("EYES", "url('../img/bannerEyes.png')");
+        updateBannerStore("EYES", "url('./img/bannerEyes.png')");
     }
 
     if(filters.type.value == "face"){
-        updateBannerStore("FACE", "url('../img/bannerSkin.png')");
+        updateBannerStore("FACE", "url('./img/bannerSkin.png')");
     }
 
     if(filters.type.value == "shop"){
-        updateBannerStore("SHOP", "url('../img/bannerSkin.png')");
+        updateBannerStore("SHOP", "url('./img/bannerSkin.png')");
     }
 
 }
