@@ -39,7 +39,6 @@ const handleCollectionResult = (querySnapshot)=>{
         `;
     
         product.classList.add('productStore');
-
     
         productList.appendChild(product);
 
@@ -54,6 +53,8 @@ const handleCollectionResult = (querySnapshot)=>{
                 amount: 1
             });
         });
+
+
 
     }));
 }

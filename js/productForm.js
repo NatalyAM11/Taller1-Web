@@ -75,7 +75,6 @@ productForm.mainImage.addEventListener('change', function (){
 });
 
 
-
 //send the information
 productForm.addEventListener('submit', function(event){
     //delete the event by default
@@ -118,6 +117,14 @@ productForm.addEventListener('submit', function(event){
     }
     if (!product.description){
         error+= "Don't forget the description of the product </br>";
+    }
+
+    if(imgFiles.length < 3){
+        error += "You must upload at least three images for the gallery <br/>";
+    }
+
+    if(mainImgFile=null){
+        error += "You must upload the at main image <br/>";
     }
 
     if(error){

@@ -15,38 +15,6 @@ const cstormiWeather=document.querySelector ('.stormiWeather');
 const cstormiWorld=document.querySelector ('.stormiWorld');
 
 
-
-////////////modal effect
-//Effects when the modal appears for the first time
-/*function effect(){
-    modalContent.style.transform = 'translate (0px, 0px)';
-    modal.style.opacity=1;
-}
-
-setTimeout(effect,80);*/
-
-/*///////interaction nav responsive
-//transition when the options of the hamburguer menu appears
-function handleNavEffect(){
-    navOptions.style.opacity=1;
-}
-
-/////options of the nav appears when click the hamburguer menu
-function handleNavAppear(){
-    
-    //Add the class "nav__disappear" to make the nav's options appear
-    navOptions.classList.toggle('nav__disappear');
-  
-    //transition
-    navOptions.style.opacity=0.6;
-    setTimeout(handleNavEffect,50);
-}
-
-hamburgerBtn.addEventListener('click', handleNavAppear);*/
-
-
-
-
 /////////////interaction section
 
 //transition when the image changes

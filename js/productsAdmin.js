@@ -33,9 +33,6 @@ const handleCollectionResult = (querySnapshot)=>{
         productAdmin.classList.add('productAdmin');
         productAdminCont.appendChild(productAdmin);
 
-
-        
-
         //edit
         const editBtn=productAdmin.querySelector('.productAdmin__editBtn');
 
@@ -59,7 +56,7 @@ const handleCollectionResult = (querySnapshot)=>{
     }))
 }
 
-db.collection('products').get().then(handleCollectionResult);
+db.collection('products').onSnapshot(handleCollectionResult);
 
 
 addProductBtn.addEventListener('click', ()=>{
