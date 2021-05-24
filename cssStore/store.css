@@ -1993,10 +1993,6 @@ h4 {
   color: #854e7b;
 }
 
-.orders {
-  height: 100vw;
-}
-
 .orders__options {
   width: 40%;
   display: -webkit-box;
