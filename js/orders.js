@@ -48,3 +48,10 @@ addProductBtn.addEventListener('click', ()=>{
     location.href='./productForm.html';
     console.log('djsmdk')
 })
+
+
+const checkProductFormAdmin= ()=>{
+    if(!loggedUser || !loggedUser.admin){
+        location.href='./store.html';
+    }
+}

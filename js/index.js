@@ -1,9 +1,3 @@
-//varaibles modal
-//const modal=document.querySelector ('.modal');
-// modalContent=document.querySelector ('.modal__content');
-//const modalBtn=document.querySelector ('.modal__btn');
-
-
 
 //variables interaction
 const imgEye=document.querySelector ('.interaction__eye');

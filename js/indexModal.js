@@ -36,7 +36,7 @@ setTimeout(effect,80);
 //turn the display of the modal in none
 function handleModalDisappear(){
     indexModal.style.display='none';
-  }
+}
   
   function handleCloseModal(){
     //transition

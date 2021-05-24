@@ -79,12 +79,15 @@ db.collection('products').doc(id)
 
 
     cartBtn.addEventListener('click', ()=>{
-
-        addToMyCart({
-            ...data,
-            id: doc.id,
-            amount: parseInt(counterStore.value) 
-        });
+        if(loggedUser){
+            addToMyCart({
+                ...data,
+                id: doc.id,
+                amount: parseInt(counterStore.value) 
+            });
+        }else{
+            handleModalAppear();
+        }
     });
 
 
