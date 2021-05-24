@@ -75,3 +75,9 @@ db.collection('products').doc(id)
     
 });
 
+const checkProductFormAdmin= ()=>{
+    if(!loggedUser || !loggedUser.admin){
+        location.href='./store.html';
+    }
+}
+

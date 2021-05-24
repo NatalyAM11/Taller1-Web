@@ -50,16 +50,22 @@ const handleCollectionResult = (querySnapshot)=>{
             }).catch((error) =>{
                 console.log('No se borro nada', error)
             });
-            
+
             db.collection('products').get().then(handleCollectionResult);
         })
     }))
 }
 
-db.collection('products').onSnapshot(handleCollectionResult);
+db.collection('products').get().then(handleCollectionResult);
 
 
 addProductBtn.addEventListener('click', ()=>{
     location.href='./productForm.html';
-    console.log('djsmdk')
 })
+
+
+const checkProductFormAdmin= ()=>{
+    if(!loggedUser || !loggedUser.admin){
+        location.href='./store.html';
+    }
+}

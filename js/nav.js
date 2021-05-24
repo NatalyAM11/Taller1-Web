@@ -7,7 +7,7 @@ nav.innerHTML=
         <a href= "./index.html" class="logo--responsiveCont"><img class="logo--responsive" src="./img/logo.png"></a>
         <div class="nav__divIconsResponsive">
             <img class="nav__icon userIcon" src="./img/userIcon.png">
-            <a href= "./cart.html" class="nav__icon cartIcon showLoggedAdmin"><img src="./img/cartIcon.png"><span class="cartSpan"></span></a>
+            <a href= "./cart.html" class="nav__icon cartIcon showLoggedIn"><img src="./img/cartIcon.png"><span class="cartSpan"></span></a>
         </div>
         <section class="authButtons hidden"></section>
         </div>
@@ -22,7 +22,7 @@ nav.innerHTML=
             <a href= "./orders.html" class="nav__option showLoggedAdmin">ORDERS</a>
             <div class="nav__divIcons">
                 <img class="nav__icon userIcon" src="./img/userIcon.png">
-                <a href= "./cart.html" class="nav__icon cartIcon showLoggedAdmin"><img src="./img/cartIcon.png"><span class="cartSpan"></span></a>
+                <a href= "./cart.html" class="nav__icon cartIcon showLoggedIn"><img src="./img/cartIcon.png"><span class="cartSpan"></span></a>
             </div>
             <section class="authButtons hidden"></section>
     </div>

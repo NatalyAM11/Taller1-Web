@@ -35,10 +35,11 @@ const handleCollectionResult = (querySnapshot)=>{
         <h4 class="productStore__price"> $ ${data.price}</h4>
         <img class="productStore__stars" src="${stars}">
         </a>
-        <button class="productStore__cartBtn">ADD TO CART</button>       
+        <button class="productStore__cartBtn">ADD TO CART</button>      
         `;
     
         product.classList.add('productStore');
+
     
         productList.appendChild(product);
 
@@ -46,15 +47,16 @@ const handleCollectionResult = (querySnapshot)=>{
         const cartBtn= product.querySelector('.productStore__cartBtn');
     
         cartBtn.addEventListener('click', ()=>{
-
-            addToMyCart({
-                ...data,
-                id: doc.id,
-                amount: 1
-            });
+            if(loggedUser){
+                addToMyCart({
+                    ...data,
+                    id: doc.id,
+                    amount: 1
+                });
+            }else{
+                handleModalAppear();
+            }
         });
-
-
 
     }));
 }

@@ -74,16 +74,6 @@ renderCart= ()=>{
             checkoutTotal.innerHTML="$"+ total;
         })
 
-    
-       
-     /*   checkoutShipping.innerHTML=`$ ${shipping}`;
-    
-        subtotal+=subProduct;
-        checkoutSubtotal.innerHTML= "$"+ subtotal;
-
-        total=subtotal+shipping;
-        checkoutTotal.innerHTML="$"+ total;*/
-
 
         const deleteBtn=product.querySelector(".productCart__deleteBtn");
 

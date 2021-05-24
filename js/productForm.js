@@ -123,9 +123,6 @@ productForm.addEventListener('submit', function(event){
         error += "You must upload at least three images for the gallery <br/>";
     }
 
-    if(mainImgFile=null){
-        error += "You must upload the at main image <br/>";
-    }
 
     if(error){
         productFormReminder.innerHTML=error;
@@ -236,4 +233,4 @@ const checkProductFormAdmin= ()=>{
     if(!loggedUser || !loggedUser.admin){
         location.href='./store.html';
     }
-  }
+}
