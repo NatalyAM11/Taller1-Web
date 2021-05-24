@@ -1,11 +1,12 @@
-.modal{
+.modal,
+.indexModal{
     position: fixed;
     left: 0px;
     top: 0px;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, .5);  
-    z-index: 5;
+    z-index: 20;
     opacity: 0;
     transition: opacity .5s ease;
      
@@ -68,7 +69,8 @@
 //Media query: 1125px
 @media only screen and (max-width:1125px){
 
-     .modal{
+     .modal,
+     .indexModal{
         &__text{
             width: 55%;
             padding: 13% 0px;
@@ -89,7 +91,8 @@
 
 //982px
 @media only screen and (max-width:982px){
-    .modal{
+    .modal,
+    .indexModal{
         &__img{
          width: 280px;
          background-position: -60px;
@@ -101,14 +104,14 @@
 //719px
 @media only screen and (max-width:719px){
 
-    .modal{
+    .modal,
+    .indexModal{
         position: fixed;
         left: 0px;
         top: 0px;
         width: 100vw;
         height: 100vh;
         background-color: rgba(0, 0, 0, .5);  
-        z-index: 5;
         //opacity: 0;
         transition: opacity .5s ease;
          

@@ -1,4 +1,5 @@
 const ordersCont=document.querySelector('.orders');
+const addProductBtn=document.querySelector('.orders__addProductBtn')
 
 db.collection('orders').get().then((snapShot)=>{
     snapShot.forEach((item)=>{
@@ -41,4 +42,9 @@ db.collection('orders').get().then((snapShot)=>{
         orderProducts.appendChild(product);
     
     })
+})
+
+addProductBtn.addEventListener('click', ()=>{
+    location.href='./productForm.html';
+    console.log('djsmdk')
 })

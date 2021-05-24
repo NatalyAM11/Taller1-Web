@@ -2,6 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Magra&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
+* {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
 .nav {
   font-family: magra;
   font-weight: 600;
@@ -41,8 +46,6 @@
   font-family: magra;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
   color: #420447;
 }
 
@@ -76,8 +79,13 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 50px 25px;
+  z-index: 10;
   /*opacity: 0;  
     transition: opacity .5s ease;  */
+}
+
+.cartSpan {
+  color: #420447;
 }
 
 @media only screen and (max-width: 1078px) {
@@ -217,20 +225,22 @@ button:hover {
   }
 }
 
-.modal {
+.modal,
+.indexModal {
   position: fixed;
   left: 0px;
   top: 0px;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 5;
+  z-index: 20;
   opacity: 0;
   -webkit-transition: opacity .5s ease;
   transition: opacity .5s ease;
 }
 
-.modal__content {
+.modal__content,
+.indexModal__content {
   width: 70%;
   height: 510px;
   padding: 30px;
@@ -246,7 +256,8 @@ button:hover {
   border-radius: 5px;
 }
 
-.modal__a {
+.modal__a,
+.indexModal__a {
   text-decoration: none;
   width: 100%;
   display: -webkit-box;
@@ -254,7 +265,8 @@ button:hover {
   display: flex;
 }
 
-.modal__img {
+.modal__img,
+.indexModal__img {
   width: 45%;
   padding: 50px 0px;
   background-image: url("../img/modal_img.jpg");
@@ -264,66 +276,76 @@ button:hover {
   border-radius: 5px;
 }
 
-.modal__btn {
+.modal__btn,
+.indexModal__btn {
   position: fixed;
   right: 14.5%;
   z-index: 50;
 }
 
-.modal__text {
+.modal__text,
+.indexModal__text {
   width: 50%;
   padding: 18% 0px;
   padding-left: 40px;
 }
 
-.modal__h4 {
+.modal__h4,
+.indexModal__h4 {
   margin: 0px;
 }
 
-.modal__bigTitle {
+.modal__bigTitle,
+.indexModal__bigTitle {
   font-size: 60px;
   margin: 0px;
 }
 
-.modal__p {
+.modal__p,
+.indexModal__p {
   color: #2f2430;
 }
 
 @media only screen and (max-width: 1125px) {
-  .modal__text {
+  .modal__text,
+  .indexModal__text {
     width: 55%;
     padding: 13% 0px;
     padding-left: 40px;
   }
-  .modal__bigTitle {
+  .modal__bigTitle,
+  .indexModal__bigTitle {
     margin: 0px;
   }
-  .modal__img {
+  .modal__img,
+  .indexModal__img {
     width: 280px;
     background-position: -60px;
   }
 }
 
 @media only screen and (max-width: 982px) {
-  .modal__img {
+  .modal__img,
+  .indexModal__img {
     width: 280px;
     background-position: -60px;
   }
 }
 
 @media only screen and (max-width: 719px) {
-  .modal {
+  .modal,
+  .indexModal {
     position: fixed;
     left: 0px;
     top: 0px;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 5;
     -webkit-transition: opacity .5s ease;
     transition: opacity .5s ease;
   }
-  .modal__content {
+  .modal__content,
+  .indexModal__content {
     width: 70%;
     height: 290px;
     padding: 30px;
@@ -337,27 +359,32 @@ button:hover {
     margin-top: 108px;
     border-radius: 5px;
   }
-  .modal__img {
+  .modal__img,
+  .indexModal__img {
     width: 280px;
     height: 25em;
     padding: 50px 0px;
     background-size: cover;
     display: none;
   }
-  .modal__btn {
+  .modal__btn,
+  .indexModal__btn {
     position: fixed;
     right: 15%;
   }
-  .modal__text {
+  .modal__text,
+  .indexModal__text {
     width: 80%;
     padding: 20px 0px;
     padding-left: 20px;
   }
-  .modal__h4 {
+  .modal__h4,
+  .indexModal__h4 {
     margin: 0px;
     font-size: 15px;
   }
-  .modal__bigTitle {
+  .modal__bigTitle,
+  .indexModal__bigTitle {
     font-size: 40px;
     margin: 0px;
   }
@@ -471,7 +498,8 @@ h4 {
   display: none !important;
 }
 
-.productStore {
+.productStore,
+.productAdmin {
   width: 210px;
   height: auto;
   background-color: #F3E0EF;
@@ -493,7 +521,8 @@ h4 {
           justify-content: center;
 }
 
-.productStore__content {
+.productStore__content,
+.productAdmin__content {
   width: 100%;
   height: 390px;
   display: -webkit-box;
@@ -513,18 +542,21 @@ h4 {
           text-decoration-line: none;
 }
 
-.productStore__name {
+.productStore__name,
+.productAdmin__name {
   font-size: 25px;
   margin: 0px;
 }
 
-.productStore__img {
+.productStore__img,
+.productAdmin__img {
   width: 100%;
   height: 60%;
   margin: 0px 5px;
 }
 
-.productStore__type {
+.productStore__type,
+.productAdmin__type {
   width: 90%;
   color: #744378;
   font-size: 18px;
@@ -538,7 +570,8 @@ h4 {
   display: flex;
 }
 
-.productStore__price {
+.productStore__price,
+.productAdmin__price {
   font-family: manrope;
   color: #744378;
   font-size: 20px;
@@ -547,57 +580,65 @@ h4 {
   margin-top: 10px;
 }
 
-.productStore__stars {
+.productStore__stars,
+.productAdmin__stars {
   width: 65%;
   margin-bottom: 15px;
 }
 
-.productStore:hover {
+.productStore:hover,
+.productAdmin:hover {
   background-color: #e4d0df;
 }
 
-.productStore__cartBtn {
+.productStore__cartBtn,
+.productAdmin__cartBtn {
   margin-top: 0px;
 }
 
-.productStore__deleteBtn {
+.productStore__deleteBtn,
+.productAdmin__deleteBtn {
   margin-left: 95%;
 }
 
-.productStore__editBtn {
+.productStore__editBtn,
+.productAdmin__editBtn {
   padding: 13px 60px;
   margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 641px) {
-  .productStore {
+  .productStore,
+  .productAdmin {
     width: 230px;
   }
-  .productStore__content {
+  .productStore__content,
+  .productAdmin__content {
     height: 400px;
     padding: 0vw 0vw;
     margin-left: 0px;
   }
-  .productStore__img {
+  .productStore__img,
+  .productAdmin__img {
     width: 95%;
     height: 60%;
     margin: 0px 5px;
   }
-  .productStore__deleteBtn {
+  .productStore__deleteBtn,
+  .productAdmin__deleteBtn {
     margin-left: 80%;
     margin-top: 10px;
   }
-  .productStore__editBtn {
+  .productStore__editBtn,
+  .productAdmin__editBtn {
     margin-bottom: 10px;
   }
-  .productStore__cartBtn {
+  .productStore__cartBtn,
+  .productAdmin__cartBtn {
     margin-bottom: 15px;
   }
 }
 
-/*        margin-top: 40px;
-        padding: 2vw 4vw;
-        margin-left: 0px;*/
 .productForm,
 .productEdit {
   width: 100%;
@@ -870,7 +911,8 @@ h4 {
   }
 }
 
-.productList {
+.productList,
+.productsAdminCont {
   width: 100%;
   padding-left: 12%;
   -webkit-box-sizing: border-box;
@@ -884,19 +926,22 @@ h4 {
 }
 
 @media only screen and (max-width: 1125px) {
-  .productList {
+  .productList,
+  .productsAdminCont {
     padding-left: 7%;
   }
 }
 
 @media only screen and (max-width: 939px) {
-  .productList {
+  .productList,
+  .productsAdminCont {
     padding-left: 9%;
   }
 }
 
 @media only screen and (max-width: 641px) {
-  .productList {
+  .productList,
+  .productsAdminCont {
     width: 90%;
     padding-left: 7%;
     -webkit-box-pack: center;
@@ -1459,7 +1504,7 @@ h4 {
 }
 
 .authModal {
-  z-index: 5;
+  z-index: 20;
   opacity: 0;
   -webkit-transition: opacity .5s ease;
   transition: opacity .5s ease;
@@ -1946,5 +1991,64 @@ h4 {
   font-family: Manrope;
   margin-bottom: 10px;
   color: #854e7b;
+}
+
+.orders {
+  height: 100vw;
+}
+
+.orders__options {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.orders__option:hover {
+  color: #892091;
+}
+
+.orders__a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+.orders__optionOrder {
+  color: #892091;
+}
+
+.orders__addProductBtn {
+  width: 97%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.orders__title {
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 779px) {
+  .orders__options {
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 100px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 13px;
+  }
 }
 /*# sourceMappingURL=store.css.map */

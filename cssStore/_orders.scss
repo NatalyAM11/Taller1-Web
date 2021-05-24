@@ -1,0 +1,53 @@
+.orders{
+    height: 100vw;
+    &__options{
+        width: 40%;
+        display: flex;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        justify-content: space-evenly;
+    }
+
+    &__option:hover{
+        color: rgb(137, 32, 145);
+       
+    }
+
+    &__a{
+        text-decoration-line: none;
+    }
+
+    &__optionOrder{
+        color: rgb(137, 32, 145);
+    }
+
+    &__addProductBtn{
+        width: 97%;
+        display: flex;
+        justify-content:flex-end;
+        box-sizing: border-box;
+    }
+
+    &__title{
+        margin-top: 50px;
+    }
+
+}
+
+
+@media only screen and (max-width:779px){
+    .orders{
+        &__text{
+            
+        }
+
+        &__options{
+            width: 60%;
+            display: flex;
+            margin-top: 100px;
+            justify-content: space-evenly;
+            font-size: 13px;
+        }
+    }
+}
+

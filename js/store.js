@@ -28,7 +28,6 @@ const handleCollectionResult = (querySnapshot)=>{
 
         //fill all the data
         product.innerHTML= `
-        <img class="productStore__deleteBtn showLoggedAdmin" src="./img/DeleteCartBtn.png">
         <a class="productStore__content" href="./productDetail.html?id=${doc.id}&name=${data.name}"> 
         <h1 class="productStore__name">${data.name}</h1>
         <h4 class="productStore__type">${data.p}</h4>
@@ -36,9 +35,7 @@ const handleCollectionResult = (querySnapshot)=>{
         <h4 class="productStore__price"> $ ${data.price}</h4>
         <img class="productStore__stars" src="${stars}">
         </a>
-        <button class="productStore__cartBtn">ADD TO CART</button>
-        <button class="productStore__editBtn showLoggedAdmin">EDIT</button>
-          
+        <button class="productStore__cartBtn">ADD TO CART</button>       
         `;
     
         product.classList.add('productStore');
@@ -57,26 +54,6 @@ const handleCollectionResult = (querySnapshot)=>{
                 amount: 1
             });
         });
-
-
-        //edit
-        const editBtn=product.querySelector('.productStore__editBtn');
-
-        editBtn.addEventListener('click', ()=>{
-            location.href=`./productEdit.html?id=${doc.id}&name=${data.name}`;
-            console.log(doc.id);
-        });
-
-        
-        const deleteBtn=product.querySelector('.productStore__deleteBtn');
-
-        deleteBtn.addEventListener('click', ()=>{
-            db.collection('products').doc(doc.id).delete().then( ()=>{
-                console.log('Se borro')
-            }).catch((error) =>{
-                console.log('No se borro nada', error)
-            });
-        })
 
     }));
 }

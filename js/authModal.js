@@ -68,6 +68,7 @@ setTimeout(effect,80);
 function handleCloseModal(){
     //transition
     modal.style.opacity=0;
+    modal.style.display='none';
 
     //make the body visible then the modal disappear
     document.body.style.overflow= 'visible';

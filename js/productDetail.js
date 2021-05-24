@@ -108,23 +108,23 @@ db.collection('products').doc(id)
 
  
     if(data.type=="lips"){
-        updateBanner("LIPS", "url('../img/bannerLips.png')");
-        updateBanners("FACE", "url('../img/recommendationFace.png')", "EYES", "url('../img/recommendationEyes.png')" );
+        updateBanner("LIPS", "url('./img/bannerLips.png')");
+        updateBanners("FACE", "url('./img/recommendationFace.png')", "EYES", "url('./img/recommendationEyes.png')" );
 
         recommendationRoot ("face", "eyes");
 
     };
 
     if(data.type=="face"){
-        updateBanner("FACE", "url('../img/bannerSkin.png')");
-        updateBanners("EYES", "url('../img/recommendationEyes.png')", "LIPS", "url('../img/recommendationLips.png')");
+        updateBanner("FACE", "url('./img/bannerSkin.png')");
+        updateBanners("EYES", "url('./img/recommendationEyes.png')", "LIPS", "url('./img/recommendationLips.png')");
 
         recommendationRoot ("eyes", "lips");
     };
 
     if(data.type=="eyes"){
-        updateBanner("EYES", "url('../img/bannerEyes.png')");
-        updateBanners("FACE", "url('../img/recommendationFace.png')", "LIPS", "url('../img/recommendationLips.png')");
+        updateBanner("EYES", "url('./img/bannerEyes.png')");
+        updateBanners("FACE", "url('./img/recommendationFace.png')", "LIPS", "url('./img/recommendationLips.png')");
 
         recommendationRoot ("face", "lips");
  

@@ -1,11 +1,9 @@
 //varaibles modal
-/*const modal=document.querySelector ('.modal');
-const modalContent=document.querySelector ('.modal__content');
-const modalBtn=document.querySelector ('.modal__btn');*/
+//const modal=document.querySelector ('.modal');
+// modalContent=document.querySelector ('.modal__content');
+//const modalBtn=document.querySelector ('.modal__btn');
 
 
-/*const navOptions=document.querySelector('.nav__options');
-const navD=document.querySelector('.nav__desaparecer');*/
 
 //variables interaction
 const imgEye=document.querySelector ('.interaction__eye');
@@ -15,7 +13,6 @@ const cperfectStorm=document.querySelector('.perfectStorm');
 const cbutterflyBae=document.querySelector ('.butterflyBae');
 const cstormiWeather=document.querySelector ('.stormiWeather');
 const cstormiWorld=document.querySelector ('.stormiWorld');
-//const hamburgerBtn=document.querySelector ('.nav__hamburger');
 
 
 
@@ -147,7 +144,7 @@ interactionLi.forEach(handleForEach);
 
 /////////////////Modal
 //turn the display of the modal in none
-function handleModalDisappear(){
+/*function handleModalDisappear(){
     modal.style.display='none';
 }
 
@@ -162,4 +159,4 @@ function handleCloseModal(){
     setTimeout(handleModalDisappear,300);
 }
 
-modalBtn.addEventListener('click', handleCloseModal);
+modalBtn.addEventListener('click', handleCloseModal);*/

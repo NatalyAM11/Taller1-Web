@@ -25,7 +25,7 @@ function userAuthChanged(loggedIn){
     });
     
     showLoggedAdmin.forEach((element)=>{
-        if(loggedIn && !loggedUser.admin){
+        if(!loggedUser || !loggedUser.admin){
             element.classList.add('hidden');
         }
     });

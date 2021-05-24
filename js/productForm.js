@@ -143,8 +143,7 @@ productForm.addEventListener('submit', function(event){
     //send the product to firebase
     db.collection('products').add(product).then(
         function(docRef){
-             //aqui pongo el modal o lo que pase si se subio el producto correctamente
-
+ 
             //array promises upload
             const uploadPromises=[];
             //array with url promises
@@ -231,6 +230,3 @@ const checkProductFormAdmin= ()=>{
         location.href='./store.html';
     }
   }
-
-//checkProductFormAdmin();
-
