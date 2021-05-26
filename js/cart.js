@@ -136,6 +136,9 @@ renderCart= ()=>{
                 cartCollection.doc(loggedUser.uid).set({
                     cart: []
                 });
+
+                checkoutReminder.innerHTML="Thanks for your purchase";
+                checkoutReminder.classList.remove('hidden');
         });
         console.log(order);
     });
